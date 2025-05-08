@@ -1,7 +1,16 @@
 {
   "variants": {
-    "axis=y":  { "model": "prehistoricnature:block/lepidodendron_log" },
-    "axis=z":   { "model": "prehistoricnature:block/lepidodendron_log", "x": 90 },
-    "axis=x":   { "model": "prehistoricnature:block/lepidodendron_log", "x": 90, "y": 90 }
+    "axis=x": {
+      "model": "prehistoricnature:block/lepidodendron_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "prehistoricnature:block/lepidodendron_log"
+    },
+    "axis=z": {
+      "model": "prehistoricnature:block/lepidodendron_log_horizontal",
+      "x": 90
+    }
   }
 }

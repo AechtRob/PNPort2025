@@ -1,39 +1,28 @@
-//package com.github.aechtrob.prehistoricnature.block.trees.lepidodendron;
-//
-//import com.github.aechtrob.prehistoricnature.block.BlockRegistration;
-//import com.github.aechtrob.prehistoricnature.entity.entities.PNBoat;
-//import com.github.aechtrob.prehistoricnature.item.ItemHandler;
-//import com.github.aechtrob.prehistoricnature.item.items.PNBoatItem;
-//import com.ibm.icu.impl.Pair;
-//import net.minecraft.core.RegistryAccess;
-//import net.minecraft.tags.ItemTags;
-//import net.minecraft.world.item.Item;
-//
-//import java.util.List;
-//
-//import static com.github.aechtrob.prehistoricnature.creativetabs.CreativeTabHelper.transportTabBoatTier;
-//
-//public class ItemsTreeLepidodendron {
-//    public static void register(){}
-//    public static final RegistryAccess.RegistryEntry<Item> LEPIDODENDRON_SIGN_ITEM = BlockRegistration.signItem(BlocksTreeLepidodendron.LEPIDODENDRON_PLANKS,BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN,BlocksTreeLepidodendron.LEPIDODENDRON_SIGN,
-//            List.of(ItemTags.SIGNS),BlocksTreeLepidodendron.treeName,BlocksTreeLepidodendron.treeId);
-//
-//
-//    public static final RegistryAccess.RegistryEntry<Item> LEPIDODENDRON_BOAT_ITEM = ItemHandler.addItem("lepidodendron_boat",
-//            () -> new PNBoatItem(false, PNBoat.Type.LEPIDODENDRON, new Item.Properties().stacksTo(1)),
-//            (provider, item) -> {provider.basicItem(item);},
-//            List.of(Pair.of("prehistoricnature_transport_tab",Pair.of(transportTabBoatTier,BlocksTreeLepidodendron.treeId))),
-//            "Lepidodendron Boat");
-//
-//    public static final RegistryAccess.RegistryEntry<Item> LEPIDODENDRON_CHEST_BOAT_ITEM = ItemHandler.addItem("lepidodendron_chest_boat",
-//            () -> new PNBoatItem(true, PNBoat.Type.LEPIDODENDRON, new Item.Properties().stacksTo(1)),
-//            (provider, item) -> {provider.basicItem(item);},
-//            List.of(Pair.of("prehistoricnature_transport_tab",Pair.of(transportTabBoatTier,BlocksTreeLepidodendron.treeId))),
-//            "Lepidodendron Chest Boat");
-//
-//
-//            //regular item creation applies
-//
-//
-//
-//}
+package com.github.aechtrob.prehistoricnature.block.trees.lepidodendron;
+
+import com.github.aechtrob.prehistoricnature.PrehistoricNature;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.HangingSignItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SignItem;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+public class ItemsTreeLepidodendron {
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(PrehistoricNature.MODID);
+
+    public static final DeferredItem<Item> LEPIDODENDRON_SIGN = ITEMS.register("lepidodendron_sign",
+            () -> new SignItem(BlocksTreeLepidodendron.LEPIDODENDRON_SIGN.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN.get(),
+                    new Item.Properties().stacksTo(16).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_sign")))));
+
+    public static final DeferredItem<Item> LEPIDODENDRON_HANGING_SIGN = ITEMS.register("lepidodendron_hanging_sign",
+            () -> new HangingSignItem(BlocksTreeLepidodendron.LEPIDODENDRON_SIGN_HANGING.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN_HANGING.get(),
+                    new Item.Properties().stacksTo(16).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_hanging_sign")))));
+
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
+}

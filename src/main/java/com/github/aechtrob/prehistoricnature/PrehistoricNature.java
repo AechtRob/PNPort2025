@@ -1,9 +1,11 @@
 package com.github.aechtrob.prehistoricnature;
 
-import com.github.aechtrob.prehistoricnature.block.trees.WoodTypeHelper;
 import com.github.aechtrob.prehistoricnature.block.trees.lepidodendron.BlocksTreeLepidodendron;
+import com.github.aechtrob.prehistoricnature.block.trees.lepidodendron.ItemsTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.creativetabs.ModCreativeTabs;
+import com.github.aechtrob.prehistoricnature.entity.block.ModBlockEntities;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
+import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
 import com.github.aechtrob.prehistoricnature.world.ModConfiguredFeatures;
 import com.github.aechtrob.prehistoricnature.world.tree.PNFoliagePlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTrunkPlacerType;
@@ -11,7 +13,8 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -86,7 +89,9 @@ public class PrehistoricNature
 
         ModCreativeTabs.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
         ModItems.register(modEventBus);
+        ItemsTreeLepidodendron.register(modEventBus);
         BlocksTreeLepidodendron.register(modEventBus);
         PNTrunkPlacerType.register(modEventBus);
         PNFoliagePlacerType.register(modEventBus);
@@ -137,16 +142,16 @@ public class PrehistoricNature
             ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_LEAVES.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_SAPLING.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_STROBILUS.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_LADDER.get(), RenderType.cutout());
 
-            WoodTypeHelper.getWoodTypes().stream().forEach((woodType -> Sheets.addWoodType(woodType)));
-            WoodTypeHelper.getWoodTypes().stream().forEach((woodType -> WoodType.register(woodType)));
+            Sheets.addWoodType(PNWoodTypes.LEPIDODENDRON);
         }
 
         @SubscribeEvent
         public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event)
         {
-            //PNBlockEntities.registerTileEntityRenders(event);
-            //PNEntities.registerEntityRenders(event);
+            event.registerBlockEntityRenderer(ModBlockEntities.PN_SIGN.get(), SignRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.PN_HANGING_SIGN.get(), HangingSignRenderer::new);
         }
 
         @SubscribeEvent
