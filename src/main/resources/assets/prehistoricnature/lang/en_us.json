@@ -1,0 +1,19 @@
+{
+  "itemGroup.prehistoricnature.plants_tab": "Prehistoric Nature Plants",
+  "itemGroup.prehistoricnature.misc_tab": "Prehistoric Nature Misc",
+
+  "block.prehistoricnature.lepidodendron_sapling": "Lepidodendron Sapling",
+  "item.prehistoricnature.lepidodendron_sapling": "Lepidodendron Sapling",
+  "block.prehistoricnature.lepidodendron_leaves": "Lepidodendron Leaves",
+  "item.prehistoricnature.lepidodendron_leaves": "Lepidodendron Leaves",
+  "block.prehistoricnature.lepidodendron_log": "Lepidodendron Log",
+  "item.prehistoricnature.lepidodendron_log": "Lepidodendron Log",
+  "block.prehistoricnature.lepidodendron_log_stripped": "Lepidodendron Stripped Log",
+  "item.prehistoricnature.lepidodendron_log_stripped": "Lepidodendron Stripped Log",
+  "block.prehistoricnature.lepidodendron_wood": "Lepidodendron Wood",
+  "item.prehistoricnature.lepidodendron_wood": "Lepidodendron Wood",
+  "block.prehistoricnature.lepidodendron_wood_stripped": "Lepidodendron Stripped Wood",
+  "item.prehistoricnature.lepidodendron_wood_stripped": "Lepidodendron Stripped Wood",
+  "block.prehistoricnature.lepidodendron_strobilus": "Lepidodendron Strobilus",
+  "item.prehistoricnature.lepidodendron_strobilus": "Lepidodendron Strobilus"
+}

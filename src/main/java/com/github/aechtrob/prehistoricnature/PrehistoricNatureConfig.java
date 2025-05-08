@@ -19,6 +19,10 @@ public class PrehistoricNatureConfig
 {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
+    public static final ForgeConfigSpec.BooleanValue doPropagation = BUILDER
+            .comment("Use the modded propagation methods instead of vanilla-style plant/sapling-drops for appropriate plants [default: true]")
+            .define("doPropagation", true);
+
     private static final ForgeConfigSpec.BooleanValue LOG_DIRT_BLOCK = BUILDER
             .comment("Whether to log the dirt block on common setup")
             .define("logDirtBlock", true);
