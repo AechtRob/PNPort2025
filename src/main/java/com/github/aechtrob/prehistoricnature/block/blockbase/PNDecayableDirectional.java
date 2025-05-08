@@ -39,6 +39,7 @@ public class PNDecayableDirectional extends Block {
             blockstate = blockstate.setValue(DirectionalBlock.FACING, direction1).setValue(PERSISTENT, Boolean.valueOf(true));
             if (blockstate.canSurvive(levelreader, blockpos)) {
                 return blockstate;
+
             }
         }
 
