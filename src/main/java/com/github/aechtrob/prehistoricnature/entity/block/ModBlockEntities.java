@@ -1,6 +1,7 @@
 package com.github.aechtrob.prehistoricnature.entity.block;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
+import com.github.aechtrob.prehistoricnature.entity.block.blockentitybase.ModBenchEntity;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.entity.block.blockentitybase.ModHangingSignBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.block.blockentitybase.ModSignBlockEntity;
@@ -30,6 +31,15 @@ public class ModBlockEntities {
             () -> new BlockEntityType<>(
                     ModHangingSignBlockEntity::new,
                     BlocksTreeLepidodendron.LEPIDODENDRON_SIGN_HANGING.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN_HANGING.get()
+            )
+    );
+
+    public static final Supplier<BlockEntityType<ModBenchEntity>> PN_BENCH = BLOCK_ENTITIES.register(
+            "pn_bench",
+            // The block entity type.
+            () -> new BlockEntityType<>(
+                    ModBenchEntity::new,
+                    BlocksTreeLepidodendron.LEPIDODENDRON_BENCH.get()
             )
     );
 

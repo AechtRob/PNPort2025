@@ -2,6 +2,8 @@ package com.github.aechtrob.prehistoricnature;
 
 import com.github.aechtrob.prehistoricnature.creativetabs.ModCreativeTabs;
 import com.github.aechtrob.prehistoricnature.entity.block.ModBlockEntities;
+import com.github.aechtrob.prehistoricnature.entity.entity.ModEntities;
+import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBenchEntityRenderer;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatChestRenderer;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.EntitiesTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatRenderer;
@@ -94,6 +96,7 @@ public class PrehistoricNature
         ModCreativeTabs.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
+        ModEntities.register(modEventBus);
         ModItems.register(modEventBus);
 
         ItemsTreeLepidodendron.register(modEventBus);
@@ -149,7 +152,6 @@ public class PrehistoricNature
         {
             ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_LEAVES.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_SAPLING.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_STROBILUS.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_LADDER.get(), RenderType.cutout());
 
             Sheets.addWoodType(PNWoodTypes.LEPIDODENDRON);
@@ -160,6 +162,7 @@ public class PrehistoricNature
         {
             event.registerBlockEntityRenderer(ModBlockEntities.PN_SIGN.get(), SignRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.PN_HANGING_SIGN.get(), HangingSignRenderer::new);
+            event.registerEntityRenderer(ModEntities.BENCH_ENTITY.get(), PNBenchEntityRenderer::new);
 
             event.registerEntityRenderer(EntitiesTreeLepidodendron.LEPIDODENDRON_BOAT.get(), context -> new PNBoatRenderer(context, ModelLayers.OAK_BOAT, "lepidodendron"));
             event.registerEntityRenderer(EntitiesTreeLepidodendron.LEPIDODENDRON_CHEST_BOAT.get(), context -> new PNBoatChestRenderer(context, ModelLayers.OAK_CHEST_BOAT, "lepidodendron"));

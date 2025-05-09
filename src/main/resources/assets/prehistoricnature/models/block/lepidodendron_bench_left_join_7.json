@@ -1,0 +1,6 @@
+{
+	"parent": "prehistoricnature:block/base/bench_left_join",
+	"textures": {
+		"metal": "prehistoricnature:block/dominican_amber"
+	}
+}

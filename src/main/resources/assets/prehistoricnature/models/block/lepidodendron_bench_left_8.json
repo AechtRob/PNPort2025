@@ -1,0 +1,6 @@
+{
+	"parent": "prehistoricnature:block/base/bench_left",
+	"textures": {
+		"metal": "block/quartz_block_side"
+	}
+}
