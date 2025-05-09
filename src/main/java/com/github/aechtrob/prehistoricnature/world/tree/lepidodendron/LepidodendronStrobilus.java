@@ -1,4 +1,4 @@
-package com.github.aechtrob.prehistoricnature.block.trees.lepidodendron;
+package com.github.aechtrob.prehistoricnature.world.tree.lepidodendron;
 
 import com.github.aechtrob.prehistoricnature.block.blockbase.PNDecayableDirectional;
 import com.google.common.collect.ImmutableMap;

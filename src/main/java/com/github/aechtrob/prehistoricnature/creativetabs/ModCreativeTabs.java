@@ -1,8 +1,8 @@
 package com.github.aechtrob.prehistoricnature.creativetabs;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
-import com.github.aechtrob.prehistoricnature.block.trees.lepidodendron.BlocksTreeLepidodendron;
-import com.github.aechtrob.prehistoricnature.block.trees.lepidodendron.ItemsTreeLepidodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ItemsTreeLepidodendron;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -66,6 +66,8 @@ public class ModCreativeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "deco_tab"))
                     .title(Component.translatable("itemGroup.prehistoricnature.misc_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ItemsTreeLepidodendron.LEPIDODENDRON_BOAT.get().asItem());
+                        output.accept(ItemsTreeLepidodendron.LEPIDODENDRON_CHEST_BOAT.get().asItem());
                     }).build());
 
     public static void register(IEventBus eventBus) {

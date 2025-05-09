@@ -1,7 +1,7 @@
 package com.github.aechtrob.prehistoricnature.entity.block;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
-import com.github.aechtrob.prehistoricnature.block.trees.lepidodendron.BlocksTreeLepidodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.entity.block.blockentitybase.ModHangingSignBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.block.blockentitybase.ModSignBlockEntity;
 import net.minecraft.core.registries.Registries;
