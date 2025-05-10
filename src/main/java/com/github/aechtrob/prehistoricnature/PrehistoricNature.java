@@ -5,7 +5,6 @@ import com.github.aechtrob.prehistoricnature.entity.blockentity.ModBlockEntities
 import com.github.aechtrob.prehistoricnature.entity.entity.ModEntities;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBenchEntityRenderer;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatChestRenderer;
-import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.EntitiesTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatRenderer;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
 import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
@@ -13,11 +12,10 @@ import com.github.aechtrob.prehistoricnature.world.ModConfiguredFeatures;
 import com.github.aechtrob.prehistoricnature.world.tree.PNFoliagePlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTrunkPlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.EntitiesTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ItemsTreeLepidodendron;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.geom.ModelLayers;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
@@ -150,10 +148,6 @@ public class PrehistoricNature
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_LEAVES.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_SAPLING.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_LADDER.get(), RenderType.cutout());
-
             Sheets.addWoodType(PNWoodTypes.LEPIDODENDRON);
         }
 

@@ -1,5 +1,6 @@
 {
     "ambientocclusion": false,
+    "render_type": "cutout",
     "textures": {
         "particle": "prehistoricnature:block/lepidodendron_ladder",
         "texture": "prehistoricnature:block/lepidodendron_ladder"
