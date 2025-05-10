@@ -1,10 +1,10 @@
 package com.github.aechtrob.prehistoricnature.entity.blockentity;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
-import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModTrimmableBlockEntity;
-import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModHangingSignBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModSignBlockEntity;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModTrimmableBlockEntity;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
@@ -35,12 +35,13 @@ public class ModBlockEntities {
     );
 
     public static final Supplier<BlockEntityType<ModTrimmableBlockEntity>> PN_TRIMMABLE = BLOCK_ENTITIES.register(
-            "pn_bench",
+            "pn_trimmable",
             // The block entity type.
             () -> new BlockEntityType<>(
                     ModTrimmableBlockEntity::new,
                     BlocksTreeLepidodendron.LEPIDODENDRON_BENCH.get(),
-                    BlocksTreeLepidodendron.LEPIDODENDRON_BRIDGE.get()
+                    BlocksTreeLepidodendron.LEPIDODENDRON_BRIDGE.get(),
+                    BlocksTreeLepidodendron.LEPIDODENDRON_LITTERBIN.get()
             )
     );
 

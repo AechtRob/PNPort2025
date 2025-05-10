@@ -1,0 +1,7 @@
+{
+  "parent": "prehistoricnature:block/base/litterbin",
+  "textures": {
+    "wood": "prehistoricnature:block/lepidodendron_planks",
+    "metal": "prehistoricnature:block/sulphur_block"
+  }
+}
