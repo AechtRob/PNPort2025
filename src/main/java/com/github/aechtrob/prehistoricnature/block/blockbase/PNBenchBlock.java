@@ -1,7 +1,6 @@
 package com.github.aechtrob.prehistoricnature.block.blockbase;
 
-import com.github.aechtrob.prehistoricnature.entity.blockentity.TrimHandler;
-import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModBenchEntity;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModTrimmableBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.entity.BenchSittableEntity;
 import com.github.aechtrob.prehistoricnature.entity.entity.ModEntities;
 import com.mojang.serialization.MapCodec;
@@ -10,23 +9,25 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySpawnReason;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.*;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.pathfinder.PathComputationType;
@@ -35,16 +36,14 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PNBenchBlock extends BaseEntityBlock {
+public class PNBenchBlock extends PNBaseTrimmableBlock {
     public static final MapCodec<PNBenchBlock> CODEC = RecordCodecBuilder.mapCodec((p_368439_) -> p_368439_.group(BlockState.CODEC.fieldOf("base_state").forGetter((p_304378_) -> p_304378_.baseState), propertiesCodec()).apply(p_368439_, PNBenchBlock::new));
     public static final EnumProperty<Direction> FACING;
     public static final BooleanProperty LEFT;
     public static final BooleanProperty RIGHT;
-    public static final IntegerProperty VARIANT;
     private final Block base;
     protected final BlockState baseState;
 
@@ -57,33 +56,6 @@ public class PNBenchBlock extends BaseEntityBlock {
         this.registerDefaultState((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)).setValue(LEFT, true)).setValue(RIGHT, true)).setValue(VARIANT, 0));
         this.base = baseState.getBlock();
         this.baseState = baseState;
-    }
-
-    @Override
-    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if (!level.isClientSide()) {
-            if (hand == InteractionHand.MAIN_HAND) {
-                int enumUsed = TrimHandler.getOreID(player.getItemInHand(hand));
-                BlockEntity blockEntity = level.getBlockEntity(pos);
-                if (blockEntity != null) {
-                    if (blockEntity instanceof ModBenchEntity) {
-                        if (enumUsed > 0) {
-                            if (((ModBenchEntity) blockEntity).getVariant() != enumUsed) {
-                                ItemStack itemstack = player.getItemInHand(hand);
-                                if (!player.isCreative()) {
-                                    itemstack.shrink(1);
-                                }
-                                level.setBlock(pos, (BlockState) state.setValue(VARIANT, enumUsed), 3);
-                                ((ModBenchEntity) blockEntity).setVariant(enumUsed);
-                                level.markAndNotifyBlock(pos, level.getChunkAt(pos), state, state, 3, 512);
-                                return InteractionResult.SUCCESS;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }
 
     @Override
@@ -103,7 +75,7 @@ public class PNBenchBlock extends BaseEntityBlock {
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new ModBenchEntity(pos, state);
+        return new ModTrimmableBlockEntity(pos, state);
     }
 
     @Override
@@ -176,32 +148,13 @@ public class PNBenchBlock extends BaseEntityBlock {
     }
 
     @Override
-    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
-        if (!level.isClientSide() && !player.isCreative()) {
-            int variant = 0;
-            if (blockEntity != null) {
-                if (blockEntity instanceof ModBenchEntity) {
-                    variant = ((ModBenchEntity) blockEntity).getVariant();
-                }
-            }
-            if (variant > 0) {
-                ItemEntity entityToSpawn = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), TrimHandler.getItemToDrop(variant));
-                entityToSpawn.setDefaultPickUpDelay();
-                level.addFreshEntity(entityToSpawn);
-            }
-
-            super.playerDestroy(level, player, pos, state, blockEntity, tool);
-        }
-    }
-
-    @Override
     protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess p_374352_, BlockPos pos, Direction direction, BlockPos p_56930_, BlockState p_56927_, RandomSource p_374581_) {
 
         int variant = 0;
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity != null) {
-            if (blockEntity instanceof ModBenchEntity) {
-                variant = ((ModBenchEntity) blockEntity).getVariant();
+            if (blockEntity instanceof ModTrimmableBlockEntity) {
+                variant = ((ModTrimmableBlockEntity) blockEntity).getVariant();
             }
         }
 
@@ -269,16 +222,6 @@ public class PNBenchBlock extends BaseEntityBlock {
         FACING = HorizontalDirectionalBlock.FACING;
         LEFT = BooleanProperty.create("left");
         RIGHT = BooleanProperty.create("right");
-        VARIANT = IntegerProperty.create("variant", 0, 15);
-//        SHAPE_OUTER = Shapes.or(Block.column((double)16.0F, (double)0.0F, (double)8.0F), Block.box((double)0.0F, (double)8.0F, (double)0.0F, (double)8.0F, (double)16.0F, (double)8.0F));
-//        SHAPE_STRAIGHT = Shapes.or(SHAPE_OUTER, Shapes.rotate(SHAPE_OUTER, OctahedralGroup.fromXYAngles(Quadrant.R0, Quadrant.R90)));
-//        SHAPE_INNER = Shapes.or(SHAPE_STRAIGHT, Shapes.rotate(SHAPE_STRAIGHT, OctahedralGroup.fromXYAngles(Quadrant.R0, Quadrant.R90)));
-//        SHAPE_BOTTOM_OUTER = Shapes.rotateHorizontal(SHAPE_OUTER);
-//        SHAPE_BOTTOM_STRAIGHT = Shapes.rotateHorizontal(SHAPE_STRAIGHT);
-//        SHAPE_BOTTOM_INNER = Shapes.rotateHorizontal(SHAPE_INNER);
-//        SHAPE_TOP_OUTER = Shapes.rotateHorizontal(Shapes.rotate(SHAPE_OUTER, OctahedralGroup.INVERT_Y));
-//        SHAPE_TOP_STRAIGHT = Shapes.rotateHorizontal(Shapes.rotate(SHAPE_STRAIGHT, OctahedralGroup.INVERT_Y));
-//        SHAPE_TOP_INNER = Shapes.rotateHorizontal(Shapes.rotate(SHAPE_INNER, OctahedralGroup.INVERT_Y));
     }
 
 }

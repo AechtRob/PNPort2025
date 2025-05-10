@@ -8,16 +8,16 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ModBenchEntity extends BlockEntity {
+public class ModTrimmableBlockEntity extends BlockEntity {
     private int variant;
 
-    public ModBenchEntity(BlockPos pos, BlockState blockState) {
-        super(ModBlockEntities.PN_BENCH.get(), pos, blockState);
+    public ModTrimmableBlockEntity(BlockPos pos, BlockState blockState) {
+        super(ModBlockEntities.PN_TRIMMABLE.get(), pos, blockState);
     }
 
     @Override
     public BlockEntityType<?> getType() {
-        return ModBlockEntities.PN_BENCH.get();
+        return ModBlockEntities.PN_TRIMMABLE.get();
     }
 
     // Read values from the passed CompoundTag here.
