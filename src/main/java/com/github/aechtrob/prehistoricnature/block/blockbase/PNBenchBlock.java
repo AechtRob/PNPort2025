@@ -1,7 +1,8 @@
 package com.github.aechtrob.prehistoricnature.block.blockbase;
 
-import com.github.aechtrob.prehistoricnature.entity.block.blockentitybase.ModBenchEntity;
-import com.github.aechtrob.prehistoricnature.entity.entity.BenchEntity;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.TrimHandler;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModBenchEntity;
+import com.github.aechtrob.prehistoricnature.entity.entity.BenchSittableEntity;
 import com.github.aechtrob.prehistoricnature.entity.entity.ModEntities;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -9,15 +10,15 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySpawnReason;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -34,6 +35,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -58,10 +60,37 @@ public class PNBenchBlock extends BaseEntityBlock {
     }
 
     @Override
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        if (!level.isClientSide()) {
+            if (hand == InteractionHand.MAIN_HAND) {
+                int enumUsed = TrimHandler.getOreID(player.getItemInHand(hand));
+                BlockEntity blockEntity = level.getBlockEntity(pos);
+                if (blockEntity != null) {
+                    if (blockEntity instanceof ModBenchEntity) {
+                        if (enumUsed > 0) {
+                            if (((ModBenchEntity) blockEntity).getVariant() != enumUsed) {
+                                ItemStack itemstack = player.getItemInHand(hand);
+                                if (!player.isCreative()) {
+                                    itemstack.shrink(1);
+                                }
+                                level.setBlock(pos, (BlockState) state.setValue(VARIANT, enumUsed), 3);
+                                ((ModBenchEntity) blockEntity).setVariant(enumUsed);
+                                level.markAndNotifyBlock(pos, level.getChunkAt(pos), state, state, 3, 512);
+                                return InteractionResult.SUCCESS;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
+    }
+
+    @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (!level.isClientSide()) {
             Entity entity = null;
-            List<BenchEntity> entities = level.getEntities(ModEntities.BENCH_ENTITY.get(), new AABB(pos), chair -> true);
+            List<BenchSittableEntity> entities = level.getEntities(ModEntities.BENCH_ENTITY.get(), new AABB(pos), chair -> true);
             if (entities.isEmpty()) {
                 entity = ModEntities.BENCH_ENTITY.get().spawn(((ServerLevel) level), pos, EntitySpawnReason.TRIGGERED);
             } else {
@@ -147,7 +176,34 @@ public class PNBenchBlock extends BaseEntityBlock {
     }
 
     @Override
+    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
+        if (!level.isClientSide() && !player.isCreative()) {
+            int variant = 0;
+            if (blockEntity != null) {
+                if (blockEntity instanceof ModBenchEntity) {
+                    variant = ((ModBenchEntity) blockEntity).getVariant();
+                }
+            }
+            if (variant > 0) {
+                ItemEntity entityToSpawn = new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), TrimHandler.getItemToDrop(variant));
+                entityToSpawn.setDefaultPickUpDelay();
+                level.addFreshEntity(entityToSpawn);
+            }
+
+            super.playerDestroy(level, player, pos, state, blockEntity, tool);
+        }
+    }
+
+    @Override
     protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess p_374352_, BlockPos pos, Direction direction, BlockPos p_56930_, BlockState p_56927_, RandomSource p_374581_) {
+
+        int variant = 0;
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (blockEntity != null) {
+            if (blockEntity instanceof ModBenchEntity) {
+                variant = ((ModBenchEntity) blockEntity).getVariant();
+            }
+        }
 
         Direction facing = state.getValue(FACING);
         if (facing == Direction.UP || facing == Direction.DOWN) {
@@ -186,7 +242,7 @@ public class PNBenchBlock extends BaseEntityBlock {
             }
         }
         
-        return direction.getAxis().isHorizontal() ? ((BlockState)(BlockState)state.setValue(LEFT, !left)).setValue(RIGHT, !right) : super.updateShape(state, level, p_374352_, pos, direction, p_56930_, p_56927_, p_374581_);
+        return direction.getAxis().isHorizontal() ? ((BlockState)((BlockState)(BlockState)state.setValue(LEFT, !left)).setValue(RIGHT, !right)).setValue(VARIANT, variant) : super.updateShape(state, level, p_374352_, pos, direction, p_56930_, p_56927_, p_374581_);
     }
 
     @Override

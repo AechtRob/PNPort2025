@@ -1,7 +1,7 @@
 package com.github.aechtrob.prehistoricnature;
 
 import com.github.aechtrob.prehistoricnature.creativetabs.ModCreativeTabs;
-import com.github.aechtrob.prehistoricnature.entity.block.ModBlockEntities;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.ModBlockEntities;
 import com.github.aechtrob.prehistoricnature.entity.entity.ModEntities;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBenchEntityRenderer;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatChestRenderer;

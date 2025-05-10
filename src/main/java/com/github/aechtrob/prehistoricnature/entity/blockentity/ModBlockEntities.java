@@ -1,10 +1,10 @@
-package com.github.aechtrob.prehistoricnature.entity.block;
+package com.github.aechtrob.prehistoricnature.entity.blockentity;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
-import com.github.aechtrob.prehistoricnature.entity.block.blockentitybase.ModBenchEntity;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModBenchEntity;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
-import com.github.aechtrob.prehistoricnature.entity.block.blockentitybase.ModHangingSignBlockEntity;
-import com.github.aechtrob.prehistoricnature.entity.block.blockentitybase.ModSignBlockEntity;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModHangingSignBlockEntity;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModSignBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;

@@ -15,9 +15,9 @@ public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(Registries.ENTITY_TYPE, PrehistoricNature.MODID);
 
-    public static final Supplier<EntityType<BenchEntity>> BENCH_ENTITY =
+    public static final Supplier<EntityType<BenchSittableEntity>> BENCH_ENTITY =
             ENTITY_TYPES.register("bench_entity",
-                () -> EntityType.Builder.of(BenchEntity::new, MobCategory.MISC)
+                () -> EntityType.Builder.of(BenchSittableEntity::new, MobCategory.MISC)
                 .sized(0.5F, 0.5F)
                 .build(ResourceKey.create(
                         Registries.ENTITY_TYPE,

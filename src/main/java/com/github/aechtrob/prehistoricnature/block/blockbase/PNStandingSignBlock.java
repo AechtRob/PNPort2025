@@ -1,6 +1,6 @@
 package com.github.aechtrob.prehistoricnature.block.blockbase;
 
-import com.github.aechtrob.prehistoricnature.entity.block.blockentitybase.ModSignBlockEntity;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModSignBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
