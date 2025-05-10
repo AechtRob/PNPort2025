@@ -147,7 +147,9 @@ public class BlocksTreeLepidodendron {
             () -> new PNLitterbinBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_litterbin")))));
 
     public static final DeferredBlock<PNBridgeBlock> LEPIDODENDRON_BRIDGE = registerBlock("lepidodendron_bridge",
-            () -> new PNBridgeBlock(LEPIDODENDRON_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_bridge")))));
+            () -> new PNBridgeBlock(LEPIDODENDRON_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .isValidSpawn(Blocks::never) //Not Khazad-Dum
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_bridge")))));
 
 
     //Other tree-specific stuff:

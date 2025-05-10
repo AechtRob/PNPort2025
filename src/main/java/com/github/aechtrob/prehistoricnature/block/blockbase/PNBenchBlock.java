@@ -148,8 +148,17 @@ public class PNBenchBlock extends PNBaseTrimmableBlock {
     }
 
     @Override
-    protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess p_374352_, BlockPos pos, Direction direction, BlockPos p_56930_, BlockState p_56927_, RandomSource p_374581_) {
+    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
+        state = updateBlockState(state, level, pos);
+        super.onPlace(state, level, pos, oldState, movedByPiston);
+    }
 
+    @Override
+    protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess p_374352_, BlockPos pos, Direction direction, BlockPos p_56930_, BlockState p_56927_, RandomSource p_374581_) {
+        return updateBlockState(state, level, pos);
+    }
+
+    public static BlockState updateBlockState(BlockState state, LevelReader level, BlockPos pos) {
         int variant = 0;
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity != null) {
@@ -194,8 +203,8 @@ public class PNBenchBlock extends PNBaseTrimmableBlock {
                 right = level.getBlockState(pos.south()).getValue(FACING) == Direction.EAST;
             }
         }
-        
-        return direction.getAxis().isHorizontal() ? ((BlockState)((BlockState)(BlockState)state.setValue(LEFT, !left)).setValue(RIGHT, !right)).setValue(VARIANT, variant) : super.updateShape(state, level, p_374352_, pos, direction, p_56930_, p_56927_, p_374581_);
+
+        return ((BlockState)((BlockState)(BlockState)state.setValue(LEFT, !left)).setValue(RIGHT, !right)).setValue(VARIANT, variant);
     }
 
     @Override

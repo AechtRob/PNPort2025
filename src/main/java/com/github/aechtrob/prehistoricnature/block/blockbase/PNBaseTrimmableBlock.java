@@ -28,6 +28,7 @@ public abstract class PNBaseTrimmableBlock extends BaseEntityBlock {
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         InteractionResult trimResult  = TrimHandler.applyTrim(stack, state, level, pos, player, hand, hitResult);
         if (trimResult == InteractionResult.SUCCESS) {
+            level.getBlockState(pos.above()).handleNeighborChanged(level, pos.above(), level.getBlockState(pos).getBlock(), null, false);
             return trimResult;
         }
         return super.useItemOn(stack, state, level, pos, player, hand, hitResult);

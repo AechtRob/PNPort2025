@@ -1,0 +1,7 @@
+{
+  "parent": "prehistoricnature:block/base/bridge_joiner",
+  "textures": {
+    "wood": "prehistoricnature:block/lepidodendron_planks",
+    "metal": "block/quartz_block_side"
+  }
+}
