@@ -69,8 +69,8 @@ public class PNDecayableDirectional extends Block {
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState state2, LevelAccessor world, BlockPos pos, BlockPos pos2) {
-        return direction.getOpposite() == state.getValue(DirectionalBlock.FACING) && !state.canSurvive(world, pos) ? Blocks.AIR.defaultBlockState() : state;
+    public BlockState updateShape(BlockState state, Direction direction, BlockState p_60543_, LevelAccessor level, BlockPos pos, BlockPos p_60546_) {
+        return direction.getOpposite() == state.getValue(DirectionalBlock.FACING) && !state.canSurvive(level, pos) ? Blocks.AIR.defaultBlockState() : state;
     }
 
 }

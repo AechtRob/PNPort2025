@@ -1,0 +1,6 @@
+{
+  "parent": "prehistoricnature:item/base/bench_item",
+  "textures": {
+    "wood": "prehistoricnature:block/lepidodendron_planks"
+  }
+}

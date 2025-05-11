@@ -16,28 +16,28 @@
                     {
                       "condition": "minecraft:match_tool",
                       "predicate": {
-                        "items": [
-                          "minecraft:shears"
-                        ]
+                        "items": "minecraft:shears"
                       }
                     },
                     {
                       "condition": "minecraft:match_tool",
                       "predicate": {
-                        "enchantments": [
-                          {
-                            "enchantment": "minecraft:silk_touch",
-                            "levels": {
-                              "min": 1
+                        "predicates": {
+                          "minecraft:enchantments": [
+                            {
+                              "enchantments": "minecraft:silk_touch",
+                              "levels": {
+                                "min": 1
+                              }
                             }
-                          }
-                        ]
+                          ]
+                        }
                       }
                     }
                   ]
                 }
               ],
-              "name": "prhistoricnature:lepidodendron_strobilus"
+              "name": "prehistoricnature:lepidodendron_strobilus"
             }
           ]
         }
@@ -45,5 +45,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:blocks/lepidodendron_strobilus"
+  "random_sequence": "prehistoricnature:blocks/lepidodendron_strobilus"
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "prehistoricnature:block/stripped_lepidodendron_wood",
+    "side": "prehistoricnature:block/stripped_lepidodendron_wood"
+  }
+}

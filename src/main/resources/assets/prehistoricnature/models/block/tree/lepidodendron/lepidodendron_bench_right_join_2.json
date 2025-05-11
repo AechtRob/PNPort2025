@@ -1,0 +1,6 @@
+{
+	"parent": "prehistoricnature:block/base/bench_right_join",
+	"textures": {
+		"metal": "block/gold_block"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"parent": "prehistoricnature:block/base/planter2",
+	"textures": {
+		"dirt": "block/dirt",
+		"metal": "prehistoricnature:block/baltic_amber",
+		"plank": "prehistoricnature:block/lepidodendron_planks"
+	}
+}
+

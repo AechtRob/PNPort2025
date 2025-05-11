@@ -1,0 +1,167 @@
+{
+ "multipart": [
+  { "when": { "variant": 0, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_0"}
+   ]
+  },
+  { "when": { "variant": 1, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_1"}
+   ]
+  },
+  { "when": { "variant": 2, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_2" }
+   ]
+  },
+  { "when": { "variant": 3, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_3"}
+   ]
+  },
+  { "when": { "variant": 4, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_4"}
+   ]
+  },
+  { "when": { "variant": 5, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_5"}
+   ]
+  },
+  { "when": { "variant": 6, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_6"}
+   ]
+  },
+  { "when": { "variant": 7, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_7"}
+   ]
+  },
+  { "when": { "variant": 8, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_8"}
+   ]
+  },
+  { "when": { "variant": 9, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_9"}
+   ]
+  },
+  { "when": { "variant": 10, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_10"}
+   ]
+  },
+  { "when": { "variant": 11, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_11"}
+   ]
+  },
+  { "when": { "variant": 12, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_12"}
+   ]
+  },
+  { "when": { "variant": 13, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_13"}
+   ]
+  },
+  { "when": { "variant": 14, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_14"}
+   ]
+  },
+  { "when": { "variant": 15, "soil": 0 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_15"}
+   ]
+  },
+
+  { "when": { "variant": 0, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_0"}
+   ]
+  },
+  { "when": { "variant": 1, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_1"}
+   ]
+  },
+  { "when": { "variant": 2, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_2" }
+   ]
+  },
+  { "when": { "variant": 3, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_3"}
+   ]
+  },
+  { "when": { "variant": 4, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_4"}
+   ]
+  },
+  { "when": { "variant": 5, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_5"}
+   ]
+  },
+  { "when": { "variant": 6, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_6"}
+   ]
+  },
+  { "when": { "variant": 7, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_7"}
+   ]
+  },
+  { "when": { "variant": 8, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_8"}
+   ]
+  },
+  { "when": { "variant": 9, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_9"}
+   ]
+  },
+  { "when": { "variant": 10, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_10"}
+   ]
+  },
+  { "when": { "variant": 11, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_11"}
+   ]
+  },
+  { "when": { "variant": 12, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_12"}
+   ]
+  },
+  { "when": { "variant": 13, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_13"}
+   ]
+  },
+  { "when": { "variant": 14, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_14"}
+   ]
+  },
+  { "when": { "variant": 15, "soil": 1 },
+   "apply": [
+    { "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planter2_sand_15"}
+   ]
+  }
+ ]
+
+
+}

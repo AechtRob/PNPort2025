@@ -1,18 +1,24 @@
 package com.github.aechtrob.prehistoricnature;
 
-import com.github.aechtrob.prehistoricnature.block.trees.WoodTypeHelper;
-import com.github.aechtrob.prehistoricnature.block.trees.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.creativetabs.ModCreativeTabs;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.ModBlockEntities;
+import com.github.aechtrob.prehistoricnature.entity.entity.ModEntities;
+import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBenchEntityRenderer;
+import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatRenderer;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
+import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
 import com.github.aechtrob.prehistoricnature.world.ModConfiguredFeatures;
 import com.github.aechtrob.prehistoricnature.world.tree.PNFoliagePlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTrunkPlacerType;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ItemsTreeLepidodendron;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -73,8 +79,13 @@ public class PrehistoricNature
 
         ModCreativeTabs.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModEntities.register(modEventBus);
         ModItems.register(modEventBus);
+
+        ItemsTreeLepidodendron.register(modEventBus);
         BlocksTreeLepidodendron.register(modEventBus);
+
         PNTrunkPlacerType.register(modEventBus);
         PNFoliagePlacerType.register(modEventBus);
         ModConfiguredFeatures.register(modEventBus);
@@ -125,12 +136,19 @@ public class PrehistoricNature
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_LEAVES.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_SAPLING.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlocksTreeLepidodendron.LEPIDODENDRON_STROBILUS.get(), RenderType.cutout());
+            Sheets.addWoodType(PNWoodTypes.LEPIDODENDRON);
 
-            WoodTypeHelper.getWoodTypes().stream().forEach((woodType -> Sheets.addWoodType(woodType)));
-            WoodTypeHelper.getWoodTypes().stream().forEach((woodType -> WoodType.register(woodType)));
+            EntityRenderers.register(ModEntities.BOAT_ENTITY.get(), context -> new PNBoatRenderer(context, false));
+            EntityRenderers.register(ModEntities.CHEST_BOAT_ENTITY.get(), context -> new PNBoatRenderer(context, true));
+            EntityRenderers.register(ModEntities.BENCH_ENTITY.get(), PNBenchEntityRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event)
+        {
+            event.registerBlockEntityRenderer(ModBlockEntities.PN_SIGN.get(), SignRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.PN_HANGING_SIGN.get(), HangingSignRenderer::new);
+
         }
     }
 }

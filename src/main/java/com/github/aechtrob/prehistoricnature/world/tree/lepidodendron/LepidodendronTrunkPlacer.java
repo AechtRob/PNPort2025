@@ -1,7 +1,6 @@
 package com.github.aechtrob.prehistoricnature.world.tree.lepidodendron;
 
 import com.github.aechtrob.prehistoricnature.block.blockbase.PNTreeLogBlock;
-import com.github.aechtrob.prehistoricnature.block.trees.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTreeFeature;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTrunkPlacerType;
 import com.google.common.collect.Lists;

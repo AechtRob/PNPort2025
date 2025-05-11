@@ -1,0 +1,43 @@
+{
+  "group": "bench",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:stick"
+    },
+    "1": {
+      "item": "prehistoricnature:lepidodendron_slab",
+      "data": 0
+    },
+    "2": {
+      "item": "minecraft:stick"
+    },
+    "3": {
+      "item": "prehistoricnature:lepidodendron_slab",
+      "data": 0
+    },
+    "4": {
+      "item": "prehistoricnature:lepidodendron_slab",
+      "data": 0
+    },
+    "5": {
+      "item": "prehistoricnature:lepidodendron_slab",
+      "data": 0
+    },
+    "6": {
+      "item": "minecraft:stick"
+    },
+    "8": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "prehistoricnature:lepidodendron_bench",
+    "count": 3
+  }
+}
