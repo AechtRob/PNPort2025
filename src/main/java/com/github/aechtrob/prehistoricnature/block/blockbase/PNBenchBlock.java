@@ -59,6 +59,10 @@ public class PNBenchBlock extends PNBaseTrimmableBlock {
 
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        InteractionResult res = super.use(state, level, pos, player, hand, hitResult);
+        if (res == InteractionResult.SUCCESS) {
+            return res;
+        }
         if (!level.isClientSide()) {
             Entity entity = null;
             List<BenchSittableEntity> entities = level.getEntities(ModEntities.BENCH_ENTITY.get(), new AABB(pos), chair -> true);
