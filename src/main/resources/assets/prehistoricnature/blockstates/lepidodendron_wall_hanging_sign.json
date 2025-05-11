@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "prehistoricnature:block/lepidodendron_hanging_sign"
+      "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_hanging_sign"
     }
   }
 }

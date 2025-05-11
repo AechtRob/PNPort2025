@@ -2,6 +2,7 @@ package com.github.aechtrob.prehistoricnature.entity.blockentity;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModHangingSignBlockEntity;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModPlanterBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModSignBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModTrimmableBlockEntity;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
@@ -42,6 +43,16 @@ public class ModBlockEntities {
                     BlocksTreeLepidodendron.LEPIDODENDRON_BENCH.get(),
                     BlocksTreeLepidodendron.LEPIDODENDRON_BRIDGE.get(),
                     BlocksTreeLepidodendron.LEPIDODENDRON_LITTERBIN.get()
+            )
+    );
+
+    public static final Supplier<BlockEntityType<ModPlanterBlockEntity>> PN_PLANTER = BLOCK_ENTITIES.register(
+            "pn_planter",
+            // The block entity type.
+            () -> new BlockEntityType<>(
+                    ModPlanterBlockEntity::new,
+                    BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_1.get(),
+                    BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_2.get()
             )
     );
 

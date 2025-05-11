@@ -1,10 +1,10 @@
 {
   "variants": {
     "powered=false": {
-      "model": "prehistoricnature:block/lepidodendron_pressure_plate"
+      "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_pressure_plate"
     },
     "powered=true": {
-      "model": "prehistoricnature:block/lepidodendron_pressure_plate_down"
+      "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_pressure_plate_down"
     }
   }
 }

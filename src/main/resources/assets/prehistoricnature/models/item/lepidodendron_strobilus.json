@@ -1,5 +1,5 @@
 {
-  "parent": "prehistoricnature:block/lepidodendron_strobilus",
+  "parent": "prehistoricnature:block/tree/lepidodendron/lepidodendron_strobilus",
   "display": {
     "thirdperson": {
       "rotation": [

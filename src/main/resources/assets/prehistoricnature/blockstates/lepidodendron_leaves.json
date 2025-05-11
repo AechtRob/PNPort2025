@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "prehistoricnature:block/lepidodendron_leaves"
+      "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_leaves"
     }
   }
 }

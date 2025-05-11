@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "prehistoricnature:block/lepidodendron_slab"
+      "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_slab"
     },
     "type=double": {
-      "model": "prehistoricnature:block/lepidodendron_planks"
+      "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_planks"
     },
     "type=top": {
-      "model": "prehistoricnature:block/lepidodendron_slab_top"
+      "model": "prehistoricnature:block/tree/lepidodendron/lepidodendron_slab_top"
     }
   }
 }

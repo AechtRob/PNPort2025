@@ -155,6 +155,14 @@ public class BlocksTreeLepidodendron {
                     .isValidSpawn(Blocks::never) //Not Khazad-Dum
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_bridge")))));
 
+    public static final DeferredBlock<PNPlanterBlock> LEPIDODENDRON_PLANTER_1 = registerBlock("lepidodendron_planter1",
+            () -> new PNPlanterBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COARSE_DIRT)
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_planter1")))));
+
+    public static final DeferredBlock<PNPlanterBlock> LEPIDODENDRON_PLANTER_2 = registerBlock("lepidodendron_planter2",
+            () -> new PNPlanterBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COARSE_DIRT)
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_planter2")))));
+
 
     //Other tree-specific stuff:
     public static final DeferredBlock<Block> LEPIDODENDRON_STROBILUS = registerBlock("lepidodendron_strobilus",

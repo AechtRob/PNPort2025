@@ -56,6 +56,8 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_LITTERBIN.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_BRIDGE.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_LADDER.get().asItem());
+                        output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_1.get().asItem());
+                        output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_2.get().asItem());
                         output.accept(ItemsTreeLepidodendron.LEPIDODENDRON_SIGN.get().asItem());
                         output.accept(ItemsTreeLepidodendron.LEPIDODENDRON_HANGING_SIGN.get().asItem());
 

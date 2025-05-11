@@ -1,0 +1,11 @@
+{
+  "parent": "prehistoricnature:block/base/planter1",
+  "textures": {
+    "dirt": "block/dirt",
+    "side": "prehistoricnature:block/lepidodendron_trapdoor",
+    "metal": "prehistoricnature:block/lepidodendron_planks",
+    "plank": "prehistoricnature:block/lepidodendron_planks"
+  }
+}
+
+

@@ -1,5 +1,5 @@
 {
-  "parent": "prehistoricnature:block/trapdoor_top",
+  "parent": "prehistoricnature:block/base/trapdoor_bottom",
   "textures": {
     "texture": "prehistoricnature:block/lepidodendron_trapdoor",
     "planktexture": "prehistoricnature:block/lepidodendron_planks"
