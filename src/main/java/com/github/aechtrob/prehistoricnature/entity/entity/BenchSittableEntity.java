@@ -32,7 +32,7 @@ public class BenchSittableEntity extends Entity {
 
     @Override
     public double getPassengersRidingOffset() {
-        return -0.1;
+        return 0.15;
     }
 
     @Override
