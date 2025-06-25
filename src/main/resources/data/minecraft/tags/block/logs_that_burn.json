@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "#minecraft:glossopteris_angustifolia_logs",
     "#minecraft:lepidodendron_logs"
   ]
 }
