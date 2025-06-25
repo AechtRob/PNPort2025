@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "prehistoricnature:glossopteris_angustifolia_log",
+    "prehistoricnature:stripped_glossopteris_angustifolia_log",
+    "prehistoricnature:glossopteris_angustifolia_wood",
+    "prehistoricnature:stripped_glossopteris_angustifolia_wood",
     "prehistoricnature:lepidodendron_log",
     "prehistoricnature:stripped_lepidodendron_log",
     "prehistoricnature:lepidodendron_wood",
