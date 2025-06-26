@@ -166,7 +166,7 @@ public class BlocksTreeGlossopterisA {
 
     //Other tree-specific stuff:
     public static final DeferredBlock<Block> GLOSSOPTERISA_STROBILUS = registerBlock("glossopteris_angustifolia_strobilus",
-            () -> new GlossopterisAStrobilus(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "glossopteris_angustifolia_strobilus")))));
+            () -> new GlossopterisAStrobilus(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).offsetType(BlockBehaviour.OffsetType.NONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "glossopteris_angustifolia_strobilus")))));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
