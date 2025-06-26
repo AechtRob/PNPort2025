@@ -166,7 +166,7 @@ public class BlocksTreeLepidodendron {
 
     //Other tree-specific stuff:
     public static final DeferredBlock<Block> LEPIDODENDRON_STROBILUS = registerBlock("lepidodendron_strobilus",
-            () -> new LepidodendronStrobilus(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_strobilus")))));
+            () -> new LepidodendronStrobilus(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).offsetType(BlockBehaviour.OffsetType.NONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_strobilus")))));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
