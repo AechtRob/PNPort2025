@@ -1,4 +1,4 @@
-package com.github.aechtrob.prehistoricnature.world.tree.GlossopterisA;
+package com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia;
 
 import com.github.aechtrob.prehistoricnature.block.blockbase.PNTreeLogBlock;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTreeFeature;

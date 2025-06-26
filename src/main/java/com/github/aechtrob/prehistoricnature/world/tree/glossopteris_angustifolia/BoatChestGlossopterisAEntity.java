@@ -1,4 +1,4 @@
-package com.github.aechtrob.prehistoricnature.world.tree.GlossopterisA;
+package com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.vehicle.ChestBoat;

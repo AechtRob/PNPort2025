@@ -9,9 +9,9 @@ import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatRenderer
 import com.github.aechtrob.prehistoricnature.item.ModItems;
 import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
 import com.github.aechtrob.prehistoricnature.world.ModConfiguredFeatures;
-import com.github.aechtrob.prehistoricnature.world.tree.GlossopterisA.BlocksTreeGlossopterisA;
-import com.github.aechtrob.prehistoricnature.world.tree.GlossopterisA.EntitiesTreeGlossopterisA;
-import com.github.aechtrob.prehistoricnature.world.tree.GlossopterisA.ItemsTreeGlossopterisA;
+import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
+import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.EntitiesTreeGlossopterisA;
+import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.ItemsTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.PNFoliagePlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTrunkPlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
