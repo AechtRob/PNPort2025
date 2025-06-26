@@ -115,10 +115,10 @@ public class GlossopterisATrunkPlacer extends TrunkPlacer {
         placeLog(pos.offset(0, height + 6, -4), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
         placeLog(pos.offset(0, height + 7, 0), logState);
         placeLog(pos.offset(0, height + 8, 0), logState);
-        placeLog(pos.offset(1, height + 8, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
-        placeLog(pos.offset(2, height + 8, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
-        placeLog(pos.offset(-1, height + 8, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
-        placeLog(pos.offset(-2, height + 8, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
+        placeLog(pos.offset(0, height + 8, 1), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
+        placeLog(pos.offset(0, height + 8, 2), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
+        placeLog(pos.offset(0, height + 8, -1), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
+        placeLog(pos.offset(0, height + 8, -2), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
         placeLog(pos.offset(1, height + 8, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.X));
         placeLog(pos.offset(2, height + 8, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.X));
         placeLog(pos.offset(-1, height + 8, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.X));
