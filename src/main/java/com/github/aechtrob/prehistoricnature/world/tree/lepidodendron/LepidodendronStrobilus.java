@@ -23,8 +23,8 @@ public class LepidodendronStrobilus extends PNDecayableDirectional {
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 8.0D),
             Direction.WEST, Block.box(8.0D, 4.0D, 4.0D, 16.0D, 12.0D, 12.0D),
             Direction.EAST, Block.box(0.0D, 4.0D, 4.0D, 8.0D, 12.0D, 12.0D),
-            Direction.UP, Block.box(4.0D, 0.0D, 4.0D, 8.0D, 8.0D, 8.0D),
-            Direction.DOWN, Block.box(4.0D, 0.0D, 4.0D, 8.0D, 8.0D, 8.0D)
+            Direction.UP, Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D),
+            Direction.DOWN, Block.box(4.0D, 8.0D, 4.0D, 12.0D, 16.0D, 12.0D)
     ));
 
     public LepidodendronStrobilus(BlockBehaviour.Properties properties) {
