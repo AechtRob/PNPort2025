@@ -9,11 +9,14 @@ import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatRenderer
 import com.github.aechtrob.prehistoricnature.item.ModItems;
 import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
 import com.github.aechtrob.prehistoricnature.world.ModConfiguredFeatures;
+import com.github.aechtrob.prehistoricnature.world.tree.PNFoliagePlacerType;
+import com.github.aechtrob.prehistoricnature.world.tree.PNTrunkPlacerType;
+import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.BlocksTreeGangamopteris;
+import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.EntitiesTreeGangamopteris;
+import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.ItemsTreeGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.EntitiesTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.ItemsTreeGlossopterisA;
-import com.github.aechtrob.prehistoricnature.world.tree.PNFoliagePlacerType;
-import com.github.aechtrob.prehistoricnature.world.tree.PNTrunkPlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.EntitiesTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ItemsTreeLepidodendron;
@@ -100,6 +103,10 @@ public class PrehistoricNature
         ModEntities.register(modEventBus);
         ModItems.register(modEventBus);
 
+        ItemsTreeGangamopteris.register(modEventBus);
+        BlocksTreeGangamopteris.register(modEventBus);
+        EntitiesTreeGangamopteris.register(modEventBus);
+        
         ItemsTreeGlossopterisA.register(modEventBus);
         BlocksTreeGlossopterisA.register(modEventBus);
         EntitiesTreeGlossopterisA.register(modEventBus);
@@ -156,6 +163,7 @@ public class PrehistoricNature
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            Sheets.addWoodType(PNWoodTypes.GANGAMOPTERIS);
             Sheets.addWoodType(PNWoodTypes.GLOSSOPTERISA);
             Sheets.addWoodType(PNWoodTypes.LEPIDODENDRON);
         }
@@ -167,6 +175,8 @@ public class PrehistoricNature
             event.registerBlockEntityRenderer(ModBlockEntities.PN_HANGING_SIGN.get(), HangingSignRenderer::new);
             event.registerEntityRenderer(ModEntities.BENCH_ENTITY.get(), PNBenchEntityRenderer::new);
 
+            event.registerEntityRenderer(EntitiesTreeGangamopteris.GANGAMOPTERIS_BOAT.get(), context -> new PNBoatRenderer(context, ModelLayers.OAK_BOAT, "gangamopteris"));
+            event.registerEntityRenderer(EntitiesTreeGangamopteris.GANGAMOPTERIS_CHEST_BOAT.get(), context -> new PNBoatChestRenderer(context, ModelLayers.OAK_CHEST_BOAT, "gangamopteris"));
             event.registerEntityRenderer(EntitiesTreeGlossopterisA.GLOSSOPTERISA_BOAT.get(), context -> new PNBoatRenderer(context, ModelLayers.OAK_BOAT, "glossopteris_angustifolia"));
             event.registerEntityRenderer(EntitiesTreeGlossopterisA.GLOSSOPTERISA_CHEST_BOAT.get(), context -> new PNBoatChestRenderer(context, ModelLayers.OAK_CHEST_BOAT, "glossopteris_angustifolia"));
             event.registerEntityRenderer(EntitiesTreeLepidodendron.LEPIDODENDRON_BOAT.get(), context -> new PNBoatRenderer(context, ModelLayers.OAK_BOAT, "lepidodendron"));

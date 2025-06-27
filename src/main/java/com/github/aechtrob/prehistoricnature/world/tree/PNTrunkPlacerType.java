@@ -1,6 +1,7 @@
 package com.github.aechtrob.prehistoricnature.world.tree;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
+import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.GangamopterisTrunkPlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.GlossopterisATrunkPlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.LepidodendronTrunkPlacer;
 import net.minecraft.core.registries.Registries;
@@ -13,6 +14,7 @@ public class PNTrunkPlacerType {
 
     public static final DeferredRegister<TrunkPlacerType<?>> TRUNK_PLACER_TYPES = DeferredRegister.create(Registries.TRUNK_PLACER_TYPE, PrehistoricNature.MODID);
 
+    public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> GANGAMOPTERIS_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("gangamopteris_trunk_placer", () -> new TrunkPlacerType<>(GangamopterisTrunkPlacer.CODEC));
     public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> GLOSSOPTERISA_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("glossopteris_angustifolia_trunk_placer", () -> new TrunkPlacerType<>(GlossopterisATrunkPlacer.CODEC));
     public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> LEPIDODENDRON_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("lepidodendron_trunk_placer", () -> new TrunkPlacerType<>(LepidodendronTrunkPlacer.CODEC));
 
