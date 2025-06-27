@@ -10,6 +10,8 @@ import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
 import com.github.aechtrob.prehistoricnature.world.ModConfiguredFeatures;
 import com.github.aechtrob.prehistoricnature.world.tree.PNFoliagePlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTrunkPlacerType;
+import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.BlocksTreeGangamopteris;
+import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.ItemsTreeGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.ItemsTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
@@ -85,6 +87,9 @@ public class PrehistoricNature
         ModEntities.register(modEventBus);
         ModItems.register(modEventBus);
 
+        ItemsTreeGangamopteris.register(modEventBus);
+        BlocksTreeGangamopteris.register(modEventBus);
+        
         ItemsTreeGlossopterisA.register(modEventBus);
         BlocksTreeGlossopterisA.register(modEventBus);
         
@@ -141,6 +146,7 @@ public class PrehistoricNature
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            Sheets.addWoodType(PNWoodTypes.GANGAMOPTERIS);
             Sheets.addWoodType(PNWoodTypes.GLOSSOPTERISA);
             Sheets.addWoodType(PNWoodTypes.LEPIDODENDRON);
 
