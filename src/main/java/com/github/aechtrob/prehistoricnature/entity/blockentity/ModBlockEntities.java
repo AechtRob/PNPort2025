@@ -5,6 +5,7 @@ import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModPlanterBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModSignBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModTrimmableBlockEntity;
+import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -21,7 +22,8 @@ public class ModBlockEntities {
             // The block entity type.
             () -> BlockEntityType.Builder.of(
                     ModSignBlockEntity::new,
-                    BlocksTreeLepidodendron.LEPIDODENDRON_SIGN.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN.get()
+                    BlocksTreeLepidodendron.LEPIDODENDRON_SIGN.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN.get()
             ).build(null)
     );
 
@@ -30,7 +32,8 @@ public class ModBlockEntities {
             // The block entity type.
             () -> BlockEntityType.Builder.of(
                     ModHangingSignBlockEntity::new,
-                    BlocksTreeLepidodendron.LEPIDODENDRON_SIGN_HANGING.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN_HANGING.get()
+                    BlocksTreeLepidodendron.LEPIDODENDRON_SIGN_HANGING.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN_HANGING.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN_HANGING.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN_HANGING.get()
             ).build(null)
     );
 
@@ -41,7 +44,11 @@ public class ModBlockEntities {
                     ModTrimmableBlockEntity::new,
                     BlocksTreeLepidodendron.LEPIDODENDRON_BENCH.get(),
                     BlocksTreeLepidodendron.LEPIDODENDRON_BRIDGE.get(),
-                    BlocksTreeLepidodendron.LEPIDODENDRON_LITTERBIN.get()
+                    BlocksTreeLepidodendron.LEPIDODENDRON_LITTERBIN.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_BENCH.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_BRIDGE.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_LITTERBIN.get()
+
             ).build(null)
     );
 
@@ -51,7 +58,9 @@ public class ModBlockEntities {
             () -> BlockEntityType.Builder.of(
                     ModPlanterBlockEntity::new,
                     BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_1.get(),
-                    BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_2.get()
+                    BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_2.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_PLANTER_1.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_PLANTER_2.get()
             ).build(null)
     );
 

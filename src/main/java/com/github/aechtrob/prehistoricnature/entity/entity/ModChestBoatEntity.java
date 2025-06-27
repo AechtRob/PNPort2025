@@ -1,5 +1,6 @@
 package com.github.aechtrob.prehistoricnature.entity.entity;
 
+import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.ItemsTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ItemsTreeLepidodendron;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -29,6 +30,7 @@ public class ModChestBoatEntity extends ChestBoat {
     public Item getDropItem() {
         return switch (getModVariant()) {
             case LEPIDODENDRON -> ItemsTreeLepidodendron.LEPIDODENDRON_CHEST_BOAT.get().asItem();
+            case GLOSSOPTERISA -> ItemsTreeGlossopterisA.GLOSSOPTERISA_CHEST_BOAT.get().asItem();
         };
     }
 
@@ -39,6 +41,7 @@ public class ModChestBoatEntity extends ChestBoat {
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_ID_TYPE, ModBoatEntity.Type.LEPIDODENDRON.ordinal());
+        this.entityData.define(DATA_ID_TYPE, ModBoatEntity.Type.GLOSSOPTERISA.ordinal());
     }
 
     protected void addAdditionalSaveData(CompoundTag tag) {

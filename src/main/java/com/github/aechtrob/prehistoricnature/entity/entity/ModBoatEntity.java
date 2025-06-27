@@ -1,5 +1,7 @@
 package com.github.aechtrob.prehistoricnature.entity.entity;
 
+import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
+import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.ItemsTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ItemsTreeLepidodendron;
 import net.minecraft.nbt.CompoundTag;
@@ -35,6 +37,7 @@ public class ModBoatEntity extends Boat {
     public Item getDropItem() {
         return switch (getModVariant()) {
             case LEPIDODENDRON -> ItemsTreeLepidodendron.LEPIDODENDRON_BOAT.get();
+            case GLOSSOPTERISA -> ItemsTreeGlossopterisA.GLOSSOPTERISA_BOAT.get();
         };
     }
 
@@ -49,6 +52,7 @@ public class ModBoatEntity extends Boat {
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_ID_TYPE, Type.LEPIDODENDRON.ordinal());
+        this.entityData.define(DATA_ID_TYPE, Type.GLOSSOPTERISA.ordinal());
     }
 
     protected void addAdditionalSaveData(CompoundTag pCompound) {
@@ -62,7 +66,8 @@ public class ModBoatEntity extends Boat {
     }
 
     public static enum Type implements StringRepresentable {
-        LEPIDODENDRON(BlocksTreeLepidodendron.LEPIDODENDRON_PLANKS.get(), "lepidodendron");
+        LEPIDODENDRON(BlocksTreeLepidodendron.LEPIDODENDRON_PLANKS.get(), "lepidodendron"),
+        GLOSSOPTERISA(BlocksTreeGlossopterisA.GLOSSOPTERISA_PLANKS.get(), "glossopteris_angustifolia");
 
         private final String name;
         private final Block planks;
@@ -98,7 +103,9 @@ public class ModBoatEntity extends Boat {
         }
 
         public static ModBoatEntity.Type byName(String pName) {
-            return CODEC.byName(pName, LEPIDODENDRON);
+             CODEC.byName(pName, LEPIDODENDRON);
+            return CODEC.byName(pName, GLOSSOPTERISA);
+
         }
     }
 }

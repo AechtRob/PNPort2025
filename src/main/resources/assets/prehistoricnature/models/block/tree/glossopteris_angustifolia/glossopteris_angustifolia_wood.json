@@ -1,0 +1,7 @@
+{
+ "parent": "block/cube_column",
+ "textures": {
+ "end": "prehistoricnature:block/glossopteris_angustifolia_wood",
+ "side": "prehistoricnature:block/glossopteris_angustifolia_wood"
+ }
+}

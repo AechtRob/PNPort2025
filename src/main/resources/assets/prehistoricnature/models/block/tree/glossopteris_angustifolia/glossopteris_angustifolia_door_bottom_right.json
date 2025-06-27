@@ -1,0 +1,7 @@
+{
+ "parent": "block/door_bottom_right",
+ "textures": {
+ "bottom": "prehistoricnature:block/glossopteris_angustifolia_door_bottom",
+ "top": "prehistoricnature:block/glossopteris_angustifolia_door_top"
+ }
+}

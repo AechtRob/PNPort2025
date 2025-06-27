@@ -1,0 +1,11 @@
+{
+	"parent": "prehistoricnature:block/base/planter1",
+	"textures": {
+		"dirt": "block/dirt",
+		"side": "prehistoricnature:block/glossopteris_angustifolia_trapdoor",
+		"metal": "block/quartz_block_side",
+		"plank": "prehistoricnature:block/glossopteris_angustifolia_planks"
+	}
+}
+
+

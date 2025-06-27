@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "prehistoricnature:lepiddendron_sapling"
+    "prehistoricnature:gangamopteris_sapling",
+    "prehistoricnature:glossopteris_angustifolia_sapling",
+    "prehistoricnature:lepidodendron_sapling"
   ]
 }
