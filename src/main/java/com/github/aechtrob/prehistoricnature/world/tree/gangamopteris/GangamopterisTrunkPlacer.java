@@ -38,7 +38,7 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
 
     protected void setFoliage(LevelSimulatedReader levelSimulatedReader, BiConsumer<BlockPos, BlockState> biConsumer, RandomSource random, TreeConfiguration treeConfiguration, int ii, FoliagePlacer.FoliageAttachment foliageAttachment, int p_161366_, int p_161367_, int p_161368_) {
         BlockPos pos = foliageAttachment.pos();
-        if (PNTreeFeature.canLeavesReplaceBlock(levelSimulatedReader, pos)) {
+        if (PNTreeFeature.canLeavesReplaceBlock(treeConfiguration, random, levelSimulatedReader, pos)) {
             biConsumer.accept(pos, treeConfiguration.foliageProvider.getState(random, pos));
         }
     }

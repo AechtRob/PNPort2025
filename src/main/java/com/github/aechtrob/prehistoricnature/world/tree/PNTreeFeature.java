@@ -2,10 +2,14 @@ package com.github.aechtrob.prehistoricnature.world.tree;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelSimulatedReader;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.material.Fluids;
 
 public class PNTreeFeature extends TreeFeature {
     public PNTreeFeature(Codec<TreeConfiguration> p_67201_) {
@@ -13,17 +17,22 @@ public class PNTreeFeature extends TreeFeature {
     }
 
     public static boolean canLogReplaceBlock(LevelSimulatedReader level, BlockPos pos) {
-        boolean flag = level.isStateAtPosition(pos, (p_372791_) -> (Boolean)p_372791_.getValueOrElse(BlockStateProperties.PERSISTENT, false));
-        if (!flag) {
-            return true;
-        } else {
-            return false;
-        }
+        return level.isStateAtPosition(pos, (p_360243_) -> {
+            return p_360243_.isAir() || p_360243_.is(BlockTags.REPLACEABLE_BY_TREES);
+        });
     }
 
-    public static boolean canLeavesReplaceBlock(LevelSimulatedReader level, BlockPos pos) {
-        boolean flag = level.isStateAtPosition(pos, (p_372791_) -> (Boolean)p_372791_.getValueOrElse(BlockStateProperties.PERSISTENT, false));
-        if (!flag) {
+    public static boolean canLeavesReplaceBlock(TreeConfiguration treeConfiguration, RandomSource random, LevelSimulatedReader level, BlockPos pos) {
+        boolean flag = level.isStateAtPosition(pos, (p_372791_) -> {
+            return (Boolean)p_372791_.getValueOrElse(BlockStateProperties.PERSISTENT, false);
+        });
+        if (!flag && TreeFeature.validTreePos(level, pos)) {
+            BlockState blockstate = treeConfiguration.foliageProvider.getState(random, pos);
+            if (blockstate.hasProperty(BlockStateProperties.WATERLOGGED)) {
+                blockstate = (BlockState)blockstate.setValue(BlockStateProperties.WATERLOGGED, level.isFluidAtPosition(pos, (p_225638_) -> {
+                    return p_225638_.isSourceOfType(Fluids.WATER);
+                }));
+            }
             return true;
         } else {
             return false;
