@@ -1,0 +1,10 @@
+{
+	"parent": "prehistoricnature:block/base/planter2",
+	"textures": {
+		"dirt": "block/sand",
+		"metal": "block/lapis_block",
+		"plank": "prehistoricnature:block/gangamopteris_planks"
+	}
+}
+
+

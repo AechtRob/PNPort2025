@@ -1,0 +1,7 @@
+{
+ "parent": "prehistoricnature:block/base/bridge",
+ "textures": {
+ "wood": "prehistoricnature:block/gangamopteris_planks",
+ "metal": "block/gold_block"
+ }
+}
