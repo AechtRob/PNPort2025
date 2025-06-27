@@ -145,7 +145,11 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-5, height + 2, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 2, 5), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 2, -5), 0, true));
-        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1, height + 2, 2), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(5, height + 1, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-5, height + 1, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 1, 5), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 1, -5), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1, height + 2, 1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(2, height + 2, 1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(3, height + 2, 1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(4, height + 2, 1), 0, true));
@@ -214,6 +218,14 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 4, 2), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 4, -1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 4, -2), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(6, height + 4, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-6, height + 4, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 4, 6), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 4, -6), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(6, height + 5, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-6, height + 5, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 5, 6), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 5, -6), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1, height + 5, 1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1, height + 5, 1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1, height + 5, -1), 0, true));
@@ -245,19 +257,15 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1, height + 6, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(2, height + 6, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(5, height + 6, 0), 0, true));
-        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(6, height + 6, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1, height + 6, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-2, height + 6, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-5, height + 6, 0), 0, true));
-        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-6, height + 6, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 6, 1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 6, 2), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 6, 5), 0, true));
-        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 6, 6), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 6, -1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 6, -2), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 6, -5), 0, true));
-        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 6, -6), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1, height + 6, -1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1, height + 6, 1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1, height +6, 1), 0, true));
@@ -295,6 +303,10 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1, height + 7, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-3, height + 7, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-4, height + 7, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(2, height + 7, 2), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-2, height + 7, 2), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(2, height + 7, -2), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-2, height + 7, -2), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(3, height + 8, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(4, height + 8, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-3, height + 8, 0), 0, true));
@@ -331,6 +343,10 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1, height + 10, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 10, 1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 10, -1), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(3, height + 10, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-3, height + 10, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 10, 3), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height + 10, -3), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1, height + 11, 1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1, height + 11, -1), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1, height + 11, 1), 0, true));
@@ -386,10 +402,10 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
 
 
         //Strobili:
-        placeRandomFoliage(pos.offset(0, height + 1, -5),0.4, 1, list);
-        placeRandomFoliage(pos.offset(0, height + 1,  5),0.4, 1, list);
-        placeRandomFoliage(pos.offset(-5,height + 1, 0),0.4, 1, list);
-        placeRandomFoliage(pos.offset(5, height + 1, 0),0.4, 1, list);
+        placeRandomFoliage(pos.offset(0, height , -5),0.4, 1, list);
+        placeRandomFoliage(pos.offset(0, height ,  5),0.4, 1, list);
+        placeRandomFoliage(pos.offset(-5,height , 0),0.4, 1, list);
+        placeRandomFoliage(pos.offset(5, height , 0),0.4, 1, list);
         placeRandomFoliage(pos.offset(1, height + 1, -4),0.4, 1, list);
         placeRandomFoliage(pos.offset(-1, height + 1, -4),0.4, 1, list);
         placeRandomFoliage(pos.offset(-1, height + 1,  4),0.4, 1, list);
@@ -406,6 +422,10 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
         placeRandomFoliage(pos.offset(-3, height + 1,  2),0.4, 1, list);
         placeRandomFoliage(pos.offset(-3, height + 1, -2),0.4, 1, list);
         placeRandomFoliage(pos.offset(3, height + 1,  2),0.4, 1, list);
+        placeRandomFoliage(pos.offset(6, height + 3, 0),0.4, 1, list);
+        placeRandomFoliage(pos.offset(0, height + 3,  6),0.4, 1, list);
+        placeRandomFoliage(pos.offset(-6, height + 3, 0),0.4, 1, list);
+        placeRandomFoliage(pos.offset(0, height + 3,  -6),0.4, 1, list);
         placeRandomFoliage(pos.offset(0, height + 4, 4),0.4, 1, list);
         placeRandomFoliage(pos.offset(0, height + 4,  5),0.4, 1, list);
         placeRandomFoliage(pos.offset(0, height + 4, -4),0.4, 1, list);
@@ -414,14 +434,10 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
         placeRandomFoliage(pos.offset(5, height + 4,  0),0.4, 1, list);
         placeRandomFoliage(pos.offset(-4, height + 4, 0),0.4, 1, list);
         placeRandomFoliage(pos.offset(-5, height + 4,  0),0.4, 1, list);
-        placeRandomFoliage(pos.offset(6, height + 5, 0),0.4, 1, list);
-        placeRandomFoliage(pos.offset(0, height + 5,  6),0.4, 1, list);
-        placeRandomFoliage(pos.offset(-6, height + 5, 0),0.4, 1, list);
-        placeRandomFoliage(pos.offset(0, height + 5,  -6),0.4, 1, list);
-        placeRandomFoliage(pos.offset(2, height + 7,  2),0.4, 1, list);
-        placeRandomFoliage(pos.offset(-2, height + 7,  2),0.4, 1, list);
-        placeRandomFoliage(pos.offset(2, height + 7,  -2),0.4, 1, list);
-        placeRandomFoliage(pos.offset(-2, height + 7,  2),0.4, 1, list);
+        placeRandomFoliage(pos.offset(2, height + 6,  2),0.4, 1, list);
+        placeRandomFoliage(pos.offset(-2, height + 6,  2),0.4, 1, list);
+        placeRandomFoliage(pos.offset(2, height + 6,  -2),0.4, 1, list);
+        placeRandomFoliage(pos.offset(-2, height + 6,  2),0.4, 1, list);
         placeRandomFoliage(pos.offset(1, height + 7,  2),0.4, 1, list);
         placeRandomFoliage(pos.offset(-1, height + 7,  2),0.4, 1, list);
         placeRandomFoliage(pos.offset(1, height + 7,  -2),0.4, 1, list);
@@ -430,10 +446,10 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
         placeRandomFoliage(pos.offset(-2, height + 7,  1),0.4, 1, list);
         placeRandomFoliage(pos.offset(2, height + 7,  -1),0.4, 1, list);
         placeRandomFoliage(pos.offset(-2, height + 7,  1),0.4, 1, list);
-        placeRandomFoliage(pos.offset(3, height + 10, 0),0.4, 1, list);
-        placeRandomFoliage(pos.offset(0, height + 10,  3),0.4, 1, list);
-        placeRandomFoliage(pos.offset(-3, height + 10, 0),0.4, 1, list);
-        placeRandomFoliage(pos.offset(0, height + 10,  -3),0.4, 1, list);
+        placeRandomFoliage(pos.offset(3, height + 9, 0),0.4, 1, list);
+        placeRandomFoliage(pos.offset(0, height + 9,  3),0.4, 1, list);
+        placeRandomFoliage(pos.offset(-3, height + 9, 0),0.4, 1, list);
+        placeRandomFoliage(pos.offset(0, height + 9,  -3),0.4, 1, list);
         placeRandomFoliage(pos.offset(2, height + 10, 1),0.4, 1, list);
         placeRandomFoliage(pos.offset(2, height + 10,  -1),0.4, 1, list);
         placeRandomFoliage(pos.offset(-2, height + 10, 1),0.4, 1, list);
@@ -463,8 +479,8 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
     }
 
     public int placeTrunk(BlockPos pos, BlockState logState, int height){
-        height += (double) (2) + Math.round((Math.random() * 10) / 5) + Math.round((Math.random() * 10) / 5)
-                + Math.round((Math.random() * 10) / 5);
+        height += (double) (2) + Math.round((Math.random() * 12) / 6) + Math.round((Math.random() * 12) / 6)
+                + Math.round((Math.random() * 6) / 3);
         int counter = 1;
         while (counter <= height) {
             placeLog(pos.above(1 + counter), logState);
