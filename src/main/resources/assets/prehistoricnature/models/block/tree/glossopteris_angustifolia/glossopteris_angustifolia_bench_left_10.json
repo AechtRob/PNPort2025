@@ -1,4 +1,4 @@
-strob{
+{
 	"parent": "prehistoricnature:block/base/bench_left",
 	"textures": {
 		"metal": "block/coal_block"
