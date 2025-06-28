@@ -152,7 +152,7 @@ public class BlocksTreeGangamopteris {
 
     //Other tree-specific stuff:
     public static final RegistryObject<Block> GANGAMOPTERIS_STROBILUS = registerBlock("gangamopteris_strobilus",
-            () -> new GangamopterisStrobilus(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
+            () -> new GangamopterisStrobilus(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).offsetType(BlockBehaviour.OffsetType.NONE)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

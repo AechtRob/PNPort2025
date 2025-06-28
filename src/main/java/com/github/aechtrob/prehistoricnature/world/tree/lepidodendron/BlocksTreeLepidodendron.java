@@ -152,7 +152,7 @@ public class BlocksTreeLepidodendron {
 
     //Other tree-specific stuff:
     public static final RegistryObject<Block> LEPIDODENDRON_STROBILUS = registerBlock("lepidodendron_strobilus",
-            () -> new LepidodendronStrobilus(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
+            () -> new LepidodendronStrobilus(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).offsetType(BlockBehaviour.OffsetType.NONE)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
