@@ -49,7 +49,7 @@ public class GlossopterisAFoliagePlacer extends BlobFoliagePlacer {
                 break;
         }
 
-        if (PNTreeFeature.canLeavesReplaceBlock(levelSimulatedReader, pos)) {
+        if (PNTreeFeature.canLeavesReplaceBlock(treeConfiguration, random, levelSimulatedReader, pos)) {
             foliageSetter.set(pos, state);
         }
     }
