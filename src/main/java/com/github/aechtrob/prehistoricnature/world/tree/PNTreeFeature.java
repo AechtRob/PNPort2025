@@ -17,25 +17,22 @@ public class PNTreeFeature extends TreeFeature {
     }
 
     public static boolean canLogReplaceBlock(LevelSimulatedReader level, BlockPos pos) {
-        return level.isStateAtPosition(pos, (p_360243_) -> {
-            return p_360243_.isAir() || p_360243_.is(BlockTags.REPLACEABLE_BY_TREES);
+        return level.isStateAtPosition(pos, (state) -> {
+            return state.isAir() || state.is(BlockTags.REPLACEABLE_BY_TREES);
         });
     }
 
     public static boolean canLeavesReplaceBlock(TreeConfiguration treeConfiguration, RandomSource random, LevelSimulatedReader level, BlockPos pos) {
-        boolean flag = level.isStateAtPosition(pos, (p_372791_) -> {
-            return (Boolean)p_372791_.getValue(BlockStateProperties.PERSISTENT);
-        });
-        if (!flag && TreeFeature.validTreePos(level, pos)) {
+        if (!TreeFeature.validTreePos(level, pos)) {
+            return false;
+        } else {
             BlockState blockstate = treeConfiguration.foliageProvider.getState(random, pos);
             if (blockstate.hasProperty(BlockStateProperties.WATERLOGGED)) {
-                blockstate = (BlockState)blockstate.setValue(BlockStateProperties.WATERLOGGED, level.isFluidAtPosition(pos, (p_225638_) -> {
-                    return p_225638_.isSourceOfType(Fluids.WATER);
-                }));
+                blockstate = blockstate.setValue(BlockStateProperties.WATERLOGGED, Boolean.valueOf(level.isFluidAtPosition(pos, (state) -> {
+                    return state.isSourceOfType(Fluids.WATER);
+                })));
             }
             return true;
-        } else {
-            return false;
         }
     }
 }
