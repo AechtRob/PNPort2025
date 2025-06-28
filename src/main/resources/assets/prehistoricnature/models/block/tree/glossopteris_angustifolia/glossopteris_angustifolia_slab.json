@@ -1,0 +1,8 @@
+{
+ "parent": "block/slab",
+ "textures": {
+ "bottom": "prehistoricnature:block/glossopteris_angustifolia_planks",
+ "side": "prehistoricnature:block/glossopteris_angustifolia_planks",
+ "top": "prehistoricnature:block/glossopteris_angustifolia_planks"
+ }
+}

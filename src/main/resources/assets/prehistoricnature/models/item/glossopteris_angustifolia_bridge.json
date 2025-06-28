@@ -1,0 +1,6 @@
+{
+  "parent": "prehistoricnature:item/base/bridge_item",
+  "textures": {
+    "wood": "prehistoricnature:block/glossopteris_angustifolia_planks"
+  }
+}

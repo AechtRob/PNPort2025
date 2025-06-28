@@ -1,0 +1,7 @@
+{
+ "parent": "prehistoricnature:block/base/litterbin",
+ "textures": {
+ "wood": "prehistoricnature:block/glossopteris_angustifolia_planks",
+ "metal": "block/lapis_block"
+ }
+}

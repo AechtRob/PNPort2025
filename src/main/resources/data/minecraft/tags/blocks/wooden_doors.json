@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "prehistoricnature:gangamopteris_door",
+    "prehistoricnature:glossopteris_angustifolia_door",
     "prehistoricnature:lepidodendron_door"
   ]
 }
