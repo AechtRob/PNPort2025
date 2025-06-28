@@ -9,7 +9,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.material.Fluids;
+
+import java.util.List;
 
 public class PNTreeFeature extends TreeFeature {
     public PNTreeFeature(Codec<TreeConfiguration> p_67201_) {
@@ -37,5 +40,128 @@ public class PNTreeFeature extends TreeFeature {
         } else {
             return false;
         }
+    }
+
+    public static void placeRandomFoliage(BlockPos pos, double odds, int foliageId, List<FoliagePlacer.FoliageAttachment> list){
+        if ((Math.random() > odds)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos, foliageId, true));
+        }
+    }
+
+    public static void placeRandomFoliageAroundLog(BlockPos pos, int layers, double odds, int foliageId, List<FoliagePlacer.FoliageAttachment> list) {
+        if (Math.random() > odds) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1,0,0), foliageId, true));
+        }
+        if (Math.random() > odds) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,0,0), foliageId, true));
+        }
+        if (Math.random() > odds) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1,0,0), foliageId, true));
+        }
+
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1,1,0), foliageId, true));
+        }
+        if (Math.random() > odds) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,1,0), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1,1,0), foliageId, true));
+        }
+
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1,-1,0), foliageId, true));
+        }
+        if (Math.random() > odds) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,-1,0), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1,-1,0), foliageId, true));
+        }
+
+
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1,0,-1), foliageId, true));
+        }
+        if (Math.random() > odds) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,0,-1), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1,0,-1), foliageId, true));
+        }
+
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1,1,-1), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,1,-1), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1,1,-1), foliageId, true));
+        }
+
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1,-1,-1), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,-1,-1), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1,-1,-1), foliageId, true));
+        }
+
+
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1,0,1), foliageId, true));
+        }
+        if (Math.random() > odds) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,0,1), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1,0,1), foliageId, true));
+        }
+
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1,1,1), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,1,1), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1,1,1), foliageId, true));
+        }
+
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-1,-1,1), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,-1,1), foliageId, true));
+        }
+        if ((Math.random() > odds) && (layers >= 2)) {
+            list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1,-1,1), foliageId, true));
+        }
+
+        //Second layer out, if needed:
+        if (layers >= 2) {
+            if (Math.random() > odds) {
+                list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,0,20), foliageId, true));
+            }
+            if (Math.random() > odds) {
+                list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,0,-2), foliageId, true));
+            }
+            if (Math.random() > odds) {
+                list.add(new FoliagePlacer.FoliageAttachment(pos.offset(2,0,0), foliageId, true));
+            }
+            if (Math.random() > odds) {
+                list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-2,0,0), foliageId, true));
+            }
+            if (Math.random() > odds) {
+                list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,2,0), foliageId, true));
+            }
+            if (Math.random() > odds) {
+                list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0,-2,0), foliageId, true));
+            }
+        }
+
     }
 }

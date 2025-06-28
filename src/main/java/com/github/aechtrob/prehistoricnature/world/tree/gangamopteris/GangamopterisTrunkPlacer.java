@@ -19,6 +19,8 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 import java.util.List;
 import java.util.function.BiConsumer;
 
+import static com.github.aechtrob.prehistoricnature.world.tree.PNTreeFeature.placeRandomFoliage;
+
 public class GangamopterisTrunkPlacer extends TrunkPlacer {
 
     private LevelSimulatedReader levelSimulatedReader;
@@ -487,11 +489,5 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
             counter += 1;
         }
         return height;
-    }
-
-    public void placeRandomFoliage(BlockPos pos, double odds, int foliageId, List<FoliagePlacer.FoliageAttachment> list){
-        if ((Math.random() > odds)) {
-            list.add(new FoliagePlacer.FoliageAttachment(pos, foliageId, true));
-        }
     }
 }
