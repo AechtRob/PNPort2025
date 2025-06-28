@@ -22,6 +22,7 @@ import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -66,12 +67,15 @@ public class BlocksTreeSciadopitys {
     public static final DeferredBlock<PNTreeLeavesBlock> SCIADOPITYS_LEAVES = registerBlock("sciadopitys_leaves",
             () -> new PNTreeLeavesBlock(0, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "sciadopitys_leaves")))){
                 @Override
-                protected void spawnAfterBreak(BlockState state, ServerLevel level, BlockPos pos, ItemStack stack, boolean dropExperience) {
-                    super.spawnAfterBreak(state, level, pos, stack, dropExperience);
+                protected List<ItemStack> getDrops(BlockState state, LootParams.Builder params) {
+                    List<ItemStack> returnList = super.getDrops(state, params);
                     if ((Math.random() >= 0.96) && (PrehistoricNatureConfig.doPropagation.getAsBoolean())) {
                         BlockState fruitState = SCIADOPITYS_FRUIT.get().defaultBlockState();
-                        level.setBlock(pos, fruitState, 3);
+                        Vec3 vec3 = params.getParameter(LootContextParams.ORIGIN);
+                        BlockPos pos = new BlockPos((int)vec3.x, (int)vec3.y, (int)vec3.z);
+                        params.getLevel().setBlock(pos, fruitState, 3);
                     }
+                    return returnList;
                 }
             });
 
