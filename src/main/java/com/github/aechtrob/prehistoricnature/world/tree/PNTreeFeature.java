@@ -17,8 +17,8 @@ public class PNTreeFeature extends TreeFeature {
     }
 
     public static boolean canLogReplaceBlock(LevelSimulatedReader level, BlockPos pos) {
-        return level.isStateAtPosition(pos, (p_360243_) -> {
-            return p_360243_.isAir() || p_360243_.is(BlockTags.REPLACEABLE_BY_TREES);
+        return level.isStateAtPosition(pos, (state) -> {
+            return state.isAir() || state.is(BlockTags.REPLACEABLE_BY_TREES);
         });
     }
 
@@ -29,8 +29,8 @@ public class PNTreeFeature extends TreeFeature {
         if (!flag && TreeFeature.validTreePos(level, pos)) {
             BlockState blockstate = treeConfiguration.foliageProvider.getState(random, pos);
             if (blockstate.hasProperty(BlockStateProperties.WATERLOGGED)) {
-                blockstate = (BlockState)blockstate.setValue(BlockStateProperties.WATERLOGGED, level.isFluidAtPosition(pos, (p_225638_) -> {
-                    return p_225638_.isSourceOfType(Fluids.WATER);
+                blockstate = (BlockState)blockstate.setValue(BlockStateProperties.WATERLOGGED, level.isFluidAtPosition(pos, (state) -> {
+                    return state.isSourceOfType(Fluids.WATER);
                 }));
             }
             return true;
