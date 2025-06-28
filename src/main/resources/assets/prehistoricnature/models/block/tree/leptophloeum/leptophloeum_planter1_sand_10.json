@@ -1,0 +1,11 @@
+{
+	"parent": "prehistoricnature:block/base/planter1",
+	"textures": {
+		"dirt": "block/sand",
+		"side": "prehistoricnature:block/leptophloeum_trapdoor",
+		"metal": "block/coal_block",
+		"plank": "prehistoricnature:block/leptophloeum_planks"
+	}
+}
+
+

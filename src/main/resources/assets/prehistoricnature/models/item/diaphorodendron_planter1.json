@@ -1,0 +1,12 @@
+{
+  "parent": "prehistoricnature:block/base/planter1",
+  "textures": {
+    "dirt": "block/dirt",
+    "side": "prehistoricnature:block/diaphorodendron_trapdoor",
+    "metal": "prehistoricnature:block/diaphorodendron_planks",
+    "plank": "prehistoricnature:block/diaphorodendron_planks"
+  }
+}
+
+
+

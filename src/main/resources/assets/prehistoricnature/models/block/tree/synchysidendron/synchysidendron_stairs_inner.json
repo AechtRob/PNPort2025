@@ -1,0 +1,8 @@
+{
+ "parent": "block/inner_stairs",
+ "textures": {
+ "bottom": "prehistoricnature:block/synchysidendron_planks",
+ "side": "prehistoricnature:block/synchysidendron_planks",
+ "top": "prehistoricnature:block/synchysidendron_planks"
+ }
+}

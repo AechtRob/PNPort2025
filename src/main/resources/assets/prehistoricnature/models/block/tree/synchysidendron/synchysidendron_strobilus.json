@@ -1,0 +1,9 @@
+{
+ "parent": "block/cross",
+ "render_type": "cutout_mipped",
+ "textures": {
+ "cross": "prehistoricnature:block/synchysidendron_strobilus",
+ "particle": "prehistoricnature:block/synchysidendron_strobilus"
+ },
+ "render_type": "cutout"
+}

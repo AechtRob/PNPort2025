@@ -1,0 +1,13 @@
+{
+ "variants": {
+ "type=bottom": {
+ "model": "prehistoricnature:block/tree/synchysidendron/synchysidendron_slab"
+ },
+ "type=double": {
+ "model": "prehistoricnature:block/tree/synchysidendron/synchysidendron_planks"
+ },
+ "type=top": {
+ "model": "prehistoricnature:block/tree/synchysidendron/synchysidendron_slab_top"
+ }
+ }
+}

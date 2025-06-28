@@ -1,0 +1,7 @@
+{
+ "variants": {
+ "axis=y": { "model": "prehistoricnature:block/tree/pitys/pitys_wood" },
+ "axis=z": { "model": "prehistoricnature:block/tree/pitys/pitys_wood", "x": 90 },
+ "axis=x": { "model": "prehistoricnature:block/tree/pitys/pitys_wood", "x": 90, "y": 90 }
+ }
+}

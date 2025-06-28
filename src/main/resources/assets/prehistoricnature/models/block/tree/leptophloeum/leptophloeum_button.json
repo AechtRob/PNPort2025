@@ -1,0 +1,6 @@
+{
+ "parent": "block/button",
+ "textures": {
+ "texture": "prehistoricnature:block/leptophloeum_planks"
+ }
+}

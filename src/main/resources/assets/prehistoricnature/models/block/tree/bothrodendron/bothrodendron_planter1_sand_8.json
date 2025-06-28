@@ -1,0 +1,11 @@
+{
+	"parent": "prehistoricnature:block/base/planter1",
+	"textures": {
+		"dirt": "block/sand",
+		"side": "prehistoricnature:block/bothrodendron_trapdoor",
+		"metal": "block/quartz_block_side",
+		"plank": "prehistoricnature:block/bothrodendron_planks"
+	}
+}
+
+

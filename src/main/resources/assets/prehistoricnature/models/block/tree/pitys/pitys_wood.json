@@ -1,0 +1,7 @@
+{
+ "parent": "block/cube_column",
+ "textures": {
+ "end": "prehistoricnature:block/pitys_wood",
+ "side": "prehistoricnature:block/pitys_wood"
+ }
+}

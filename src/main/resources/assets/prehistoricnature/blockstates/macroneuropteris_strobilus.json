@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "normal": {
+      "model": "prehistoricnature:block/tree/macroneuropteris/macroneuropteris_strobilus"
+    },
+    "facing=north": {
+      "model": "prehistoricnature:block/tree/macroneuropteris/macroneuropteris_strobilus"
+    },
+    "facing=east": {
+      "model": "prehistoricnature:block/tree/macroneuropteris/macroneuropteris_strobilus",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "prehistoricnature:block/tree/macroneuropteris/macroneuropteris_strobilus",
+      "y": 180
+    },
+
+    "facing=west": {
+      "model": "prehistoricnature:block/tree/macroneuropteris/macroneuropteris_strobilus",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "prehistoricnature:block/tree/macroneuropteris/macroneuropteris_strobilus"
+    },
+    "facing=down": {
+      "model": "prehistoricnature:block/tree/macroneuropteris/macroneuropteris_strobilus",
+      "x": 180
+    }
+  }
+}

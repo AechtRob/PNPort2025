@@ -1,0 +1,7 @@
+{
+ "parent": "prehistoricnature:block/base/trapdoor_bottom",
+ "textures": {
+ "texture": "prehistoricnature:block/leptophloeum_trapdoor",
+ "planktexture": "prehistoricnature:block/leptophloeum_planks"
+ }
+}

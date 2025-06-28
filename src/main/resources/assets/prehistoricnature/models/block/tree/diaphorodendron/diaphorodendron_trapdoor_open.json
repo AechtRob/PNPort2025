@@ -1,0 +1,7 @@
+{
+ "parent": "prehistoricnature:block/base/trapdoor_open",
+ "textures": {
+ "texture": "prehistoricnature:block/diaphorodendron_trapdoor",
+ "planktexture": "prehistoricnature:block/diaphorodendron_planks"
+ }
+}

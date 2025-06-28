@@ -1,0 +1,7 @@
+{
+ "parent": "prehistoricnature:block/base/trapdoor_open",
+ "textures": {
+ "texture": "prehistoricnature:block/synchysidendron_trapdoor",
+ "planktexture": "prehistoricnature:block/synchysidendron_planks"
+ }
+}

@@ -1,0 +1,10 @@
+{
+	"parent": "prehistoricnature:block/base/planter2",
+	"textures": {
+		"dirt": "block/sand",
+		"metal": "prehistoricnature:block/iron_bridge",
+		"plank": "prehistoricnature:block/synchysidendron_planks"
+	}
+}
+
+

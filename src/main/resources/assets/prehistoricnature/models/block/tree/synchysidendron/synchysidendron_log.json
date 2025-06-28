@@ -1,0 +1,7 @@
+{
+ "parent": "block/cube_column",
+ "textures": {
+ "end": "prehistoricnature:block/synchysidendron_log_top",
+ "side": "prehistoricnature:block/synchysidendron_log"
+ }
+}

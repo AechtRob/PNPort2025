@@ -1,0 +1,7 @@
+{
+ "parent": "block/door_top_right_open",
+ "textures": {
+ "bottom": "prehistoricnature:block/synchysidendron_door_bottom",
+ "top": "prehistoricnature:block/synchysidendron_door_top"
+ }
+}

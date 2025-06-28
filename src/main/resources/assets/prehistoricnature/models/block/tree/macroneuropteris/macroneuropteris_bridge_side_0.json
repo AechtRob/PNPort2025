@@ -1,0 +1,7 @@
+{
+ "parent": "prehistoricnature:block/base/bridge_side",
+ "textures": {
+ "wood": "prehistoricnature:block/macroneuropteris_planks",
+ "metal": "prehistoricnature:block/macroneuropteris_planks"
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "parent": "block/stairs",
+ "textures": {
+ "bottom": "prehistoricnature:block/leptophloeum_planks",
+ "side": "prehistoricnature:block/leptophloeum_planks",
+ "top": "prehistoricnature:block/leptophloeum_planks"
+ }
+}

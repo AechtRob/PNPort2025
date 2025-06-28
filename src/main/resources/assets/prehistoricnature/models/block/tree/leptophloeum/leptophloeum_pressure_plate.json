@@ -1,0 +1,6 @@
+{
+ "parent": "block/pressure_plate_up",
+ "textures": {
+ "texture": "prehistoricnature:block/leptophloeum_planks"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "parent": "block/cube_column",
+ "textures": {
+ "end": "prehistoricnature:block/macroneuropteris_wood",
+ "side": "prehistoricnature:block/macroneuropteris_wood"
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "variants": {
+ "powered=false": {
+ "model": "prehistoricnature:block/tree/leptophloeum/leptophloeum_pressure_plate"
+ },
+ "powered=true": {
+ "model": "prehistoricnature:block/tree/leptophloeum/leptophloeum_pressure_plate_down"
+ }
+ }
+}

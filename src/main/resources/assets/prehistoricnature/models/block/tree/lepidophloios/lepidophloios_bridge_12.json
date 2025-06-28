@@ -1,0 +1,7 @@
+{
+ "parent": "prehistoricnature:block/base/bridge",
+ "textures": {
+ "wood": "prehistoricnature:block/lepidophloios_planks",
+ "metal": "block/redstone_block"
+ }
+}
