@@ -8,6 +8,7 @@ import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.BlocksTreeGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.BlocksTreeSciadopitys;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
@@ -26,7 +27,8 @@ public class ModBlockEntities {
                     ModSignBlockEntity::new,
                     BlocksTreeLepidodendron.LEPIDODENDRON_SIGN.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN.get(),
                     BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN.get(),
-                    BlocksTreeGangamopteris.GANGAMOPTERIS_SIGN.get(), BlocksTreeGangamopteris.GANGAMOPTERIS_WALL_SIGN.get()
+                    BlocksTreeGangamopteris.GANGAMOPTERIS_SIGN.get(), BlocksTreeGangamopteris.GANGAMOPTERIS_WALL_SIGN.get(),
+                    BlocksTreeSciadopitys.SCIADOPITYS_SIGN.get(), BlocksTreeSciadopitys.SCIADOPITYS_WALL_SIGN.get()
             )
     );
 
@@ -37,7 +39,8 @@ public class ModBlockEntities {
                     ModHangingSignBlockEntity::new,
                     BlocksTreeLepidodendron.LEPIDODENDRON_SIGN_HANGING.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN_HANGING.get(),
                     BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN_HANGING.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN_HANGING.get(),
-                    BlocksTreeGangamopteris.GANGAMOPTERIS_SIGN_HANGING.get(), BlocksTreeGangamopteris.GANGAMOPTERIS_WALL_SIGN_HANGING.get()
+                    BlocksTreeGangamopteris.GANGAMOPTERIS_SIGN_HANGING.get(), BlocksTreeGangamopteris.GANGAMOPTERIS_WALL_SIGN_HANGING.get(),
+                    BlocksTreeSciadopitys.SCIADOPITYS_SIGN_HANGING.get(), BlocksTreeSciadopitys.SCIADOPITYS_WALL_SIGN_HANGING.get()
 
             )
     );
@@ -55,7 +58,10 @@ public class ModBlockEntities {
                     BlocksTreeGlossopterisA.GLOSSOPTERISA_LITTERBIN.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_BENCH.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_BRIDGE.get(),
-                    BlocksTreeGangamopteris.GANGAMOPTERIS_LITTERBIN.get()
+                    BlocksTreeGangamopteris.GANGAMOPTERIS_LITTERBIN.get(),
+                    BlocksTreeSciadopitys.SCIADOPITYS_BENCH.get(),
+                    BlocksTreeSciadopitys.SCIADOPITYS_BRIDGE.get(),
+                    BlocksTreeSciadopitys.SCIADOPITYS_LITTERBIN.get()
 
             )
     );
@@ -70,7 +76,9 @@ public class ModBlockEntities {
                     BlocksTreeGlossopterisA.GLOSSOPTERISA_PLANTER_1.get(),
                     BlocksTreeGlossopterisA.GLOSSOPTERISA_PLANTER_2.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_PLANTER_1.get(),
-                    BlocksTreeGangamopteris.GANGAMOPTERIS_PLANTER_2.get()
+                    BlocksTreeGangamopteris.GANGAMOPTERIS_PLANTER_2.get(),
+                    BlocksTreeSciadopitys.SCIADOPITYS_PLANTER_1.get(),
+                    BlocksTreeSciadopitys.SCIADOPITYS_PLANTER_2.get()
             )
     );
 

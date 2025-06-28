@@ -26,8 +26,8 @@ public class PNTreeFeature extends TreeFeature {
     }
 
     public static boolean canLeavesReplaceBlock(TreeConfiguration treeConfiguration, RandomSource random, LevelSimulatedReader level, BlockPos pos) {
-        boolean flag = level.isStateAtPosition(pos, (p_372791_) -> {
-            return (Boolean)p_372791_.getValueOrElse(BlockStateProperties.PERSISTENT, false);
+        boolean flag = level.isStateAtPosition(pos, (state) -> {
+            return (Boolean)state.getValueOrElse(BlockStateProperties.PERSISTENT, false);
         });
         if (!flag && TreeFeature.validTreePos(level, pos)) {
             BlockState blockstate = treeConfiguration.foliageProvider.getState(random, pos);

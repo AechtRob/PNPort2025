@@ -1,0 +1,11 @@
+{
+	"parent": "prehistoricnature:block/base/planter1",
+	"textures": {
+		"dirt": "block/dirt",
+		"side": "prehistoricnature:block/sciadopitys_trapdoor",
+		"metal": "prehistoricnature:block/dominican_amber",
+		"plank": "prehistoricnature:block/sciadopitys_planks"
+	}
+}
+
+

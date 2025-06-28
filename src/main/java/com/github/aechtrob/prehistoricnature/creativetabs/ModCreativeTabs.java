@@ -7,6 +7,8 @@ import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifoli
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.ItemsTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ItemsTreeLepidodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.BlocksTreeSciadopitys;
+import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.ItemsTreeSciadopitys;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -39,6 +41,7 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_TRAPDOOR.get().asItem());
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_PRESSURE_PLATE.get().asItem());
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_BUTTON.get().asItem());
+
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_LOG.get().asItem());
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_WOOD.get().asItem());
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_STRIPPED_LOG.get().asItem());
@@ -52,6 +55,7 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_TRAPDOOR.get().asItem());
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_PRESSURE_PLATE.get().asItem());
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_BUTTON.get().asItem());
+
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_LOG.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_WOOD.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_STRIPPED_LOG.get().asItem());
@@ -66,6 +70,20 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_PRESSURE_PLATE.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_BUTTON.get().asItem());
 
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_LOG.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_WOOD.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_STRIPPED_LOG.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_STRIPPED_WOOD.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_PLANKS.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_STAIRS.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_SLAB.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_FENCE.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_FENCE_GATE.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_DOOR.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_TRAPDOOR.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_PRESSURE_PLATE.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_BUTTON.get().asItem());
+
                     }).build());
 
     public static final Supplier<CreativeModeTab> PLANTS_TAB = CREATIVE_MODE_TAB.register("plants_tab",
@@ -76,12 +94,19 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_LEAVES.get().asItem());
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_SAPLING.get().asItem());
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_STROBILUS.get().asItem());
+
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_LEAVES.get().asItem());
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_SAPLING.get().asItem());
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_STROBILUS.get().asItem());
+
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_LEAVES.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_SAPLING.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_STROBILUS.get().asItem());
+
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_LEAVES.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_SAPLING.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_FRUIT.get().asItem());
+                        output.accept(ItemsTreeSciadopitys.SCIADOPITYS_SEEDS.get());
                     }).build());
 
     public static final Supplier<CreativeModeTab> DECO_TAB = CREATIVE_MODE_TAB.register("deco_tab",
@@ -97,6 +122,7 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_PLANTER_2.get().asItem());
                         output.accept(ItemsTreeGangamopteris.GANGAMOPTERIS_SIGN.get().asItem());
                         output.accept(ItemsTreeGangamopteris.GANGAMOPTERIS_HANGING_SIGN.get().asItem());
+
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_BENCH.get().asItem());
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_LITTERBIN.get().asItem());
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_BRIDGE.get().asItem());
@@ -105,6 +131,7 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeGlossopterisA.GLOSSOPTERISA_PLANTER_2.get().asItem());
                         output.accept(ItemsTreeGlossopterisA.GLOSSOPTERISA_SIGN.get().asItem());
                         output.accept(ItemsTreeGlossopterisA.GLOSSOPTERISA_HANGING_SIGN.get().asItem());
+
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_BENCH.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_LITTERBIN.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_BRIDGE.get().asItem());
@@ -113,6 +140,15 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_2.get().asItem());
                         output.accept(ItemsTreeLepidodendron.LEPIDODENDRON_SIGN.get().asItem());
                         output.accept(ItemsTreeLepidodendron.LEPIDODENDRON_HANGING_SIGN.get().asItem());
+
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_BENCH.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_LITTERBIN.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_BRIDGE.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_LADDER.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_PLANTER_1.get().asItem());
+                        output.accept(BlocksTreeSciadopitys.SCIADOPITYS_PLANTER_2.get().asItem());
+                        output.accept(ItemsTreeSciadopitys.SCIADOPITYS_SIGN.get().asItem());
+                        output.accept(ItemsTreeSciadopitys.SCIADOPITYS_HANGING_SIGN.get().asItem());
 
                     }).build());
 
@@ -126,8 +162,12 @@ public class ModCreativeTabs {
                         
                         output.accept(ItemsTreeGlossopterisA.GLOSSOPTERISA_BOAT.get().asItem());
                         output.accept(ItemsTreeGlossopterisA.GLOSSOPTERISA_CHEST_BOAT.get().asItem());
+
                         output.accept(ItemsTreeLepidodendron.LEPIDODENDRON_BOAT.get().asItem());
                         output.accept(ItemsTreeLepidodendron.LEPIDODENDRON_CHEST_BOAT.get().asItem());
+
+                        output.accept(ItemsTreeSciadopitys.SCIADOPITYS_BOAT.get().asItem());
+                        output.accept(ItemsTreeSciadopitys.SCIADOPITYS_CHEST_BOAT.get().asItem());
                     }).build());
 
     public static void register(IEventBus eventBus) {
