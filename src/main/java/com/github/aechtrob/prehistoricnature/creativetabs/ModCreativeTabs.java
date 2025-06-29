@@ -1,6 +1,8 @@
 package com.github.aechtrob.prehistoricnature.creativetabs;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
+import com.github.aechtrob.prehistoricnature.world.tree.Bothrodendron.BlocksTreeBothrodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.Bothrodendron.ItemsTreeBothrodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.BlocksTreeGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.ItemsTreeGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
@@ -27,6 +29,19 @@ public class ModCreativeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(BlocksTreeLepidodendron.LEPIDODENDRON_PLANKS.get()))
                     .title(Component.translatable("itemGroup.prehistoricnature.building_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_LOG.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_WOOD.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_STRIPPED_LOG.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_STRIPPED_WOOD.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_PLANKS.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_STAIRS.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_SLAB.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_FENCE.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_FENCE_GATE.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_DOOR.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_TRAPDOOR.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_PRESSURE_PLATE.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_BUTTON.get().asItem());
 
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_LOG.get().asItem());
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_WOOD.get().asItem());
@@ -91,6 +106,10 @@ public class ModCreativeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "building_tab"))
                     .title(Component.translatable("itemGroup.prehistoricnature.plants_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_LEAVES.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_SAPLING.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_STROBILUS.get().asItem());
+                        
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_LEAVES.get().asItem());
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_SAPLING.get().asItem());
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_STROBILUS.get().asItem());
@@ -114,6 +133,15 @@ public class ModCreativeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "plants_tab"))
                     .title(Component.translatable("itemGroup.prehistoricnature.deco_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_BENCH.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_LITTERBIN.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_BRIDGE.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_LADDER.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_PLANTER_1.get().asItem());
+                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_PLANTER_2.get().asItem());
+                        output.accept(ItemsTreeBothrodendron.BOTHRODENDRON_SIGN.get().asItem());
+                        output.accept(ItemsTreeBothrodendron.BOTHRODENDRON_HANGING_SIGN.get().asItem());
+                        
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_BENCH.get().asItem());
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_LITTERBIN.get().asItem());
                         output.accept(BlocksTreeGangamopteris.GANGAMOPTERIS_BRIDGE.get().asItem());
@@ -157,6 +185,9 @@ public class ModCreativeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "deco_tab"))
                     .title(Component.translatable("itemGroup.prehistoricnature.misc_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ItemsTreeBothrodendron.BOTHRODENDRON_BOAT.get().asItem());
+                        output.accept(ItemsTreeBothrodendron.BOTHRODENDRON_CHEST_BOAT.get().asItem());
+                        
                         output.accept(ItemsTreeGangamopteris.GANGAMOPTERIS_BOAT.get().asItem());
                         output.accept(ItemsTreeGangamopteris.GANGAMOPTERIS_CHEST_BOAT.get().asItem());
                         

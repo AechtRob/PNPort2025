@@ -7,6 +7,8 @@ import net.minecraft.world.level.block.grower.TreeGrower;
 import java.util.Optional;
 
 public class PNTreeGrower {
+    public static final TreeGrower BOTHRODENDRON_GROWER = new TreeGrower(PrehistoricNature.MODID + ":bothrodendron_grower",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.BOTHRODENDRON_TREE), Optional.empty());
     public static final TreeGrower GANGAMOPTERIS_GROWER = new TreeGrower(PrehistoricNature.MODID + ":gangamopteris_grower",
             Optional.empty(), Optional.of(ModConfiguredFeatures.GANGAMOPTERIS_TREE), Optional.empty());
     public static final TreeGrower GLOSSOPTERISA_GROWER = new TreeGrower(PrehistoricNature.MODID + ":glossopteris_angustifolia_grower",
