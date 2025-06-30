@@ -5,6 +5,7 @@ import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModPlanterBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModSignBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModTrimmableBlockEntity;
+import com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron.BlocksTreeDiaphorodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.BlocksTreeGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
@@ -25,9 +26,10 @@ public class ModBlockEntities {
             // The block entity type.
             () -> new BlockEntityType<>(
                     ModSignBlockEntity::new,
-                    BlocksTreeLepidodendron.LEPIDODENDRON_SIGN.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN.get(),
-                    BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN.get(),
+                    BlocksTreeDiaphorodendron.DIAPHORODENDRON_SIGN.get(), BlocksTreeDiaphorodendron.DIAPHORODENDRON_WALL_SIGN.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_SIGN.get(), BlocksTreeGangamopteris.GANGAMOPTERIS_WALL_SIGN.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN.get(),
+                    BlocksTreeLepidodendron.LEPIDODENDRON_SIGN.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN.get(),
                     BlocksTreeSciadopitys.SCIADOPITYS_SIGN.get(), BlocksTreeSciadopitys.SCIADOPITYS_WALL_SIGN.get()
             )
     );
@@ -37,9 +39,10 @@ public class ModBlockEntities {
             // The block entity type.
             () -> new BlockEntityType<>(
                     ModHangingSignBlockEntity::new,
-                    BlocksTreeLepidodendron.LEPIDODENDRON_SIGN_HANGING.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN_HANGING.get(),
-                    BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN_HANGING.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN_HANGING.get(),
+                    BlocksTreeDiaphorodendron.DIAPHORODENDRON_SIGN_HANGING.get(), BlocksTreeDiaphorodendron.DIAPHORODENDRON_WALL_SIGN_HANGING.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_SIGN_HANGING.get(), BlocksTreeGangamopteris.GANGAMOPTERIS_WALL_SIGN_HANGING.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN_HANGING.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN_HANGING.get(),
+                    BlocksTreeLepidodendron.LEPIDODENDRON_SIGN_HANGING.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN_HANGING.get(),
                     BlocksTreeSciadopitys.SCIADOPITYS_SIGN_HANGING.get(), BlocksTreeSciadopitys.SCIADOPITYS_WALL_SIGN_HANGING.get()
 
             )
@@ -50,15 +53,18 @@ public class ModBlockEntities {
             // The block entity type.
             () -> new BlockEntityType<>(
                     ModTrimmableBlockEntity::new,
-                    BlocksTreeLepidodendron.LEPIDODENDRON_BENCH.get(),
-                    BlocksTreeLepidodendron.LEPIDODENDRON_BRIDGE.get(),
-                    BlocksTreeLepidodendron.LEPIDODENDRON_LITTERBIN.get(),
-                    BlocksTreeGlossopterisA.GLOSSOPTERISA_BENCH.get(),
-                    BlocksTreeGlossopterisA.GLOSSOPTERISA_BRIDGE.get(),
-                    BlocksTreeGlossopterisA.GLOSSOPTERISA_LITTERBIN.get(),
+                    BlocksTreeDiaphorodendron.DIAPHORODENDRON_BENCH.get(),
+                    BlocksTreeDiaphorodendron.DIAPHORODENDRON_BRIDGE.get(),
+                    BlocksTreeDiaphorodendron.DIAPHORODENDRON_LITTERBIN.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_BENCH.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_BRIDGE.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_LITTERBIN.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_BENCH.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_BRIDGE.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_LITTERBIN.get(),
+                    BlocksTreeLepidodendron.LEPIDODENDRON_BENCH.get(),
+                    BlocksTreeLepidodendron.LEPIDODENDRON_BRIDGE.get(),
+                    BlocksTreeLepidodendron.LEPIDODENDRON_LITTERBIN.get(),
                     BlocksTreeSciadopitys.SCIADOPITYS_BENCH.get(),
                     BlocksTreeSciadopitys.SCIADOPITYS_BRIDGE.get(),
                     BlocksTreeSciadopitys.SCIADOPITYS_LITTERBIN.get()
@@ -71,12 +77,14 @@ public class ModBlockEntities {
             // The block entity type.
             () -> new BlockEntityType<>(
                     ModPlanterBlockEntity::new,
-                    BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_1.get(),
-                    BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_2.get(),
-                    BlocksTreeGlossopterisA.GLOSSOPTERISA_PLANTER_1.get(),
-                    BlocksTreeGlossopterisA.GLOSSOPTERISA_PLANTER_2.get(),
+                    BlocksTreeDiaphorodendron.DIAPHORODENDRON_PLANTER_1.get(),
+                    BlocksTreeDiaphorodendron.DIAPHORODENDRON_PLANTER_2.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_PLANTER_1.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_PLANTER_2.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_PLANTER_1.get(),
+                    BlocksTreeGlossopterisA.GLOSSOPTERISA_PLANTER_2.get(),
+                    BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_1.get(),
+                    BlocksTreeLepidodendron.LEPIDODENDRON_PLANTER_2.get(),
                     BlocksTreeSciadopitys.SCIADOPITYS_PLANTER_1.get(),
                     BlocksTreeSciadopitys.SCIADOPITYS_PLANTER_2.get()
             )

@@ -13,6 +13,7 @@ public class ModConfiguredFeatures {
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES =
             DeferredRegister.create(Registries.CONFIGURED_FEATURE, PrehistoricNature.MODID);
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DIAPHORODENDRON_TREE = createKey("diaphorodendron_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GANGAMOPTERIS_TREE = createKey("gangamopteris_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GLOSSOPTERISA_TREE = createKey("glossopteris_angustifolia_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LEPIDODENDRON_TREE = createKey("lepidodendron_tree");
