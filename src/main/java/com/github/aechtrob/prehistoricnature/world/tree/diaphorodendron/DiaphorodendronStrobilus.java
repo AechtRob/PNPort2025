@@ -1,14 +1,12 @@
-package com.github.aechtrob.prehistoricnature.world.tree.gangamopteris;
+package com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron;
 
 import com.github.aechtrob.prehistoricnature.block.blockbase.PNDecayableDirectional;
-import com.github.aechtrob.prehistoricnature.block.interfaces.IEnvelopable;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DirectionalBlock;
@@ -18,7 +16,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Map;
 
-public class GangamopterisStrobilus extends PNDecayableDirectional implements IEnvelopable {
+public class DiaphorodendronStrobilus extends PNDecayableDirectional {
     private static final Map<Direction, VoxelShape> AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.0D, 4.0D, 8.0D, 12.0D, 12.0D, 16.0D),
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 8.0D),
@@ -28,7 +26,7 @@ public class GangamopterisStrobilus extends PNDecayableDirectional implements IE
             Direction.DOWN, Block.box(4.0D, 8.0D, 4.0D, 12.0D, 16.0D, 12.0D)
     ));
 
-    public GangamopterisStrobilus(Properties properties) {
+    public DiaphorodendronStrobilus(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(PERSISTENT, Boolean.valueOf(false)).setValue(DirectionalBlock.FACING, Direction.DOWN));
     }
@@ -37,7 +35,7 @@ public class GangamopterisStrobilus extends PNDecayableDirectional implements IE
     public void randomTick(BlockState state, ServerLevel world, BlockPos pos, RandomSource rand) {
         if (!state.getValue(PERSISTENT)) {
             if (world.getBlockState(pos.relative(state.getValue(DirectionalBlock.FACING).getOpposite())).getBlock()
-                != BlocksTreeGangamopteris.GANGAMOPTERIS_LEAVES.value()) {
+                != BlocksTreeDiaphorodendron.DIAPHORODENDRON_LEAVES.value()) {
                 world.removeBlock(pos, false);
             }
         }
@@ -67,19 +65,5 @@ public class GangamopterisStrobilus extends PNDecayableDirectional implements IE
         return 30;
     }
 
-    @Override
-    public BlockState planted() {
-        return BlocksTreeGangamopteris.GANGAMOPTERIS_SAPLING.get().defaultBlockState();
-    }
-
-    @Override
-    public int offsetY() {
-        return 1;
-    }
-
-    @Override
-    public Item blockItem() {
-        return null;
-    }
 }
 
