@@ -1,7 +1,6 @@
 package com.github.aechtrob.prehistoricnature.world.tree;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
-import com.github.aechtrob.prehistoricnature.world.tree.Bothrodendron.BothrodendronFoliagePlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron.DiaphorodendronFoliagePlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.GangamopterisFoliagePlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.GlossopterisAFoliagePlacer;
@@ -17,7 +16,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class PNFoliagePlacerType {
     public static final DeferredRegister<FoliagePlacerType<?>> FOLIAGE_PLACER_TYPES = DeferredRegister.create(Registries.FOLIAGE_PLACER_TYPE, PrehistoricNature.MODID);
 
-    public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> BOTHRODENDRON_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("bothrodendron_foliage_placer", () -> new FoliagePlacerType<>(BothrodendronFoliagePlacer.CODEC));
     public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> DIAPHORODENDRON_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("diaphorodendron_foliage_placer", () -> new FoliagePlacerType<>(DiaphorodendronFoliagePlacer.CODEC));
     public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> GANGAMOPTERIS_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("gangamopteris_foliage_placer", () -> new FoliagePlacerType<>(GangamopterisFoliagePlacer.CODEC));
     public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> GLOSSOPTERISA_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("glossopteris_angustifolia_foliage_placer", () -> new FoliagePlacerType<>(GlossopterisAFoliagePlacer.CODEC));
