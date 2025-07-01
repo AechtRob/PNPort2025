@@ -1,4 +1,4 @@
-package com.github.aechtrob.prehistoricnature.world.tree.gangamopteris;
+package com.github.aechtrob.prehistoricnature.world.tree.lepidophloios;
 
 import com.github.aechtrob.prehistoricnature.block.blockbase.PNDecayableDirectional;
 import com.google.common.collect.ImmutableMap;
@@ -16,7 +16,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Map;
 
-public class GangamopterisStrobilus extends PNDecayableDirectional {
+public class LepidophloiosStrobilus extends PNDecayableDirectional {
     private static final Map<Direction, VoxelShape> AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.0D, 4.0D, 8.0D, 12.0D, 12.0D, 16.0D),
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 8.0D),
@@ -26,7 +26,7 @@ public class GangamopterisStrobilus extends PNDecayableDirectional {
             Direction.DOWN, Block.box(4.0D, 8.0D, 4.0D, 12.0D, 16.0D, 12.0D)
     ));
 
-    public GangamopterisStrobilus(Properties properties) {
+    public LepidophloiosStrobilus(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(PERSISTENT, Boolean.valueOf(false)).setValue(DirectionalBlock.FACING, Direction.DOWN));
     }
@@ -35,7 +35,7 @@ public class GangamopterisStrobilus extends PNDecayableDirectional {
     public void randomTick(BlockState state, ServerLevel world, BlockPos pos, RandomSource rand) {
         if (!state.getValue(PERSISTENT)) {
             if (world.getBlockState(pos.relative(state.getValue(DirectionalBlock.FACING).getOpposite())).getBlock()
-                != BlocksTreeGangamopteris.GANGAMOPTERIS_LEAVES.value()) {
+                != BlocksTreeLepidophloios.LEPIDOPHLOIOS_LEAVES.value()) {
                 world.removeBlock(pos, false);
             }
         }

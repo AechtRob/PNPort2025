@@ -1,10 +1,12 @@
 {
   "replace": false,
   "values": [
+    "prehistoricnature:bothrodendron_leaves",
     "prehistoricnature:diaphorodendron_leaves",
     "prehistoricnature:gangamopteris_leaves",
     "prehistoricnature:glossopteris_angustifolia_leaves",
     "prehistoricnature:lepidodendron_leaves",
+    "prehistoricnature:lepidophloios_leaves",
     "prehistoricnature:sciadopitys_leaves"
   ]
 }

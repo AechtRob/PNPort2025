@@ -7,6 +7,8 @@ import net.minecraft.world.level.block.grower.TreeGrower;
 import java.util.Optional;
 
 public class PNTreeGrower {
+    public static final TreeGrower BOTHRODENDRON_GROWER = new TreeGrower(PrehistoricNature.MODID + ":bothrodendron_grower",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.BOTHRODENDRON_TREE), Optional.empty());
     public static final TreeGrower DIAPHORODENDRON_GROWER = new TreeGrower(PrehistoricNature.MODID + ":diaphorodendron_grower",
             Optional.empty(), Optional.of(ModConfiguredFeatures.DIAPHORODENDRON_TREE), Optional.empty());
     public static final TreeGrower GANGAMOPTERIS_GROWER = new TreeGrower(PrehistoricNature.MODID + ":gangamopteris_grower",
@@ -15,6 +17,8 @@ public class PNTreeGrower {
             Optional.empty(), Optional.of(ModConfiguredFeatures.GLOSSOPTERISA_TREE), Optional.empty());
     public static final TreeGrower LEPIDODENDRON_GROWER = new TreeGrower(PrehistoricNature.MODID + ":lepidodendron_grower",
             Optional.empty(), Optional.of(ModConfiguredFeatures.LEPIDODENDRON_TREE), Optional.empty());
+    public static final TreeGrower LEPIDOPHLOIOS_GROWER = new TreeGrower(PrehistoricNature.MODID + ":lepidophloios_grower",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.LEPIDOPHLOIOS_TREE), Optional.empty());
     public static final TreeGrower SCIADOPITYS_GROWER = new TreeGrower(PrehistoricNature.MODID + ":sciadopitys_grower",
             Optional.empty(), Optional.of(ModConfiguredFeatures.SCIADOPITYS_TREE), Optional.empty());
 

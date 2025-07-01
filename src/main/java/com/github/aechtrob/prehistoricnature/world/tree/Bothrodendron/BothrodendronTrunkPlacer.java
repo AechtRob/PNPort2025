@@ -191,7 +191,7 @@ public class BothrodendronTrunkPlacer extends TrunkPlacer {
 
             int counter = 0;
             while (counter <= height) {
-                placeLog(pos.above(1 + counter), logState);
+                placeLog(pos.above(counter), logState);
                 counter += 1;
             }
             return height;
