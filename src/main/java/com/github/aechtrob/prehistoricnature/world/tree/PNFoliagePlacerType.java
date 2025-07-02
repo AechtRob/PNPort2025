@@ -5,6 +5,7 @@ import com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron.Diaphoro
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.GangamopterisFoliagePlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.GlossopterisAFoliagePlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.LepidodendronFoliagePlacer;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.LepidophloiosFoliagePlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.SciadopitysFoliagePlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
@@ -19,6 +20,7 @@ public class PNFoliagePlacerType {
     public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> GANGAMOPTERIS_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("gangamopteris_foliage_placer", () -> new FoliagePlacerType<>(GangamopterisFoliagePlacer.CODEC));
     public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> GLOSSOPTERISA_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("glossopteris_angustifolia_foliage_placer", () -> new FoliagePlacerType<>(GlossopterisAFoliagePlacer.CODEC));
     public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> LEPIDODENDRON_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("lepidodendron_foliage_placer", () -> new FoliagePlacerType<>(LepidodendronFoliagePlacer.CODEC));
+    public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> LEPIDOPHLOIOS_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("lepidophloios_foliage_placer", () -> new FoliagePlacerType<>(LepidophloiosFoliagePlacer.CODEC));
     public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> SCIADOPITYS_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("sciadopitys_foliage_placer", () -> new FoliagePlacerType<>(SciadopitysFoliagePlacer.CODEC));
 
     public static void register(IEventBus eventBus) {
