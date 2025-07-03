@@ -5,6 +5,7 @@ import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModPlanterBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModSignBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModTrimmableBlockEntity;
+import com.github.aechtrob.prehistoricnature.world.tree.bothrodendron.BlocksTreeBothrodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron.BlocksTreeDiaphorodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.BlocksTreeGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
@@ -27,6 +28,7 @@ public class ModBlockEntities {
             // The block entity type.
             () -> new BlockEntityType<>(
                     ModSignBlockEntity::new,
+                    BlocksTreeBothrodendron.BOTHRODENDRON_SIGN.get(), BlocksTreeBothrodendron.BOTHRODENDRON_WALL_SIGN.get(),
                     BlocksTreeDiaphorodendron.DIAPHORODENDRON_SIGN.get(), BlocksTreeDiaphorodendron.DIAPHORODENDRON_WALL_SIGN.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_SIGN.get(), BlocksTreeGangamopteris.GANGAMOPTERIS_WALL_SIGN.get(),
                     BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN.get(),
@@ -41,6 +43,7 @@ public class ModBlockEntities {
             // The block entity type.
             () -> new BlockEntityType<>(
                     ModHangingSignBlockEntity::new,
+                    BlocksTreeBothrodendron.BOTHRODENDRON_SIGN_HANGING.get(), BlocksTreeBothrodendron.BOTHRODENDRON_WALL_SIGN_HANGING.get(),
                     BlocksTreeDiaphorodendron.DIAPHORODENDRON_SIGN_HANGING.get(), BlocksTreeDiaphorodendron.DIAPHORODENDRON_WALL_SIGN_HANGING.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_SIGN_HANGING.get(), BlocksTreeGangamopteris.GANGAMOPTERIS_WALL_SIGN_HANGING.get(),
                     BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN_HANGING.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN_HANGING.get(),
@@ -56,6 +59,9 @@ public class ModBlockEntities {
             // The block entity type.
             () -> new BlockEntityType<>(
                     ModTrimmableBlockEntity::new,
+                    BlocksTreeBothrodendron.BOTHRODENDRON_BENCH.get(),
+                    BlocksTreeBothrodendron.BOTHRODENDRON_BRIDGE.get(),
+                    BlocksTreeBothrodendron.BOTHRODENDRON_LITTERBIN.get(),
                     BlocksTreeDiaphorodendron.DIAPHORODENDRON_BENCH.get(),
                     BlocksTreeDiaphorodendron.DIAPHORODENDRON_BRIDGE.get(),
                     BlocksTreeDiaphorodendron.DIAPHORODENDRON_LITTERBIN.get(),
@@ -84,6 +90,8 @@ public class ModBlockEntities {
             // The block entity type.
             () -> new BlockEntityType<>(
                     ModPlanterBlockEntity::new,
+                    BlocksTreeBothrodendron.BOTHRODENDRON_PLANTER_1.get(),
+                    BlocksTreeBothrodendron.BOTHRODENDRON_PLANTER_2.get(),
                     BlocksTreeDiaphorodendron.DIAPHORODENDRON_PLANTER_1.get(),
                     BlocksTreeDiaphorodendron.DIAPHORODENDRON_PLANTER_2.get(),
                     BlocksTreeGangamopteris.GANGAMOPTERIS_PLANTER_1.get(),
