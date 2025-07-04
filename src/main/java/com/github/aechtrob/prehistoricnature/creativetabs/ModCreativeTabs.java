@@ -16,6 +16,8 @@ import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.BlocksTree
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.ItemsTreeLepidophloios;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.BlocksTreeSciadopitys;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.ItemsTreeSciadopitys;
+import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.BlocksTreeSynchysidendron;
+import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.ItemsTreeSynchysidendron;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -133,6 +135,19 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_PRESSURE_PLATE.get().asItem());
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_BUTTON.get().asItem());
 
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_LOG.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_WOOD.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_STRIPPED_LOG.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_STRIPPED_WOOD.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_PLANKS.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_STAIRS.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_SLAB.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_FENCE.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_FENCE_GATE.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_DOOR.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_TRAPDOOR.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_PRESSURE_PLATE.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_BUTTON.get().asItem());
                     }).build());
 
     public static final Supplier<CreativeModeTab> PLANTS_TAB = CREATIVE_MODE_TAB.register("plants_tab",
@@ -168,6 +183,10 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_SAPLING.get().asItem());
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_FRUIT.get().asItem());
                         output.accept(ItemsTreeSciadopitys.SCIADOPITYS_SEEDS.get());
+
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_LEAVES.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_SAPLING.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_STROBILUS.get().asItem());
                     }).build());
 
     public static final Supplier<CreativeModeTab> DECO_TAB = CREATIVE_MODE_TAB.register("deco_tab",
@@ -238,6 +257,14 @@ public class ModCreativeTabs {
                         output.accept(ItemsTreeSciadopitys.SCIADOPITYS_SIGN.get().asItem());
                         output.accept(ItemsTreeSciadopitys.SCIADOPITYS_HANGING_SIGN.get().asItem());
 
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_BENCH.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_LITTERBIN.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_BRIDGE.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_LADDER.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_PLANTER_1.get().asItem());
+                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_PLANTER_2.get().asItem());
+                        output.accept(ItemsTreeSynchysidendron.SYNCHYSIDENDRON_SIGN.get().asItem());
+                        output.accept(ItemsTreeSynchysidendron.SYNCHYSIDENDRON_HANGING_SIGN.get().asItem());
                     }).build());
 
     public static final Supplier<CreativeModeTab> MISC_TAB = CREATIVE_MODE_TAB.register("misc_tab",
@@ -267,6 +294,9 @@ public class ModCreativeTabs {
 
                         output.accept(ItemsTreeSciadopitys.SCIADOPITYS_BOAT.get().asItem());
                         output.accept(ItemsTreeSciadopitys.SCIADOPITYS_CHEST_BOAT.get().asItem());
+
+                        output.accept(ItemsTreeSynchysidendron.SYNCHYSIDENDRON_BOAT.get().asItem());
+                        output.accept(ItemsTreeSynchysidendron.SYNCHYSIDENDRON_CHEST_BOAT.get().asItem());
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -21,5 +21,7 @@ public class PNTreeGrower {
             Optional.empty(), Optional.of(ModConfiguredFeatures.LEPIDOPHLOIOS_TREE), Optional.empty());
     public static final TreeGrower SCIADOPITYS_GROWER = new TreeGrower(PrehistoricNature.MODID + ":sciadopitys_grower",
             Optional.empty(), Optional.of(ModConfiguredFeatures.SCIADOPITYS_TREE), Optional.empty());
+    public static final TreeGrower SYNCHYSIDENDRON_GROWER = new TreeGrower(PrehistoricNature.MODID + ":synchysidendron_grower",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.SYNCHYSIDENDRON_TREE), Optional.empty());
 
 }

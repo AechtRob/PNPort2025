@@ -8,6 +8,7 @@ import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifoli
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.LepidodendronFoliagePlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.LepidophloiosFoliagePlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.SciadopitysFoliagePlacer;
+import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.SynchysidendronFoliagePlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 import net.neoforged.bus.api.IEventBus;
@@ -24,6 +25,7 @@ public class PNFoliagePlacerType {
     public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> LEPIDODENDRON_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("lepidodendron_foliage_placer", () -> new FoliagePlacerType<>(LepidodendronFoliagePlacer.CODEC));
     public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> LEPIDOPHLOIOS_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("lepidophloios_foliage_placer", () -> new FoliagePlacerType<>(LepidophloiosFoliagePlacer.CODEC));
     public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> SCIADOPITYS_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("sciadopitys_foliage_placer", () -> new FoliagePlacerType<>(SciadopitysFoliagePlacer.CODEC));
+    public static DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<?>> SYNCHYSIDENDRON_FOLIAGE_PLACER_HOLDER = FOLIAGE_PLACER_TYPES.register("synchysidendron_foliage_placer", () -> new FoliagePlacerType<>(SynchysidendronFoliagePlacer.CODEC));
 
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACER_TYPES.register(eventBus);

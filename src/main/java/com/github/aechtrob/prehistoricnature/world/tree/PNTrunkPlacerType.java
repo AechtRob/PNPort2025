@@ -8,6 +8,7 @@ import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifoli
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.LepidodendronTrunkPlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.LepidophloiosTrunkPlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.SciadopitysTrunkPlacer;
+import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.SynchysidendronTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 import net.neoforged.bus.api.IEventBus;
@@ -25,6 +26,7 @@ public class PNTrunkPlacerType {
     public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> LEPIDODENDRON_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("lepidodendron_trunk_placer", () -> new TrunkPlacerType<>(LepidodendronTrunkPlacer.CODEC));
     public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> LEPIDOPHLOIOS_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("lepidophloios_trunk_placer", () -> new TrunkPlacerType<>(LepidophloiosTrunkPlacer.CODEC));
     public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> SCIADOPITYS_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("sciadopitys_trunk_placer", () -> new TrunkPlacerType<>(SciadopitysTrunkPlacer.CODEC));
+    public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> SYNCHYSIDENDRON_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("synchysidendron_trunk_placer", () -> new TrunkPlacerType<>(SynchysidendronTrunkPlacer.CODEC));
 
     public static void register(IEventBus eventBus) {
         TRUNK_PLACER_TYPES.register(eventBus);
