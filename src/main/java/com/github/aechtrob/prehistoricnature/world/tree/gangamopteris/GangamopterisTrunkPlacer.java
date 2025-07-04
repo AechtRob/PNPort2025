@@ -484,7 +484,7 @@ public class GangamopterisTrunkPlacer extends TrunkPlacer {
         height += (double) (2) + Math.round((Math.random() * 12) / 6) + Math.round((Math.random() * 12) / 6)
                 + Math.round((Math.random() * 6) / 3);
         int counter = 0;
-        while (counter <= height) {
+        while (counter <= height - 1) {
             placeLog(pos.above(1 + counter), logState);
             counter += 1;
         }

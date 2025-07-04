@@ -349,7 +349,7 @@ public class DiaphorodendronTrunkPlacer extends TrunkPlacer {
         height = 18;
         height = height + (int) Math.round((Math.random() * 100D) / 8D);
         int counter = 0;
-        while (counter <= height) {
+        while (counter <= height - 1) {
             placeLog(pos.above(1 + counter), logState);
             counter += 1;
         }

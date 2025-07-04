@@ -222,7 +222,7 @@ public class SciadopitysTrunkPlacer extends TrunkPlacer {
             height = height + (int)(Math.random() * 5);
         }
         int counter = 0;
-        while (counter <= height) {
+        while (counter <= height - 1) {
             placeLog(pos.above(1 + counter), logState);
             counter += 1;
         }

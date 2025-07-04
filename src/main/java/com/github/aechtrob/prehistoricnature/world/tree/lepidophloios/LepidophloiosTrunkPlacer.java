@@ -283,8 +283,8 @@ public class LepidophloiosTrunkPlacer extends TrunkPlacer {
             height += (double) (14) + Math.round((Math.random() * 8) / 2) + Math.round((Math.random() * 8) / 2)
                     + Math.round((Math.random() * 6) / 2);
             int counter = 0;
-            while (counter <= height) {
-                placeLog(pos.above( 1 + counter), logState);
+            while (counter <= height - 1) {
+                placeLog(pos.above(1 + counter), logState);
                 counter += 1;
             }
             return height;

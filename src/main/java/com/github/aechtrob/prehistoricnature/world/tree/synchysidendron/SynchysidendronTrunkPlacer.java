@@ -80,8 +80,7 @@ public class SynchysidendronTrunkPlacer extends TrunkPlacer {
         placeLog(pos.north().above(1), woodState);
         height = placeTrunk(pos, logState, height);
 
-
-     int counter = height ++;
+        int counter = height ++;
         //Leaves:
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(1, height, 0), 0, true));
@@ -98,8 +97,8 @@ public class SynchysidendronTrunkPlacer extends TrunkPlacer {
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, height +1, -2), 0, true));
 
 
-  counter = counter - 4;
-       placeLog(pos.offset(0, counter, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
+        counter = counter - 4;
+        placeLog(pos.offset(0, counter, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
         placeLog(pos.offset(1, counter, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.X));
         placeLog(pos.offset(-1, counter, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.X));
         placeLog(pos.offset(0, counter, 1), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
@@ -113,10 +112,10 @@ public class SynchysidendronTrunkPlacer extends TrunkPlacer {
         placeLog(pos.offset(0, counter + 1, 3), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
         placeLog(pos.offset(0, counter + 1, -3), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
 
-list.add(new FoliagePlacer.FoliageAttachment(pos.offset(4, counter + 2, 0), 0, true));
-list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-4, counter + 2, 0), 0, true));
- list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter + 2, 4), 0, true));
-list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter + 2, -4), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(4, counter + 2, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-4, counter + 2, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter + 2, 4), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter + 2, -4), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(4, counter + 2, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-4, counter + 2, 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter + 2, 4), 0, true));
@@ -155,12 +154,8 @@ list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter + 2, -4), 0, 
         placeRandomFoliage(pos.offset(4, counter + 1, 0),0.4, 1, list);
         placeRandomFoliage(pos.offset(-4, counter + 1, 0),0.4, 1, list);
 
-
-
-
-
         counter = counter - 3;
-  placeLog(pos.offset(0, counter, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
+        placeLog(pos.offset(0, counter, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
         placeLog(pos.offset(1, counter, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.X));
         placeLog(pos.offset(-1, counter, 0), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.X));
         placeLog(pos.offset(0, counter, 1), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
@@ -174,13 +169,13 @@ list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter + 2, -4), 0, 
         placeLog(pos.offset(0, counter , 3), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
         placeLog(pos.offset(0,  counter , -3), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
 
-list.add(new FoliagePlacer.FoliageAttachment(pos.offset(4, counter, 0), 0, true));
-list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-4, counter , 0), 0, true));
-list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter , 4), 0, true));
-list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter, -4), 0, true));
-list.add(new FoliagePlacer.FoliageAttachment(pos.offset(5, counter, 0), 0, true));
-list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-5, counter , 0), 0, true));
-list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter , 5), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(4, counter, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-4, counter , 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter , 4), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter, -4), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(5, counter, 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-5, counter , 0), 0, true));
+        list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter , 5), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter, -5), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter +1, 4), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter +1, -4), 0, true));
@@ -208,8 +203,6 @@ list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter , 5), 0, true
         placeRandomFoliage(pos.offset(0, counter -1, 5),0.4, 1, list);
         placeRandomFoliage(pos.offset(0, counter -1, -5),0.4, 1, list);
 
-
-
         return list;
     }
 
@@ -225,8 +218,8 @@ list.add(new FoliagePlacer.FoliageAttachment(pos.offset(0, counter , 5), 0, true
             height += (double) (16) + Math.round((Math.random() * 10) / 2) + Math.round((Math.random() * 8) / 2)
                     + Math.round((Math.random() * 8) / 2);
             int counter = 0;
-            while (counter <= height) {
-                placeLog(pos.above( 1 + counter), logState);
+            while (counter <= height - 1) {
+                placeLog(pos.above(1 + counter), logState);
                 counter += 1;
             }
             return height;

@@ -279,7 +279,7 @@ public class LepidodendronTrunkPlacer extends TrunkPlacer {
         height += (int) ((18D) + Math.round((Math.random() * 10D) / 2D) + Math.round((Math.random() * 10D) / 2D)
                 + Math.round((Math.random() * 10D) / 2D));
         int counter = 0;
-        while (counter <= height) {
+        while (counter <= height - 1) {
             placeLog(pos.above(1 + counter), logState);
             counter += 1;
         }
