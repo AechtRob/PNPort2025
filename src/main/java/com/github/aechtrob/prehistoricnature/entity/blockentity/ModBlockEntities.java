@@ -12,6 +12,7 @@ import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifoli
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.BlocksTreeLepidophloios;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.BlocksTreeSciadopitys;
+import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.BlocksTreeSynchysidendron;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
@@ -34,8 +35,10 @@ public class ModBlockEntities {
                     BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN.get(),
                     BlocksTreeLepidodendron.LEPIDODENDRON_SIGN.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN.get(),
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_SIGN.get(), BlocksTreeLepidophloios.LEPIDOPHLOIOS_WALL_SIGN.get(),
-                    BlocksTreeSciadopitys.SCIADOPITYS_SIGN.get(), BlocksTreeSciadopitys.SCIADOPITYS_WALL_SIGN.get()
-            )
+                    BlocksTreeSciadopitys.SCIADOPITYS_SIGN.get(), BlocksTreeSciadopitys.SCIADOPITYS_WALL_SIGN.get(),
+                    BlocksTreeSynchysidendron.SYNCHYSIDENDRON_SIGN.get(), BlocksTreeSynchysidendron.SYNCHYSIDENDRON_WALL_SIGN.get()
+
+                    )
     );
 
     public static final Supplier<BlockEntityType<ModHangingSignBlockEntity>> PN_HANGING_SIGN = BLOCK_ENTITIES.register(
@@ -49,9 +52,10 @@ public class ModBlockEntities {
                     BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN_HANGING.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN_HANGING.get(),
                     BlocksTreeLepidodendron.LEPIDODENDRON_SIGN_HANGING.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN_HANGING.get(),
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_SIGN_HANGING.get(), BlocksTreeLepidophloios.LEPIDOPHLOIOS_WALL_SIGN_HANGING.get(),
-                    BlocksTreeSciadopitys.SCIADOPITYS_SIGN_HANGING.get(), BlocksTreeSciadopitys.SCIADOPITYS_WALL_SIGN_HANGING.get()
+                    BlocksTreeSciadopitys.SCIADOPITYS_SIGN_HANGING.get(), BlocksTreeSciadopitys.SCIADOPITYS_WALL_SIGN_HANGING.get(),
+                    BlocksTreeSynchysidendron.SYNCHYSIDENDRON_SIGN_HANGING.get(), BlocksTreeSynchysidendron.SYNCHYSIDENDRON_WALL_SIGN_HANGING.get()
 
-            )
+                    )
     );
 
     public static final Supplier<BlockEntityType<ModTrimmableBlockEntity>> PN_TRIMMABLE = BLOCK_ENTITIES.register(
@@ -79,7 +83,10 @@ public class ModBlockEntities {
                     BlocksTreeSciadopitys.SCIADOPITYS_LITTERBIN.get(),
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_BENCH.get(),
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_BRIDGE.get(),
-                    BlocksTreeLepidophloios.LEPIDOPHLOIOS_LITTERBIN.get()
+                    BlocksTreeLepidophloios.LEPIDOPHLOIOS_LITTERBIN.get(),
+                    BlocksTreeSynchysidendron.SYNCHYSIDENDRON_BENCH.get(),
+                    BlocksTreeSynchysidendron.SYNCHYSIDENDRON_BRIDGE.get(),
+                    BlocksTreeSynchysidendron.SYNCHYSIDENDRON_LITTERBIN.get()
 
 
             )
@@ -103,7 +110,9 @@ public class ModBlockEntities {
                     BlocksTreeSciadopitys.SCIADOPITYS_PLANTER_1.get(),
                     BlocksTreeSciadopitys.SCIADOPITYS_PLANTER_2.get(),
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_PLANTER_1.get(),
-                    BlocksTreeLepidophloios.LEPIDOPHLOIOS_PLANTER_2.get()
+                    BlocksTreeLepidophloios.LEPIDOPHLOIOS_PLANTER_2.get(),
+                    BlocksTreeSynchysidendron.SYNCHYSIDENDRON_PLANTER_1.get(),
+                    BlocksTreeSynchysidendron.SYNCHYSIDENDRON_PLANTER_2.get()
             )
     );
 

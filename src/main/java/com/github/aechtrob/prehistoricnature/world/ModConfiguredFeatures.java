@@ -20,6 +20,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> LEPIDODENDRON_TREE = createKey("lepidodendron_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LEPIDOPHLOIOS_TREE = createKey("lepidophloios_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SCIADOPITYS_TREE = createKey("sciadopitys_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SYNCHYSIDENDRON_TREE = createKey("synchysidendron_tree");
 
     public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name) {
         return ResourceKey.create(CONFIGURED_FEATURES.getRegistryKey(), ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, name));
