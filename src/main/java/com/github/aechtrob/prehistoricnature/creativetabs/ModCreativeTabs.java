@@ -1,6 +1,7 @@
 package com.github.aechtrob.prehistoricnature.creativetabs;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
+import com.github.aechtrob.prehistoricnature.block.ModBlocks;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
 import com.github.aechtrob.prehistoricnature.world.tree.bothrodendron.BlocksTreeBothrodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.bothrodendron.ItemsTreeBothrodendron;
@@ -187,6 +188,9 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_LEAVES.get().asItem());
                         output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_SAPLING.get().asItem());
                         output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_STROBILUS.get().asItem());
+
+                        output.accept(ModBlocks.MACROCYSTIS.get().asItem());
+                        output.accept(ModBlocks.NEREOCYSTIS.get().asItem());
                     }).build());
 
     public static final Supplier<CreativeModeTab> DECO_TAB = CREATIVE_MODE_TAB.register("deco_tab",

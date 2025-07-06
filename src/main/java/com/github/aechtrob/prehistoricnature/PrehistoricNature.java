@@ -1,5 +1,6 @@
 package com.github.aechtrob.prehistoricnature;
 
+import com.github.aechtrob.prehistoricnature.block.ModBlocks;
 import com.github.aechtrob.prehistoricnature.creativetabs.ModCreativeTabs;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.ModBlockEntities;
 import com.github.aechtrob.prehistoricnature.entity.entity.ModEntities;
@@ -117,6 +118,7 @@ public class PrehistoricNature
         ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         ItemsTreeBothrodendron.register(modEventBus);
         BlocksTreeBothrodendron.register(modEventBus);

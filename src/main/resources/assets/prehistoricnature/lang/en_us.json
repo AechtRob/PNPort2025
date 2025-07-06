@@ -6,6 +6,11 @@
 
   "item.prehistoricnature.collection_envelope": "Spore and Seed Collection Envelope",
 
+  "item.prehistoricnature.macrocystis": "Macrocystis Kelp",
+  "block.prehistoricnature.macrocystis_plant": "Macrocystis Kelp",
+  "item.prehistoricnature.nereocystis": "Nereocystis Kelp",
+  "block.prehistoricnature.nereocystis_plant": "Nereocystis Kelp",
+
   "item.prehistoricnature.bothrodendron_sapling": "Bothrodendron Sapling",
   "item.prehistoricnature.bothrodendron_leaves": "Bothrodendron Leaves",
   "item.prehistoricnature.bothrodendron_log": "Bothrodendron Log",
@@ -254,4 +259,5 @@
   "item.prehistoricnature.synchysidendron_ladder": "Synchysidendron Ladder",
   "item.prehistoricnature.synchysidendron_planter1": "Synchysidendron Planter Style 1",
   "item.prehistoricnature.synchysidendron_planter2": "Synchysidendron Planter Style 2"
+
 }
