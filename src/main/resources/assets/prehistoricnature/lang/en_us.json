@@ -4,6 +4,10 @@
   "itemGroup.prehistoricnature.deco_tab": "Prehistoric Nature Decorations",
   "itemGroup.prehistoricnature.misc_tab": "Prehistoric Nature Misc",
 
+  "item.prehistoricnature.macrocystis": "Macrocystis Kelp",
+  "block.prehistoricnature.macrocystis_plant": "Macrocystis Kelp",
+  "item.prehistoricnature.nereocystis": "Nereocystis Kelp",
+  "block.prehistoricnature.nereocystis_plant": "Nereocystis Kelp",
 
   "block.prehistoricnature.Gangamopteris_sapling": "Gangamopteris Sapling",
   "block.prehistoricnature.Gangamopteris_leaves": "Gangamopteris Leaves",
