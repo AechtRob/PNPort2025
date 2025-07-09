@@ -1,12 +1,15 @@
 package com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron;
 
 import com.github.aechtrob.prehistoricnature.block.blockbase.PNDecayableDirectional;
+import com.github.aechtrob.prehistoricnature.block.interfaces.IEnvelopable;
+import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.BlocksTreeGangamopteris;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DirectionalBlock;
@@ -16,7 +19,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Map;
 
-public class DiaphorodendronStrobilus extends PNDecayableDirectional {
+public class DiaphorodendronStrobilus extends PNDecayableDirectional implements IEnvelopable {
     private static final Map<Direction, VoxelShape> AABBS = Maps.newEnumMap(ImmutableMap.of(
             Direction.NORTH, Block.box(4.0D, 4.0D, 8.0D, 12.0D, 12.0D, 16.0D),
             Direction.SOUTH, Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 8.0D),
@@ -63,6 +66,11 @@ public class DiaphorodendronStrobilus extends PNDecayableDirectional {
     @Override
     public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
         return 30;
+    }
+
+    @Override
+    public ItemStack envelopeMimicsItemPlacement() {
+        return new ItemStack(BlocksTreeDiaphorodendron.DIAPHORODENDRON_SAPLING.get(), 1);
     }
 
 }

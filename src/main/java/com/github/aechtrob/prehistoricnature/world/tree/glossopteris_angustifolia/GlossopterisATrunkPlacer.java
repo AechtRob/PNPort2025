@@ -468,7 +468,7 @@ public class GlossopterisATrunkPlacer extends TrunkPlacer {
         height += (double) (2) + Math.round((Math.random() * 10) / 5) + Math.round((Math.random() * 10) / 5)
                 + Math.round((Math.random() * 10) / 5);
         int counter = 0;
-        while (counter <= height - 1) {
+        while (counter <= height + 1) {
             placeLog(pos.above(1 + counter), logState);
             counter += 1;
         }

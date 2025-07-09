@@ -1,13 +1,9 @@
 package com.github.aechtrob.prehistoricnature.block.interfaces;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.item.ItemStack;
 
 public interface IEnvelopable {
 
-    BlockState planted();
+    ItemStack envelopeMimicsItemPlacement();
 
-    int offsetY();
-
-    Item blockItem();
 }
