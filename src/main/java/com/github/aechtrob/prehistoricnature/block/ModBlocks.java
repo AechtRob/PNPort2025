@@ -2,13 +2,18 @@ package com.github.aechtrob.prehistoricnature.block;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -39,6 +44,36 @@ public class ModBlocks {
                 @Override
                 protected Block getBodyBlock() {
                     return NEREOCYSTIS_PLANT.get();
+                }
+
+                @Override
+                protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource p_221353_) {
+                    if (state.getValue(AGE) < 25 && net.neoforged.neoforge.common.CommonHooks.canCropGrow(level, pos.relative(this.growthDirection), state, p_221353_.nextDouble() < 0.14D)) {
+                        BlockPos blockpos = pos.relative(this.growthDirection);
+                        if (this.canGrowInto(level.getBlockState(blockpos)) && this.canGrowInto(level.getBlockState(blockpos.above()))) {
+                            level.setBlockAndUpdate(blockpos, this.getGrowIntoState(state, level.random));
+                            net.neoforged.neoforge.common.CommonHooks.fireCropGrowPost(level, blockpos, level.getBlockState(blockpos));
+                        }
+                    }
+                }
+
+                @Override
+                public boolean isValidBonemealTarget(LevelReader p_255931_, BlockPos pos, BlockState p_256550_) {
+                    return this.canGrowInto(p_255931_.getBlockState(pos.relative(this.growthDirection)))
+                        && this.canGrowInto(p_255931_.getBlockState(pos.relative(this.growthDirection).above()));
+                }
+
+                @Override
+                public void performBonemeal(ServerLevel p_221337_, RandomSource p_221338_, BlockPos p_221339_, BlockState p_221340_) {
+                    BlockPos blockpos = p_221339_.relative(this.growthDirection);
+                    int i = Math.min(p_221340_.getValue(AGE) + 1, 25);
+                    int j = this.getBlocksToGrowWhenBonemealed(p_221338_);
+
+                    for (int k = 0; k < j && this.canGrowInto(p_221337_.getBlockState(blockpos)) && this.canGrowInto(p_221337_.getBlockState(blockpos.above())); k++) {
+                        p_221337_.setBlockAndUpdate(blockpos, p_221340_.setValue(AGE, i));
+                        blockpos = blockpos.relative(this.growthDirection);
+                        i = Math.min(i + 1, 25);
+                    }
                 }
             });
     public static final DeferredBlock<KelpPlantBlock> NEREOCYSTIS_PLANT = registerBlockNoItem("nereocystis_plant",
