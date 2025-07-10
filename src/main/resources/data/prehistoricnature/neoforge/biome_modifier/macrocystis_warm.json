@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": ["minecraft:deep_lukewarm_ocean","minecraft:lukewarm_ocean"],
+  "features": "prehistoricnature:macrocystis_warm",
+  "step": "vegetal_decoration"
+}

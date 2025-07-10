@@ -10,6 +10,7 @@ import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatRenderer
 import com.github.aechtrob.prehistoricnature.item.ModItems;
 import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
 import com.github.aechtrob.prehistoricnature.world.ModConfiguredFeatures;
+import com.github.aechtrob.prehistoricnature.world.ModFeatures;
 import com.github.aechtrob.prehistoricnature.world.tree.PNFoliagePlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTrunkPlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.bothrodendron.BlocksTreeBothrodendron;
@@ -155,6 +156,7 @@ public class PrehistoricNature
         PNTrunkPlacerType.register(modEventBus);
         PNFoliagePlacerType.register(modEventBus);
         ModConfiguredFeatures.register(modEventBus);
+        ModFeatures.register(modEventBus);
 
 
         // Register the item to a creative tab
