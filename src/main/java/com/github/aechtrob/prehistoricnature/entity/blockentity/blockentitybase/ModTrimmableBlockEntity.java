@@ -2,8 +2,6 @@ package com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase
 
 import com.github.aechtrob.prehistoricnature.entity.blockentity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -11,6 +9,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.AABB;
 
 import java.util.List;
@@ -33,17 +33,17 @@ public class ModTrimmableBlockEntity extends BlockEntity {
 
     // Read values from the passed CompoundTag here.
     @Override
-    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
+    public void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
         // Will default to 0 if absent. See the NBT article for more information.
-        this.variant = tag.getInt("variant").get();
+        this.variant = input.getInt("variant").get();
     }
 
     // Save values into the passed CompoundTag here.
     @Override
-    public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
-        tag.putInt("variant", this.variant);
+    public void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        output.putInt("variant", this.variant);
     }
 
     public int getVariant() {

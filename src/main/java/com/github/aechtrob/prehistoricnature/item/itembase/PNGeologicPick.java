@@ -13,11 +13,6 @@ public class PNGeologicPick extends Item {
     }
 
     @Override
-    public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
-        return true;
-    }
-
-    @Override
     public boolean supportsEnchantment(ItemStack stack, Holder<Enchantment> enchantment) {
         if (enchantment.is(ResourceLocation.fromNamespaceAndPath("minecraft","fortune"))
                 || enchantment.is(ResourceLocation.fromNamespaceAndPath("minecraft","mending"))
