@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "": [
+   {"model": "prehistoricnature:block/fossil_stone_devonian" },
+   {"model": "prehistoricnature:block/fossil_stone_devonian", "y": 180 },
+   {"model": "prehistoricnature:block/fossil_stone_devonian_var" },
+   {"model": "prehistoricnature:block/fossil_stone_devonian_var", "y": 180 }
+  ]
+ }
+}

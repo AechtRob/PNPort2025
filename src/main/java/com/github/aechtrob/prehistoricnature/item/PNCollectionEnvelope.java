@@ -21,7 +21,7 @@ public class PNCollectionEnvelope extends Item {
         super(properties);
     }
 
-    private static ItemStack getProperties(final ItemStack stack) {
+    public static ItemStack getProperties(final ItemStack stack) {
         ItemContainerContents contents = stack.getOrDefault(
                 DataComponents.CONTAINER,
                 null

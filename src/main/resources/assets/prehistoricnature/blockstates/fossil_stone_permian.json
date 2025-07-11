@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "": [
+   {"model": "prehistoricnature:block/fossil_stone_permian" },
+   {"model": "prehistoricnature:block/fossil_stone_permian", "y": 180 },
+   {"model": "prehistoricnature:block/fossil_stone_permian_var" },
+   {"model": "prehistoricnature:block/fossil_stone_permian_var", "y": 180 }
+  ]
+ }
+}

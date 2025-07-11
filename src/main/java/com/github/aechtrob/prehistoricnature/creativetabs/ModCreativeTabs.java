@@ -37,6 +37,20 @@ public class ModCreativeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(BlocksTreeLepidodendron.LEPIDODENDRON_PLANKS.get()))
                     .title(Component.translatable("itemGroup.prehistoricnature.building_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.PRECAMBRIAN_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.CAMBRIAN_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.PORDOVICIAN_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.SILURIAN_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.DEVONIAN_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.CARBONIFEROUS_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.PERMIAN_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.TRIASSIC_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.JURASSIC_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.CRETAECEOUS_EARLY_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.CRETAECEOUS_LATE_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.PALEOGENE_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.NEOGENE_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.PLEISTOCENE_FOSSIL_STONE.get().asItem());
 
                         output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_LOG.get().asItem());
                         output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_WOOD.get().asItem());
@@ -276,6 +290,7 @@ public class ModCreativeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "deco_tab"))
                     .title(Component.translatable("itemGroup.prehistoricnature.misc_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.GEOLOGIC_PICK.get().asItem());
                         output.accept(ModItems.COLLECTION_ENVELOPE.get().asItem());
 
                         output.accept(ItemsTreeBothrodendron.BOTHRODENDRON_BOAT.get().asItem());

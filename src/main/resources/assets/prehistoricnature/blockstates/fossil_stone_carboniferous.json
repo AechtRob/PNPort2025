@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "": [
+   {"model": "prehistoricnature:block/fossil_stone_carboniferous" },
+   {"model": "prehistoricnature:block/fossil_stone_carboniferous", "y": 180 },
+   {"model": "prehistoricnature:block/fossil_stone_carboniferous_var" },
+   {"model": "prehistoricnature:block/fossil_stone_carboniferous_var", "y": 180 }
+  ]
+ }
+}

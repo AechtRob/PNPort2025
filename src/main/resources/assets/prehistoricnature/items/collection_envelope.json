@@ -1,6 +1,20 @@
 {
  "model": {
- "type": "model",
- "model": "prehistoricnature:item/collection_envelope"
+  "type": "minecraft:range_dispatch",
+  "property": "prehistoricnature:envelope_status",
+  "scale": 1.0,
+  "fallback": {
+    "type": "minecraft:model",
+    "model": "prehistoricnature:item/collection_envelope"
+  },
+  "entries": [
+   {
+    "threshold": 1.0,
+    "model": {
+     "type": "minecraft:model",
+     "model": "prehistoricnature:item/collection_envelope_full"
+    }
+   }
+  ]
  }
 }

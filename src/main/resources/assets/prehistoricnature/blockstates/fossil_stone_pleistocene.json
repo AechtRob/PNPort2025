@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "": [
+   {"model": "prehistoricnature:block/fossil_stone_pleistocene" },
+   {"model": "prehistoricnature:block/fossil_stone_pleistocene", "y": 180 },
+   {"model": "prehistoricnature:block/fossil_stone_pleistocene_var" },
+   {"model": "prehistoricnature:block/fossil_stone_pleistocene_var", "y": 180 }
+  ]
+ }
+}

@@ -1,6 +1,7 @@
 package com.github.aechtrob.prehistoricnature.block;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
+import com.github.aechtrob.prehistoricnature.block.blockbase.PNFossilStoneBlock;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
@@ -23,6 +24,54 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(PrehistoricNature.MODID);
 
+    //Blocks:
+    //-------
+    public static final DeferredBlock<PNFossilStoneBlock> PRECAMBRIAN_FOSSIL_STONE = registerBlock("fossil_stone_precambrian",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_precambrian"))), 14){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> CAMBRIAN_FOSSIL_STONE = registerBlock("fossil_stone_cambrian",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_cambrian"))), 13){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> PORDOVICIAN_FOSSIL_STONE = registerBlock("fossil_stone_ordovician",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_ordovician"))), 12){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> SILURIAN_FOSSIL_STONE = registerBlock("fossil_stone_silurian",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_silurian"))), 11){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> DEVONIAN_FOSSIL_STONE = registerBlock("fossil_stone_devonian",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_devonian"))), 10){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> CARBONIFEROUS_FOSSIL_STONE = registerBlock("fossil_stone_carboniferous",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_carboniferous"))), 9){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> PERMIAN_FOSSIL_STONE = registerBlock("fossil_stone_permian",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_permian"))), 8){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> TRIASSIC_FOSSIL_STONE = registerBlock("fossil_stone_triassic",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_triassic"))), 7){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> JURASSIC_FOSSIL_STONE = registerBlock("fossil_stone_jurassic",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_jurassic"))), 6){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> CRETAECEOUS_EARLY_FOSSIL_STONE = registerBlock("fossil_stone_cretaceous_early",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_cretaceous_early"))), 5){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> CRETAECEOUS_LATE_FOSSIL_STONE = registerBlock("fossil_stone_cretaceous_late",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_cretaceous_late"))), 4){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> PALEOGENE_FOSSIL_STONE = registerBlock("fossil_stone_paleogene",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_paleogene"))), 3){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> NEOGENE_FOSSIL_STONE = registerBlock("fossil_stone_neogene",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_neogene"))), 2){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> PLEISTOCENE_FOSSIL_STONE = registerBlock("fossil_stone_pleistocene",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_pleistocene"))), 1){}
+    );
+
+
+    //Plants:
+    //-------
     public static final DeferredBlock<KelpBlock> MACROCYSTIS = registerBlock("macrocystis",
             () -> new KelpBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.KELP).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "macrocystis")))){
                 @Override
