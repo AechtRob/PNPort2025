@@ -13,6 +13,27 @@ public class ModConfiguredFeatures {
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES =
             DeferredRegister.create(Registries.CONFIGURED_FEATURE, PrehistoricNature.MODID);
 
+
+    //Blocks:
+    //-------
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_PRECAMBRIAN = createKey("fossil_stone_precambrian_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_CAMBRIAN = createKey("fossil_stone_cambrian_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_ORDOVICIAN = createKey("fossil_stone_ordovician_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_SILURIAN = createKey("fossil_stone_silurian_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_DEVONIAN = createKey("fossil_stone_devonian_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_CARBONIFEROUS = createKey("fossil_stone_carboniferous_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_PERMIAN = createKey("fossil_stone_permian_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_TRIASSIC = createKey("fossil_stone_triassic_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_JURASSIC = createKey("fossil_stone_jurassic_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_CRETACEOUS_EARLY = createKey("fossil_stone_cretaceous_early_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_CRETACEOUS_LATE = createKey("fossil_stone_cretaceous_late_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_PALEOGENE = createKey("fossil_stone_paleogene_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_NEOGENE = createKey("fossil_stone_neogene_overworld");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FOSSIL_STONE_PLEISTOCENE = createKey("fossil_stone_plaistocene_overworld");
+
+
+    //Plants:
+    //-------
     public static final ResourceKey<ConfiguredFeature<?, ?>> MACROCYSTIS = createKey("macrocystis");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NEREOCYSTIS = createKey("nereocuystis");
 

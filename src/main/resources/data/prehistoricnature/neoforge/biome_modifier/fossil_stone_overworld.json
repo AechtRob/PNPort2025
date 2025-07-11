@@ -1,0 +1,21 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#c:is_overworld",
+  "features": [
+    "prehistoricnature:fossil_stone_precambrian_overworld",
+    "prehistoricnature:fossil_stone_cambrian_overworld",
+    "prehistoricnature:fossil_stone_ordovician_overworld",
+    "prehistoricnature:fossil_stone_silurian_overworld",
+    "prehistoricnature:fossil_stone_devonian_overworld",
+    "prehistoricnature:fossil_stone_carboniferous_overworld",
+    "prehistoricnature:fossil_stone_permian_overworld",
+    "prehistoricnature:fossil_stone_triassic_overworld",
+    "prehistoricnature:fossil_stone_jurassic_overworld",
+    "prehistoricnature:fossil_stone_cretaceous_early_overworld",
+    "prehistoricnature:fossil_stone_cretaceous_late_overworld",
+    "prehistoricnature:fossil_stone_paleogene_overworld",
+    "prehistoricnature:fossil_stone_neogene_overworld",
+    "prehistoricnature:fossil_stone_pleistocene_overworld"
+  ],
+  "step": "underground_ores"
+}

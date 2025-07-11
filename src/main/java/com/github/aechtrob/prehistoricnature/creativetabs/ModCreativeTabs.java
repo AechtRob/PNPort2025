@@ -52,6 +52,21 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.NEOGENE_FOSSIL_STONE.get().asItem());
                         output.accept(ModBlocks.PLEISTOCENE_FOSSIL_STONE.get().asItem());
 
+                        output.accept(ModBlocks.PRECAMBRIAN_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.CAMBRIAN_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.ORDOVICIAN_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.SILURIAN_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.DEVONIAN_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.CARBONIFEROUS_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.PERMIAN_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.TRIASSIC_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.JURASSIC_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.CRETACEOUS_EARLY_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.CRETACEOUS_LATE_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.PALEOGENE_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.NEOGENE_FOSSIL_STONE_DEEPSLATE.get().asItem());
+                        output.accept(ModBlocks.PLEISTOCENE_FOSSIL_STONE_DEEPSLATE.get().asItem());
+
                         output.accept(ModItems.PRECAMBRIAN_RAW_FOSSIL.get());
                         output.accept(ModItems.CAMBRIAN_RAW_FOSSIL.get());
                         output.accept(ModItems.ORDOVICIAN_RAW_FOSSIL.get());

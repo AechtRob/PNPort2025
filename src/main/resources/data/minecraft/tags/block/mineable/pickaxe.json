@@ -14,6 +14,20 @@
     "prehistoricnature:fossil_stone_cretaceous_late",
     "prehistoricnature:fossil_stone_paleogene",
     "prehistoricnature:fossil_stone_neogene",
-    "prehistoricnature:fossil_stone_pleistocene"
+    "prehistoricnature:fossil_stone_pleistocene",
+    "prehistoricnature:fossil_stone_precambrian_deepslate",
+    "prehistoricnature:fossil_stone_cambrian_deepslate",
+    "prehistoricnature:fossil_stone_ordovician_deepslate",
+    "prehistoricnature:fossil_stone_silurian_deepslate",
+    "prehistoricnature:fossil_stone_devonian_deepslate",
+    "prehistoricnature:fossil_stone_carboniferous_deepslate",
+    "prehistoricnature:fossil_stone_permian_deepslate",
+    "prehistoricnature:fossil_stone_triassic_deepslate",
+    "prehistoricnature:fossil_stone_jurassic_deepslate",
+    "prehistoricnature:fossil_stone_cretaceous_early_deepslate",
+    "prehistoricnature:fossil_stone_cretaceous_late_deepslate",
+    "prehistoricnature:fossil_stone_paleogene_deepslate",
+    "prehistoricnature:fossil_stone_neogene_deepslate",
+    "prehistoricnature:fossil_stone_pleistocene_deepslate"
   ]
 }

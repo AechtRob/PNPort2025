@@ -69,6 +69,49 @@ public class ModBlocks {
             () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_pleistocene"))), 1, 14){}
     );
 
+    public static final DeferredBlock<PNFossilStoneBlock> PRECAMBRIAN_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_precambrian_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_precambrian_deepslate"))), 14, 1){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> CAMBRIAN_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_cambrian_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_cambrian_deepslate"))), 13, 2){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> ORDOVICIAN_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_ordovician_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_ordovician_deepslate"))), 12, 3){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> SILURIAN_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_silurian_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_silurian_deepslate"))), 11, 4){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> DEVONIAN_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_devonian_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_devonian_deepslate"))), 10, 5){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> CARBONIFEROUS_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_carboniferous_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_carboniferous_deepslate"))), 9, 6){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> PERMIAN_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_permian_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_permian_deepslate"))), 8, 7){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> TRIASSIC_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_triassic_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_triassic_deepslate"))), 7, 8){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> JURASSIC_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_jurassic_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_jurassic_deepslate"))), 6, 9){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> CRETACEOUS_EARLY_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_cretaceous_early_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_cretaceous_early_deepslate"))), 5, 10){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> CRETACEOUS_LATE_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_cretaceous_late_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_cretaceous_late_deepslate"))), 4, 11){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> PALEOGENE_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_paleogene_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_paleogene_deepslate"))), 3, 12){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> NEOGENE_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_neogene_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_neogene_deepslate"))), 2, 13){}
+    );
+    public static final DeferredBlock<PNFossilStoneBlock> PLEISTOCENE_FOSSIL_STONE_DEEPSLATE = registerBlock("fossil_stone_pleistocene_deepslate",
+            () -> new PNFossilStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_stone_pleistocene_deepslate"))), 1, 14){}
+    );
+
 
     //Plants:
     //-------

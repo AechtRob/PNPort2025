@@ -1,0 +1,57 @@
+{
+ "type": "minecraft:block",
+ "pools": [
+   {
+   "bonus_rolls": 0.0,
+   "entries": [
+   {
+ "type": "minecraft:alternatives",
+ "children": [
+   {
+   "type": "minecraft:item",
+   "conditions": [
+     {
+     "condition": "minecraft:any_of",
+     "terms": [
+       {
+       "condition": "minecraft:match_tool",
+       "predicate": {
+         "items": "prehistoricnature:geologic_pick"
+       }
+       }
+     ]
+     }
+ ],
+ "functions": [
+   {
+     "enchantment": "minecraft:fortune",
+     "formula": "minecraft:binomial_with_bonus_count",
+     "parameters": {
+       "extra": 0,
+       "probability": 100
+     },
+     "function": "minecraft:apply_bonus"
+   },
+   {
+     "function": "minecraft:explosion_decay"
+   }
+ ],
+ "name": "prehistoricnature:fossil_drop_cretaceous_late"
+ },
+  {
+   "type": "minecraft:item",
+   "conditions": [
+    {
+     "condition": "minecraft:survives_explosion"
+    }
+   ],
+   "name": "prehistoricnature:fossil_stone_cretaceous_late_deepslate"
+  }
+ ]
+ }
+ ],
+ "rolls": 1.0
+ }
+ ],
+ "random_sequence": "prehistoricnature:blocks/fossil_stone_cretaceous_late_deepslate"
+}
