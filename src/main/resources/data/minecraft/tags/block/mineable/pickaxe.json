@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "prehistoricnature:fossil_stone_precambrian",
+    "prehistoricnature:fossil_stone_cambrian",
+    "prehistoricnature:fossil_stone_ordovician",
+    "prehistoricnature:fossil_stone_silurian",
+    "prehistoricnature:fossil_stone_devonian",
+    "prehistoricnature:fossil_stone_carboniferous",
+    "prehistoricnature:fossil_stone_permian",
+    "prehistoricnature:fossil_stone_triassic",
+    "prehistoricnature:fossil_stone_jurassic",
+    "prehistoricnature:fossil_stone_cretaceous_early",
+    "prehistoricnature:fossil_stone_cretaceous_late",
+    "prehistoricnature:fossil_stone_paleogene",
+    "prehistoricnature:fossil_stone_neogene",
+    "prehistoricnature:fossil_stone_pleistocene"
+  ]
+}

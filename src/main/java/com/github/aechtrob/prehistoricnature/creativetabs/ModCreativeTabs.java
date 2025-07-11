@@ -39,18 +39,33 @@ public class ModCreativeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.PRECAMBRIAN_FOSSIL_STONE.get().asItem());
                         output.accept(ModBlocks.CAMBRIAN_FOSSIL_STONE.get().asItem());
-                        output.accept(ModBlocks.PORDOVICIAN_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.ORDOVICIAN_FOSSIL_STONE.get().asItem());
                         output.accept(ModBlocks.SILURIAN_FOSSIL_STONE.get().asItem());
                         output.accept(ModBlocks.DEVONIAN_FOSSIL_STONE.get().asItem());
                         output.accept(ModBlocks.CARBONIFEROUS_FOSSIL_STONE.get().asItem());
                         output.accept(ModBlocks.PERMIAN_FOSSIL_STONE.get().asItem());
                         output.accept(ModBlocks.TRIASSIC_FOSSIL_STONE.get().asItem());
                         output.accept(ModBlocks.JURASSIC_FOSSIL_STONE.get().asItem());
-                        output.accept(ModBlocks.CRETAECEOUS_EARLY_FOSSIL_STONE.get().asItem());
-                        output.accept(ModBlocks.CRETAECEOUS_LATE_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.CRETACEOUS_EARLY_FOSSIL_STONE.get().asItem());
+                        output.accept(ModBlocks.CRETACEOUS_LATE_FOSSIL_STONE.get().asItem());
                         output.accept(ModBlocks.PALEOGENE_FOSSIL_STONE.get().asItem());
                         output.accept(ModBlocks.NEOGENE_FOSSIL_STONE.get().asItem());
                         output.accept(ModBlocks.PLEISTOCENE_FOSSIL_STONE.get().asItem());
+
+                        output.accept(ModItems.PRECAMBRIAN_RAW_FOSSIL.get());
+                        output.accept(ModItems.CAMBRIAN_RAW_FOSSIL.get());
+                        output.accept(ModItems.ORDOVICIAN_RAW_FOSSIL.get());
+                        output.accept(ModItems.SILURIAN_RAW_FOSSIL.get());
+                        output.accept(ModItems.DEVONIAN_RAW_FOSSIL.get());
+                        output.accept(ModItems.CARBONIFEROUS_RAW_FOSSIL.get());
+                        output.accept(ModItems.PERMIAN_RAW_FOSSIL.get());
+                        output.accept(ModItems.TRIASSIC_RAW_FOSSIL.get());
+                        output.accept(ModItems.JURASSIC_RAW_FOSSIL.get());
+                        output.accept(ModItems.CRETACEOUS_EARLY_RAW_FOSSIL.get());
+                        output.accept(ModItems.CRETACEOUS_LATE_RAW_FOSSIL.get());
+                        output.accept(ModItems.PALEOGENE_RAW_FOSSIL.get());
+                        output.accept(ModItems.NEOGENE_RAW_FOSSIL.get());
+                        output.accept(ModItems.PLEISTOCENE_RAW_FOSSIL.get());
 
                         output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_LOG.get().asItem());
                         output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_WOOD.get().asItem());
