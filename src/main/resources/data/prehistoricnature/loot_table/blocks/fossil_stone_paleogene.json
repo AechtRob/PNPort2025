@@ -36,7 +36,7 @@
      "function": "minecraft:explosion_decay"
    }
  ],
- "name": "prehistoricnature:fossil_drop_precambrian"
+ "name": "prehistoricnature:fossil_drop_paleogene"
  },
   {
    "type": "minecraft:item",
@@ -45,7 +45,7 @@
      "condition": "minecraft:survives_explosion"
     }
    ],
-   "name": "prehistoricnature:fossil_stone_precambrian"
+   "name": "prehistoricnature:fossil_stone_paleogene"
   }
  ]
  }
@@ -53,5 +53,5 @@
  "rolls": 1.0
  }
  ],
- "random_sequence": "prehistoricnature:blocks/fossil_stone_precambrian"
+ "random_sequence": "prehistoricnature:blocks/fossil_stone_paleogene"
 }
