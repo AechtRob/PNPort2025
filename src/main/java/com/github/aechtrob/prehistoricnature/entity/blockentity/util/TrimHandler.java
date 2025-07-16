@@ -1,4 +1,4 @@
-package com.github.aechtrob.prehistoricnature.entity.blockentity;
+package com.github.aechtrob.prehistoricnature.entity.blockentity.util;
 
 import com.github.aechtrob.prehistoricnature.block.blockbase.PNBaseTrimmableBlock;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModTrimmableBlockEntity;

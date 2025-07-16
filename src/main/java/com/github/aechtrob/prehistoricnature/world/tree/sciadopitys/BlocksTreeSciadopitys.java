@@ -69,7 +69,7 @@ public class BlocksTreeSciadopitys {
                 @Override
                 protected List<ItemStack> getDrops(BlockState state, LootParams.Builder params) {
                     List<ItemStack> returnList = super.getDrops(state, params);
-                    if ((Math.random() >= 0.96) && (PrehistoricNatureConfig.doPropagation.getAsBoolean())) {
+                    if ((Math.random() >= 0.96) && (PrehistoricNatureConfig.doPropagation)) {
                         BlockState fruitState = SCIADOPITYS_FRUIT.get().defaultBlockState();
                         Vec3 vec3 = params.getParameter(LootContextParams.ORIGIN);
                         BlockPos pos = new BlockPos((int)vec3.x, (int)vec3.y, (int)vec3.z);

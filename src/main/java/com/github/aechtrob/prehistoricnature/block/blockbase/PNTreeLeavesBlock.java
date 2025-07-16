@@ -23,7 +23,7 @@ public class PNTreeLeavesBlock extends TintedParticleLeavesBlock implements IEnv
 
     @Override
     protected List<ItemStack> getDrops(BlockState state, LootParams.Builder params) {
-        if (PrehistoricNatureConfig.doPropagation.getAsBoolean()) {
+        if (PrehistoricNatureConfig.doPropagation) {
             return getPNModdedDrops();
         }
         return super.getDrops(state, params);

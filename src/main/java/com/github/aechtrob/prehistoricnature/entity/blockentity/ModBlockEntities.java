@@ -1,6 +1,7 @@
 package com.github.aechtrob.prehistoricnature.entity.blockentity;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
+import com.github.aechtrob.prehistoricnature.block.ModBlocks;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModHangingSignBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModPlanterBlockEntity;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModSignBlockEntity;
@@ -26,7 +27,6 @@ public class ModBlockEntities {
 
     public static final Supplier<BlockEntityType<ModSignBlockEntity>> PN_SIGN = BLOCK_ENTITIES.register(
             "pn_sign",
-            // The block entity type.
             () -> new BlockEntityType<>(
                     ModSignBlockEntity::new,
                     BlocksTreeBothrodendron.BOTHRODENDRON_SIGN.get(), BlocksTreeBothrodendron.BOTHRODENDRON_WALL_SIGN.get(),
@@ -43,7 +43,6 @@ public class ModBlockEntities {
 
     public static final Supplier<BlockEntityType<ModHangingSignBlockEntity>> PN_HANGING_SIGN = BLOCK_ENTITIES.register(
             "pn_hanging_sign",
-            // The block entity type.
             () -> new BlockEntityType<>(
                     ModHangingSignBlockEntity::new,
                     BlocksTreeBothrodendron.BOTHRODENDRON_SIGN_HANGING.get(), BlocksTreeBothrodendron.BOTHRODENDRON_WALL_SIGN_HANGING.get(),
@@ -60,7 +59,6 @@ public class ModBlockEntities {
 
     public static final Supplier<BlockEntityType<ModTrimmableBlockEntity>> PN_TRIMMABLE = BLOCK_ENTITIES.register(
             "pn_trimmable",
-            // The block entity type.
             () -> new BlockEntityType<>(
                     ModTrimmableBlockEntity::new,
                     BlocksTreeBothrodendron.BOTHRODENDRON_BENCH.get(),
@@ -94,7 +92,6 @@ public class ModBlockEntities {
 
     public static final Supplier<BlockEntityType<ModPlanterBlockEntity>> PN_PLANTER = BLOCK_ENTITIES.register(
             "pn_planter",
-            // The block entity type.
             () -> new BlockEntityType<>(
                     ModPlanterBlockEntity::new,
                     BlocksTreeBothrodendron.BOTHRODENDRON_PLANTER_1.get(),
@@ -116,7 +113,13 @@ public class ModBlockEntities {
             )
     );
 
-
+    public static final Supplier<BlockEntityType<BlockEntityDNARecombinerCentrifuge>> CENTRIFUGE = BLOCK_ENTITIES.register(
+            "dna_recombiner_centrifuge",
+            () -> new BlockEntityType<>(
+                    BlockEntityDNARecombinerCentrifuge::new,
+                    ModBlocks.CENTRIFUGE.get()
+            )
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

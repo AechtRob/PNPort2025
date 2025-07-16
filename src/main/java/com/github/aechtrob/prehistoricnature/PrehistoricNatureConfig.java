@@ -19,9 +19,14 @@ public class PrehistoricNatureConfig
 {
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
-    public static final ModConfigSpec.BooleanValue doPropagation = BUILDER
+    public static final ModConfigSpec.BooleanValue DO_PROPAGATION = BUILDER
             .comment("Use the modded propagation methods instead of vanilla-style plant/sapling-drops for appropriate plants [default: true]")
             .define("doPropagation", true);
+
+    public static final ModConfigSpec.BooleanValue MACHINES_RF = BUILDER
+            .comment("Prehistoric Nature machines need RF to function. [default: false]")
+            .define("machinesRF", false);
+
 
     private static final ModConfigSpec.BooleanValue LOG_DIRT_BLOCK = BUILDER
             .comment("Whether to log the dirt block on common setup")
@@ -42,6 +47,9 @@ public class PrehistoricNatureConfig
 
     static final ModConfigSpec SPEC = BUILDER.build();
 
+    public static boolean doPropagation;
+    public static boolean machinesRF;
+
     public static boolean logDirtBlock;
     public static int magicNumber;
     public static String magicNumberIntroduction;
@@ -55,6 +63,10 @@ public class PrehistoricNatureConfig
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event)
     {
+
+        doPropagation = DO_PROPAGATION.get();
+        machinesRF = MACHINES_RF.get();
+
         logDirtBlock = LOG_DIRT_BLOCK.get();
         magicNumber = MAGIC_NUMBER.get();
         magicNumberIntroduction = MAGIC_NUMBER_INTRODUCTION.get();

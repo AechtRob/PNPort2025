@@ -1,6 +1,6 @@
 package com.github.aechtrob.prehistoricnature.block.blockbase;
 
-import com.github.aechtrob.prehistoricnature.entity.blockentity.PlanterSoilHandler;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.util.PlanterSoilHandler;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModPlanterBlockEntity;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

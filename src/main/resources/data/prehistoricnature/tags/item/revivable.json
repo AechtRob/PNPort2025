@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#prehistricnature:revived_plant",
+    "#prehistricnature:revived_static",
+    "#prehistricnature:revived_vertebrate",
+    "#prehistricnature:revived_invertebrate"
+  ]
+}

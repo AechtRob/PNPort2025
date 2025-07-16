@@ -320,8 +320,10 @@ public class ModCreativeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "deco_tab"))
                     .title(Component.translatable("itemGroup.prehistoricnature.misc_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.GEOLOGIC_PICK.get().asItem());
-                        output.accept(ModItems.COLLECTION_ENVELOPE.get().asItem());
+                        output.accept(ModItems.GEOLOGIC_PICK.get());
+                        output.accept(ModItems.COLLECTION_ENVELOPE.get());
+
+                        output.accept(ModBlocks.CENTRIFUGE.get().asItem());
 
                         output.accept(ItemsTreeBothrodendron.BOTHRODENDRON_BOAT.get().asItem());
                         output.accept(ItemsTreeBothrodendron.BOTHRODENDRON_CHEST_BOAT.get().asItem());

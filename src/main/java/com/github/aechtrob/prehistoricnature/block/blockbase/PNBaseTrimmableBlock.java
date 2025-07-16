@@ -1,6 +1,6 @@
 package com.github.aechtrob.prehistoricnature.block.blockbase;
 
-import com.github.aechtrob.prehistoricnature.entity.blockentity.TrimHandler;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.util.TrimHandler;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.blockentitybase.ModTrimmableBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
