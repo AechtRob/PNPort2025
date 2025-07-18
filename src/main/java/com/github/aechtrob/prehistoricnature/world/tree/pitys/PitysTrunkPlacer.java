@@ -267,8 +267,8 @@ public class PitysTrunkPlacer extends TrunkPlacer {
     }
 
 
-        public int placeTrunk (BlockPos pos, BlockState logState,int height){
-            height += (int) ((18D) + Math.round((Math.random() * 10D) / 2D) + Math.round((Math.random() * 10D) / 2D)
+        public int placeTrunk (BlockPos pos, BlockState logState, int height){
+            height = (int) ((18D) + Math.round((Math.random() * 10D) / 2D) + Math.round((Math.random() * 10D) / 2D)
                     + Math.round((Math.random() * 10D) / 2D) + 6D);
             int counter = 0;
             while (counter <= height - 1) {

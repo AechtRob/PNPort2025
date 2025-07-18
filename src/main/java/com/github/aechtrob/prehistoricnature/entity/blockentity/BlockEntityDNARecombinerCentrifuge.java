@@ -64,6 +64,14 @@ public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements C
         return 4;
     }
 
+    public double getHatchVal() {
+        return this.hatchVal;
+    }
+
+    public void setHatchVal(double val) {
+        this.hatchVal = val;
+    }
+
     @Override
     public boolean isEmpty() {
         Iterator var1 = this.centrifugeContents.iterator();
@@ -181,6 +189,9 @@ public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements C
 
     public static <T extends BlockEntity> void tick(Level level, BlockPos blockPos, BlockState state, T t) {
         if (PrehistoricNatureConfig.machinesRF) {
+            if (!state.getValue(BlockDNARecombinerCentrifuge.RF)) {
+                level.setBlock(blockPos, state.setValue(BlockDNARecombinerCentrifuge.RF, true), 3);
+            }
             BlockEntity blockEntity = level.getBlockEntity(blockPos);
             if (blockEntity instanceof BlockEntityDNARecombinerCentrifuge) {
                 BlockEntityDNARecombinerCentrifuge entity = (BlockEntityDNARecombinerCentrifuge) blockEntity;
@@ -211,6 +222,11 @@ public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements C
                         }
                     }
                 }
+            }
+        }
+        else {
+            if (state.getValue(BlockDNARecombinerCentrifuge.RF)) {
+                level.setBlock(blockPos, state.setValue(BlockDNARecombinerCentrifuge.RF, false), 3);
             }
         }
 

@@ -3,6 +3,11 @@ package com.github.aechtrob.prehistoricnature;
 import com.github.aechtrob.prehistoricnature.block.ModBlocks;
 import com.github.aechtrob.prehistoricnature.creativetabs.ModCreativeTabs;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.ModBlockEntities;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombinerCentrifugeHatchModel;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombinerCentrifugePhialModel;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombinerCentrifugeSpindleModel;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombinerCentrifugeTopModel;
+import com.github.aechtrob.prehistoricnature.entity.blockentity.renderer.BlockEntityDNARecombinerCentrifugeRenderer;
 import com.github.aechtrob.prehistoricnature.entity.entity.ModEntities;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBenchEntityRenderer;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatChestRenderer;
@@ -241,6 +246,7 @@ public class PrehistoricNature
         @SubscribeEvent
         public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event)
         {
+            event.registerBlockEntityRenderer(ModBlockEntities.CENTRIFUGE.get(), BlockEntityDNARecombinerCentrifugeRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.PN_SIGN.get(), SignRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntities.PN_HANGING_SIGN.get(), HangingSignRenderer::new);
             event.registerEntityRenderer(ModEntities.BENCH_ENTITY.get(), PNBenchEntityRenderer::new);
@@ -271,7 +277,12 @@ public class PrehistoricNature
         @SubscribeEvent
         public static void onClientSetup(EntityRenderersEvent.RegisterLayerDefinitions event)
         {
-            //PNEntities.registerEntityLayers(event);
+            event.registerLayerDefinition(DNARecombinerCentrifugeTopModel.LAYER_LOCATION, DNARecombinerCentrifugeTopModel::createBodyLayer);
+            event.registerLayerDefinition(DNARecombinerCentrifugeHatchModel.LAYER_LOCATION, DNARecombinerCentrifugeHatchModel::createBodyLayer);
+            event.registerLayerDefinition(DNARecombinerCentrifugePhialModel.LAYER_LOCATION, DNARecombinerCentrifugePhialModel::createBodyLayer);
+            event.registerLayerDefinition(DNARecombinerCentrifugeSpindleModel.LAYER_LOCATION, DNARecombinerCentrifugeSpindleModel::createBodyLayer);
+
+
         }
     }
 }

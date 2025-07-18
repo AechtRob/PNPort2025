@@ -62,7 +62,12 @@ public class BlocksTreeLeptophloeum {
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "leptophloeum_planks")))));
 
     public static final DeferredBlock<PNTreeLeavesBlock> LEPTOPHLOEUM_LEAVES = registerBlock("leptophloeum_leaves",
-            () -> new PNTreeLeavesBlock(0, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "leptophloeum_leaves")))));
+            () -> new PNTreeLeavesBlock(0, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "leptophloeum_leaves")))){
+                @Override
+                public ItemStack envelopeMimicsItemPlacement() {
+                    return new ItemStack(BlocksTreeLeptophloeum.LEPTOPHLOEUM_SAPLING.get(), 1);
+                }
+            });
 
     public static final DeferredBlock<SlabBlock> LEPTOPHLOEUM_SLAB = registerBlock("leptophloeum_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "leptophloeum_slab")))));
