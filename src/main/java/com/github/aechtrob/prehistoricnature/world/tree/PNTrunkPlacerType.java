@@ -7,6 +7,7 @@ import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.Gangamopte
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.GlossopterisATrunkPlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.LepidodendronTrunkPlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.LepidophloiosTrunkPlacer;
+import com.github.aechtrob.prehistoricnature.world.tree.pitys.PitysTrunkPlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.SciadopitysTrunkPlacer;
 import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.SynchysidendronTrunkPlacer;
 import net.minecraft.core.registries.Registries;
@@ -25,6 +26,7 @@ public class PNTrunkPlacerType {
     public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> GLOSSOPTERISA_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("glossopteris_angustifolia_trunk_placer", () -> new TrunkPlacerType<>(GlossopterisATrunkPlacer.CODEC));
     public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> LEPIDODENDRON_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("lepidodendron_trunk_placer", () -> new TrunkPlacerType<>(LepidodendronTrunkPlacer.CODEC));
     public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> LEPIDOPHLOIOS_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("lepidophloios_trunk_placer", () -> new TrunkPlacerType<>(LepidophloiosTrunkPlacer.CODEC));
+    public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> PITYS_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("pitys_trunk_placer", () -> new TrunkPlacerType<>(PitysTrunkPlacer.CODEC));
     public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> SCIADOPITYS_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("sciadopitys_trunk_placer", () -> new TrunkPlacerType<>(SciadopitysTrunkPlacer.CODEC));
     public static DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<?>> SYNCHYSIDENDRON_TRUNK_PLACER = TRUNK_PLACER_TYPES.register("synchysidendron_trunk_placer", () -> new TrunkPlacerType<>(SynchysidendronTrunkPlacer.CODEC));
 

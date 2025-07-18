@@ -15,6 +15,8 @@ import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTree
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ItemsTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.BlocksTreeLepidophloios;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.ItemsTreeLepidophloios;
+import com.github.aechtrob.prehistoricnature.world.tree.pitys.BlocksTreePitys;
+import com.github.aechtrob.prehistoricnature.world.tree.pitys.ItemsTreePitys;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.BlocksTreeSciadopitys;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.ItemsTreeSciadopitys;
 import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.BlocksTreeSynchysidendron;
@@ -166,6 +168,20 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_PRESSURE_PLATE.get().asItem());
                         output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_BUTTON.get().asItem());
 
+                        output.accept(BlocksTreePitys.PITYS_LOG.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_WOOD.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_STRIPPED_LOG.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_STRIPPED_WOOD.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_PLANKS.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_STAIRS.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_SLAB.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_FENCE.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_FENCE_GATE.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_DOOR.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_TRAPDOOR.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_PRESSURE_PLATE.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_BUTTON.get().asItem());
+
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_LOG.get().asItem());
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_WOOD.get().asItem());
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_STRIPPED_LOG.get().asItem());
@@ -223,6 +239,10 @@ public class ModCreativeTabs {
                         output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_LEAVES.get().asItem());
                         output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_SAPLING.get().asItem());
                         output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_STROBILUS.get().asItem());
+
+                        output.accept(BlocksTreePitys.PITYS_LEAVES.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_SAPLING.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_STROBILUS.get().asItem());
 
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_LEAVES.get().asItem());
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_SAPLING.get().asItem());
@@ -296,6 +316,15 @@ public class ModCreativeTabs {
                         output.accept(ItemsTreeLepidophloios.LEPIDOPHLOIOS_SIGN.get().asItem());
                         output.accept(ItemsTreeLepidophloios.LEPIDOPHLOIOS_HANGING_SIGN.get().asItem());
 
+                        output.accept(BlocksTreePitys.PITYS_BENCH.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_LITTERBIN.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_BRIDGE.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_LADDER.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_PLANTER_1.get().asItem());
+                        output.accept(BlocksTreePitys.PITYS_PLANTER_2.get().asItem());
+                        output.accept(ItemsTreePitys.PITYS_SIGN.get().asItem());
+                        output.accept(ItemsTreePitys.PITYS_HANGING_SIGN.get().asItem());
+
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_BENCH.get().asItem());
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_LITTERBIN.get().asItem());
                         output.accept(BlocksTreeSciadopitys.SCIADOPITYS_BRIDGE.get().asItem());
@@ -342,6 +371,9 @@ public class ModCreativeTabs {
 
                         output.accept(ItemsTreeLepidophloios.LEPIDOPHLOIOS_BOAT.get().asItem());
                         output.accept(ItemsTreeLepidophloios.LEPIDOPHLOIOS_CHEST_BOAT.get().asItem());
+
+                        output.accept(ItemsTreePitys.PITYS_BOAT.get().asItem());
+                        output.accept(ItemsTreePitys.PITYS_CHEST_BOAT.get().asItem());
 
                         output.accept(ItemsTreeSciadopitys.SCIADOPITYS_BOAT.get().asItem());
                         output.accept(ItemsTreeSciadopitys.SCIADOPITYS_CHEST_BOAT.get().asItem());

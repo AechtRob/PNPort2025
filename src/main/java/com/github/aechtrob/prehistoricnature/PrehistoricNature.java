@@ -32,6 +32,9 @@ import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ItemsTreeL
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.BlocksTreeLepidophloios;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.EntitiesTreeLepidophloios;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.ItemsTreeLepidophloios;
+import com.github.aechtrob.prehistoricnature.world.tree.pitys.BlocksTreePitys;
+import com.github.aechtrob.prehistoricnature.world.tree.pitys.EntitiesTreePitys;
+import com.github.aechtrob.prehistoricnature.world.tree.pitys.ItemsTreePitys;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.BlocksTreeSciadopitys;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.EntitiesTreeSciadopitys;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.ItemsTreeSciadopitys;
@@ -148,6 +151,10 @@ public class PrehistoricNature
         BlocksTreeLepidophloios.register(modEventBus);
         EntitiesTreeLepidophloios.register(modEventBus);
 
+        ItemsTreePitys.register(modEventBus);
+        BlocksTreePitys.register(modEventBus);
+        EntitiesTreePitys.register(modEventBus);
+
         ItemsTreeSciadopitys.register(modEventBus);
         BlocksTreeSciadopitys.register(modEventBus);
         EntitiesTreeSciadopitys.register(modEventBus);
@@ -218,6 +225,7 @@ public class PrehistoricNature
             Sheets.addWoodType(PNWoodTypes.GLOSSOPTERISA);
             Sheets.addWoodType(PNWoodTypes.LEPIDODENDRON);
             Sheets.addWoodType(PNWoodTypes.LEPIDOPHLOIOS);
+            Sheets.addWoodType(PNWoodTypes.PITYS);
             Sheets.addWoodType(PNWoodTypes.SCIADOPITYS);
             Sheets.addWoodType(PNWoodTypes.SYNCHYSIDENDRON);
         }
@@ -241,6 +249,8 @@ public class PrehistoricNature
             event.registerEntityRenderer(EntitiesTreeLepidodendron.LEPIDODENDRON_CHEST_BOAT.get(), context -> new PNBoatChestRenderer(context, ModelLayers.OAK_CHEST_BOAT, "lepidodendron"));
             event.registerEntityRenderer(EntitiesTreeLepidophloios.LEPIDOPHLOIOS_BOAT.get(), context -> new PNBoatRenderer(context, ModelLayers.OAK_BOAT, "lepidophloios"));
             event.registerEntityRenderer(EntitiesTreeLepidophloios.LEPIDOPHLOIOS_CHEST_BOAT.get(), context -> new PNBoatChestRenderer(context, ModelLayers.OAK_CHEST_BOAT, "lepidophloios"));
+            event.registerEntityRenderer(EntitiesTreePitys.PITYS_BOAT.get(), context -> new PNBoatRenderer(context, ModelLayers.OAK_BOAT, "pitys"));
+            event.registerEntityRenderer(EntitiesTreePitys.PITYS_CHEST_BOAT.get(), context -> new PNBoatChestRenderer(context, ModelLayers.OAK_CHEST_BOAT, "pitys"));
             event.registerEntityRenderer(EntitiesTreeSciadopitys.SCIADOPITYS_BOAT.get(), context -> new PNBoatRenderer(context, ModelLayers.OAK_BOAT, "sciadopitys"));
             event.registerEntityRenderer(EntitiesTreeSciadopitys.SCIADOPITYS_CHEST_BOAT.get(), context -> new PNBoatChestRenderer(context, ModelLayers.OAK_CHEST_BOAT, "sciadopitys"));
             event.registerEntityRenderer(EntitiesTreeSynchysidendron.SYNCHYSIDENDRON_BOAT.get(), context -> new PNBoatRenderer(context, ModelLayers.OAK_BOAT, "synchysidendron"));
