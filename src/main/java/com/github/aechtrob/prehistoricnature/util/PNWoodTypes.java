@@ -11,6 +11,7 @@ public class PNWoodTypes {
     public static final WoodType GLOSSOPTERISA = WoodType.register(new WoodType(PrehistoricNature.MODID + "glossopteris_angustifolia", BlockSetType.OAK));
     public static final WoodType LEPIDODENDRON = WoodType.register(new WoodType(PrehistoricNature.MODID + "lepidodendron", BlockSetType.OAK));
     public static final WoodType LEPIDOPHLOIOS = WoodType.register(new WoodType(PrehistoricNature.MODID + "lepidophloios", BlockSetType.OAK));
+    public static final WoodType LEPTOPHLOEUM = WoodType.register(new WoodType(PrehistoricNature.MODID + "leptophloeum", BlockSetType.OAK));
     public static final WoodType PITYS = WoodType.register(new WoodType(PrehistoricNature.MODID + "pitys", BlockSetType.OAK));
     public static final WoodType SCIADOPITYS = WoodType.register(new WoodType(PrehistoricNature.MODID + "sciadopitys", BlockSetType.OAK));
     public static final WoodType SYNCHYSIDENDRON = WoodType.register(new WoodType(PrehistoricNature.MODID + "synchysidendron", BlockSetType.OAK));

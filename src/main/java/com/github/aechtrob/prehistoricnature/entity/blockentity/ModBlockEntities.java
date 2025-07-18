@@ -12,6 +12,7 @@ import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.BlocksTree
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.BlocksTreeLepidophloios;
+import com.github.aechtrob.prehistoricnature.world.tree.leptophloeum.BlocksTreeLeptophloeum;
 import com.github.aechtrob.prehistoricnature.world.tree.pitys.BlocksTreePitys;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.BlocksTreeSciadopitys;
 import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.BlocksTreeSynchysidendron;
@@ -36,6 +37,7 @@ public class ModBlockEntities {
                     BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN.get(),
                     BlocksTreeLepidodendron.LEPIDODENDRON_SIGN.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN.get(),
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_SIGN.get(), BlocksTreeLepidophloios.LEPIDOPHLOIOS_WALL_SIGN.get(),
+                    BlocksTreeLeptophloeum.LEPTOPHLOEUM_SIGN.get(), BlocksTreeLeptophloeum.LEPTOPHLOEUM_WALL_SIGN.get(),
                     BlocksTreePitys.PITYS_SIGN.get(), BlocksTreePitys.PITYS_WALL_SIGN.get(),
                     BlocksTreeSciadopitys.SCIADOPITYS_SIGN.get(), BlocksTreeSciadopitys.SCIADOPITYS_WALL_SIGN.get(),
                     BlocksTreeSynchysidendron.SYNCHYSIDENDRON_SIGN.get(), BlocksTreeSynchysidendron.SYNCHYSIDENDRON_WALL_SIGN.get()
@@ -53,6 +55,7 @@ public class ModBlockEntities {
                     BlocksTreeGlossopterisA.GLOSSOPTERISA_SIGN_HANGING.get(), BlocksTreeGlossopterisA.GLOSSOPTERISA_WALL_SIGN_HANGING.get(),
                     BlocksTreeLepidodendron.LEPIDODENDRON_SIGN_HANGING.get(), BlocksTreeLepidodendron.LEPIDODENDRON_WALL_SIGN_HANGING.get(),
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_SIGN_HANGING.get(), BlocksTreeLepidophloios.LEPIDOPHLOIOS_WALL_SIGN_HANGING.get(),
+                    BlocksTreeLeptophloeum.LEPTOPHLOEUM_SIGN_HANGING.get(), BlocksTreeLeptophloeum.LEPTOPHLOEUM_WALL_SIGN_HANGING.get(),
                     BlocksTreePitys.PITYS_SIGN_HANGING.get(), BlocksTreePitys.PITYS_WALL_SIGN_HANGING.get(),
                     BlocksTreeSciadopitys.SCIADOPITYS_SIGN_HANGING.get(), BlocksTreeSciadopitys.SCIADOPITYS_WALL_SIGN_HANGING.get(),
                     BlocksTreeSynchysidendron.SYNCHYSIDENDRON_SIGN_HANGING.get(), BlocksTreeSynchysidendron.SYNCHYSIDENDRON_WALL_SIGN_HANGING.get()
@@ -85,6 +88,9 @@ public class ModBlockEntities {
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_BENCH.get(),
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_BRIDGE.get(),
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_LITTERBIN.get(),
+                    BlocksTreeLeptophloeum.LEPTOPHLOEUM_BENCH.get(),
+                    BlocksTreeLeptophloeum.LEPTOPHLOEUM_BRIDGE.get(),
+                    BlocksTreeLeptophloeum.LEPTOPHLOEUM_LITTERBIN.get(),
                     BlocksTreePitys.PITYS_BENCH.get(),
                     BlocksTreePitys.PITYS_BRIDGE.get(),
                     BlocksTreePitys.PITYS_LITTERBIN.get(),
@@ -114,6 +120,8 @@ public class ModBlockEntities {
                     BlocksTreeSciadopitys.SCIADOPITYS_PLANTER_2.get(),
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_PLANTER_1.get(),
                     BlocksTreeLepidophloios.LEPIDOPHLOIOS_PLANTER_2.get(),
+                    BlocksTreeLeptophloeum.LEPTOPHLOEUM_PLANTER_1.get(),
+                    BlocksTreeLeptophloeum.LEPTOPHLOEUM_PLANTER_2.get(),
                     BlocksTreePitys.PITYS_PLANTER_1.get(),
                     BlocksTreePitys.PITYS_PLANTER_2.get(),
                     BlocksTreeSynchysidendron.SYNCHYSIDENDRON_PLANTER_1.get(),

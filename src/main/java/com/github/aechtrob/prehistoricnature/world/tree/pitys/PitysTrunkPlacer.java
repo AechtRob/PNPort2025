@@ -193,7 +193,7 @@ public class PitysTrunkPlacer extends TrunkPlacer {
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-4, yy  , 0), 0, true));
         list.add(new FoliagePlacer.FoliageAttachment(pos.offset(-4, yy -1 , 0), 0, true));
         placeRandomFoliage(pos.offset(-4, yy -2, 0),0.4, 1, list);
-        
+
         if (Math.random() > 0.15) {
             yy = yy - 1;
             placeLog(pos.offset(0, yy, -1), logState.setValue(PNTreeLogBlock.AXIS, Direction.Axis.Z));
