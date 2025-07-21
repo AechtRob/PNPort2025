@@ -79,7 +79,7 @@ public class ModItems {
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "collection_envelope")))));
 
     public static final DeferredItem<Item> PHIAL = ITEMS.register("phial",
-            () -> new PNCollectionEnvelope(new Item.Properties().stacksTo(64)
+            () -> new PNPhial(new Item.Properties().stacksTo(64)
                     .component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "phial")))));
 

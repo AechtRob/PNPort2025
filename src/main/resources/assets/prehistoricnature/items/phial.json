@@ -1,6 +1,20 @@
 {
  "model": {
- "type": "model",
- "model": "prehistoricnature:item/phial_empty"
+  "type": "minecraft:range_dispatch",
+  "property": "prehistoricnature:phial_status",
+  "scale": 1.0,
+  "fallback": {
+   "type": "minecraft:model",
+   "model": "prehistoricnature:item/phial_empty"
+  },
+  "entries": [
+   {
+    "threshold": 1.0,
+    "model": {
+     "type": "minecraft:model",
+     "model": "prehistoricnature:item/phial_dna"
+    }
+   }
+  ]
  }
 }

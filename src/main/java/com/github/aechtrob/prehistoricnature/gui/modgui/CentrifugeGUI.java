@@ -3,7 +3,6 @@ package com.github.aechtrob.prehistoricnature.gui.modgui;
 import com.github.aechtrob.prehistoricnature.block.ModBlocks;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.BlockEntityDNARecombinerCentrifuge;
 import com.github.aechtrob.prehistoricnature.gui.ModGUIs;
-import com.github.aechtrob.prehistoricnature.item.ModItems;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Inventory;
@@ -37,7 +36,7 @@ public class CentrifugeGUI extends AbstractContainerMenu {
         this.addSlot(new Slot(container, 0, 62, 40) {
             @Override
             public boolean mayPlace(ItemStack stack) {
-                return stack.getItem() == ModItems.PHIAL.get();
+                return BlockEntityDNARecombinerCentrifuge.canInsertPhial(stack);
             }
 
             @Override
@@ -48,7 +47,7 @@ public class CentrifugeGUI extends AbstractContainerMenu {
         this.addSlot(new Slot(container, 1, 104, 40) {
             @Override
             public boolean mayPlace(ItemStack stack) {
-                return stack.getItem() == ModItems.PHIAL.get();
+                return BlockEntityDNARecombinerCentrifuge.canInsertPhial(stack);
             }
 
             @Override
@@ -59,7 +58,7 @@ public class CentrifugeGUI extends AbstractContainerMenu {
         this.addSlot(new Slot(container, 2, 83, 19) {
             @Override
             public boolean mayPlace(ItemStack stack) {
-                return stack.getItem() == ModItems.PHIAL.get();
+                return BlockEntityDNARecombinerCentrifuge.canInsertPhial(stack);
             }
 
             @Override
@@ -70,7 +69,7 @@ public class CentrifugeGUI extends AbstractContainerMenu {
         this.addSlot(new Slot(container, 3, 83, 61) {
             @Override
             public boolean mayPlace(ItemStack stack) {
-                return stack.getItem() == ModItems.PHIAL.get();
+                return BlockEntityDNARecombinerCentrifuge.canInsertPhial(stack);
             }
 
             @Override

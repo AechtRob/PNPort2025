@@ -7,7 +7,7 @@ import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombi
 import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombinerCentrifugePhialModel;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombinerCentrifugeSpindleModel;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombinerCentrifugeTopModel;
-import com.github.aechtrob.prehistoricnature.item.ModItems;
+import com.github.aechtrob.prehistoricnature.item.PNPhial;
 import com.mojang.blaze3d.opengl.GlStateManager;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -140,10 +140,10 @@ public class BlockEntityDNARecombinerCentrifugeRenderer implements BlockEntityRe
         double yy = 1.08; //1.525 change lower to lower it
         if (!blockEntity.getItem(0).isEmpty()) {
             //Render the model in position 0:
-            if (blockEntity.getItem(0).getItem() == ModItems.PHIAL.get()) {
-                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
-            } else {
+            if (PNPhial.getProperties(blockEntity.getItem(0)).isEmpty()) {
                 vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_EMPTY);
+            } else {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
             }
             DNARecombinerCentrifugePhialModel modelDNARecombinerCentrifugePhial = this.modelDNARecombinerCentrifugePhial;
 
@@ -159,10 +159,10 @@ public class BlockEntityDNARecombinerCentrifugeRenderer implements BlockEntityRe
 
         if (!blockEntity.getItem(1).isEmpty()) {
             //Render the model in position 1:
-            if (blockEntity.getItem(1).getItem() == ModItems.PHIAL.get()) {
-                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
-            } else {
+            if (PNPhial.getProperties(blockEntity.getItem(1)).isEmpty()) {
                 vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_EMPTY);
+            } else {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
             }
             DNARecombinerCentrifugePhialModel modelDNARecombinerCentrifugePhial = this.modelDNARecombinerCentrifugePhial;
 
@@ -178,10 +178,10 @@ public class BlockEntityDNARecombinerCentrifugeRenderer implements BlockEntityRe
 
         if (!blockEntity.getItem(2).isEmpty()) {
             //Render the model in position 2:
-            if (blockEntity.getItem(2).getItem() == ModItems.PHIAL.get()) {
-                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
-            } else {
+            if (PNPhial.getProperties(blockEntity.getItem(2)).isEmpty()) {
                 vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_EMPTY);
+            } else {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
             }
             DNARecombinerCentrifugePhialModel modelDNARecombinerCentrifugePhial = this.modelDNARecombinerCentrifugePhial;
 
@@ -197,10 +197,10 @@ public class BlockEntityDNARecombinerCentrifugeRenderer implements BlockEntityRe
 
         if (!blockEntity.getItem(3).isEmpty()) {
             //Render the model in position 3:
-            if (blockEntity.getItem(3).getItem() == ModItems.PHIAL.get()) {
-                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
-            } else {
+            if (PNPhial.getProperties(blockEntity.getItem(3)).isEmpty()) {
                 vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_EMPTY);
+            } else {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
             }
             DNARecombinerCentrifugePhialModel modelDNARecombinerCentrifugePhial = this.modelDNARecombinerCentrifugePhial;
 

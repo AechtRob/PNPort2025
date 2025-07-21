@@ -5,6 +5,7 @@ import com.github.aechtrob.prehistoricnature.block.BlockDNARecombinerCentrifuge;
 import com.github.aechtrob.prehistoricnature.block.ModBlocks;
 import com.github.aechtrob.prehistoricnature.gui.modgui.CentrifugeGUI;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
+import com.github.aechtrob.prehistoricnature.item.PNPhial;
 import com.github.aechtrob.prehistoricnature.util.PNTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -184,10 +185,18 @@ public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements C
 
     @Override
     public boolean canPlaceItem(int slot, ItemStack stack) {
-        if (stack.getItem() != ModItems.PHIAL.get()) {
-            return false;
+        return canInsertPhial(stack);
+    }
+
+    public static boolean canInsertPhial(ItemStack stack) {
+        if (stack.getItem() == ModItems.PHIAL.get()) {
+            ItemStack stackInside = PNPhial.getProperties(stack);
+            if (stackInside.isEmpty()) {
+                return true;
+            }
+            return stackInside.is(PNTags.Items.REVIVABLE);
         }
-        return Container.super.canPlaceItem(slot, stack);
+        return false;
     }
 
     @Override

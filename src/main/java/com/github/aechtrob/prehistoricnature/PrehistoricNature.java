@@ -17,6 +17,7 @@ import com.github.aechtrob.prehistoricnature.gui.modgui.CentrifugeScreen;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
 import com.github.aechtrob.prehistoricnature.util.EnvelopeStatus;
 import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
+import com.github.aechtrob.prehistoricnature.util.PhialStatus;
 import com.github.aechtrob.prehistoricnature.world.ModConfiguredFeatures;
 import com.github.aechtrob.prehistoricnature.world.ModFeatures;
 import com.github.aechtrob.prehistoricnature.world.tree.PNFoliagePlacerType;
@@ -230,6 +231,10 @@ public class PrehistoricNature
             event.register(
                     ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "envelope_status"),
                     EnvelopeStatus.MAP_CODEC
+            );
+            event.register(
+                    ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "phial_status"),
+                    PhialStatus.MAP_CODEC
             );
         }
 
