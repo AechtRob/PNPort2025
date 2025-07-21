@@ -3,6 +3,8 @@ package com.github.aechtrob.prehistoricnature.entity.blockentity;
 import com.github.aechtrob.prehistoricnature.PrehistoricNatureConfig;
 import com.github.aechtrob.prehistoricnature.block.BlockDNARecombinerCentrifuge;
 import com.github.aechtrob.prehistoricnature.block.ModBlocks;
+import com.github.aechtrob.prehistoricnature.gui.modgui.CentrifugeGUI;
+import com.github.aechtrob.prehistoricnature.item.ModItems;
 import com.github.aechtrob.prehistoricnature.util.PNTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -10,32 +12,63 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.Connection;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntitySelector;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
-import net.minecraft.world.phys.AABB;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.ICapabilityProvider;
 import net.neoforged.neoforge.energy.IEnergyStorage;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Iterator;
 
-public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements Container, IEnergyStorage {
-    private NonNullList<ItemStack> centrifugeContents;
+public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements Container, IEnergyStorage, MenuProvider {
+    public NonNullList<ItemStack> centrifugeContents;
+    private final ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
+        @Override
+        protected void onOpen(Level level, BlockPos pos, BlockState state) {
+            BlockEntityDNARecombinerCentrifuge.playSound(level, pos, state, SoundEvents.CHEST_OPEN);
+        }
 
+        @Override
+        protected void onClose(Level level, BlockPos pos, BlockState state) {
+            BlockEntityDNARecombinerCentrifuge.playSound(level, pos, state, SoundEvents.CHEST_CLOSE);
+        }
+
+        @Override
+        protected void openerCountChanged(Level level, BlockPos pos, BlockState state, int p_155364_, int p_155365_) {
+            BlockEntityDNARecombinerCentrifuge.this.signalOpenCount(level, pos, state, p_155364_, p_155365_);
+        }
+
+        @Override
+        protected boolean isOwnContainer(Player player) {
+            if (!(player.containerMenu instanceof CentrifugeGUI)) {
+                return false;
+            } else {
+                Container container = ((CentrifugeGUI)player.containerMenu).getContainer();
+                return container == BlockEntityDNARecombinerCentrifuge.this;
+            }
+        }
+    };
+    
     protected boolean isLocked;
     protected boolean isProcessing;
     public int processTick;
@@ -56,14 +89,42 @@ public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements C
 
     public BlockEntityDNARecombinerCentrifuge(BlockPos pos, BlockState blockState) {
         super(ModBlockEntities.CENTRIFUGE.get(), pos, blockState);
-        this.centrifugeContents = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+        this.centrifugeContents = net.minecraft.core.NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
     }
 
     @Override
     public int getContainerSize() {
         return 4;
     }
+    
+    @Override
+    public void startOpen(Player player) {
+        if (!this.remove && !player.isSpectator()) {
+            this.openersCounter.incrementOpeners(player, this.getLevel(), this.getBlockPos(), this.getBlockState());
+        }
+    }
 
+    @Override
+    public void stopOpen(Player player) {
+        if (!this.remove && !player.isSpectator()) {
+            this.openersCounter.decrementOpeners(player, this.getLevel(), this.getBlockPos(), this.getBlockState());
+        }
+    }
+
+    public void updateOpeners() {
+        this.numPlayersUsing = this.openersCounter.getOpenerCount();
+    }
+    
+    static void playSound(Level level, BlockPos pos, BlockState state, SoundEvent sound) {
+        level.playSound(null, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, sound, SoundSource.BLOCKS, 0.5F, level.random.nextFloat() * 0.1F + 0.9F);
+    }
+
+    protected void signalOpenCount(Level level, BlockPos pos, BlockState state, int eventId, int eventParam) {
+        Block block = state.getBlock();
+        level.blockEvent(pos, block, 1, eventParam);
+        this.numPlayersUsing = openersCounter.getOpenerCount();
+    }
+    
     public double getHatchVal() {
         return this.hatchVal;
     }
@@ -122,6 +183,14 @@ public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements C
     }
 
     @Override
+    public boolean canPlaceItem(int slot, ItemStack stack) {
+        if (stack.getItem() != ModItems.PHIAL.get()) {
+            return false;
+        }
+        return Container.super.canPlaceItem(slot, stack);
+    }
+
+    @Override
     public boolean stillValid(Player player) {
         return true;
     }
@@ -167,7 +236,7 @@ public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements C
         this.hatchVal = input.getDoubleOr("hatchVal", 0.0D);
         this.isProcessing = input.getBooleanOr("isProcessing", false);
         this.startTick = input.getLongOr("startTick", 0L);
-        this.centrifugeContents = NonNullList.<ItemStack>withSize(this.getContainerSize(), ItemStack.EMPTY);
+        this.centrifugeContents = net.minecraft.core.NonNullList.<ItemStack>withSize(this.getContainerSize(), ItemStack.EMPTY);
         ContainerHelper.loadAllItems(input, this.centrifugeContents);
     }
 
@@ -239,22 +308,22 @@ public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements C
             int k = blockPos.getZ();
             ++entity.ticksSinceSync;
             if (!entity.isLocked) {
-                if (!level.isClientSide && entity.numPlayersUsing != 0 && (entity.ticksSinceSync + i + j + k) % 200 == 0) {
-                    entity.numPlayersUsing = 0;
-                    float f = 5.0F;
-
-                    for (Entity entityplayer : level.getEntities((Entity)null, new AABB((double) ((float) i - 5.0F), (double) ((float) j - 5.0F), (double) ((float) k - 5.0F), (double) ((float) (i + 1) + 5.0F), (double) ((float) (j + 1) + 5.0F), (double) ((float) (k + 1) + 5.0F)),
-                            EntitySelector.CONTAINER_ENTITY_SELECTOR)) {
-//                        if (entityplayer.openContainer instanceof GUIDNACentrifuge.GUILepidodendronDNACentrifuge) {
-//                            IInventory iinventory = ((GUIDNACentrifuge.GUILepidodendronDNACentrifuge) entityplayer.openContainer).getLowerChestInventory();
+//                if (!level.isClientSide && entity.numPlayersUsing != 0 && (entity.ticksSinceSync + i + j + k) % 200 == 0) {
+//                    entity.numPlayersUsing = 0;
+////                    float f = 5.0F;
+////
+////                    for (Entity entityOpener : level.getEntities((Entity)null, new AABB((double) ((float) i - 5.0F), (double) ((float) j - 5.0F), (double) ((float) k - 5.0F), (double) ((float) (i + 1) + 5.0F), (double) ((float) (j + 1) + 5.0F), (double) ((float) (k + 1) + 5.0F)),
+////                            EntitySelector.CONTAINER_ENTITY_SELECTOR)) {
+////                        if (entityOpener. .container .openContainer instanceof GUIDNACentrifuge.GUILepidodendronDNACentrifuge) {
+////                            IInventory iinventory = ((GUIDNACentrifuge.GUILepidodendronDNACentrifuge) entityOpener.openContainer).getLowerChestInventory();
+////
+////                            if (iinventory == entity) {
+////                                ++entity.numPlayersUsing;
+////                            }
+////                        }
+////                    }
 //
-//                            if (iinventory == entity) {
-//                                ++entity.numPlayersUsing;
-//                            }
-//                        }
-                    }
-
-                }
+//                }
 
                 entity.prevLidAngle = entity.lidAngle;
                 float f1 = 0.1F;
@@ -596,4 +665,13 @@ public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements C
         return 0;
     }
 
+    @Override
+    public Component getDisplayName() {
+        return Component.literal("centrifuge");
+    }
+
+    @Override
+    public @Nullable AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
+        return new CentrifugeGUI(i, inventory, this);
+    }
 }

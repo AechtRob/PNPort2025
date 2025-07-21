@@ -78,6 +78,11 @@ public class ModItems {
                     .component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "collection_envelope")))));
 
+    public static final DeferredItem<Item> PHIAL = ITEMS.register("phial",
+            () -> new PNCollectionEnvelope(new Item.Properties().stacksTo(64)
+                    .component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "phial")))));
+
     public static final DeferredItem<Item> GEOLOGIC_PICK = ITEMS.register("geologic_pick",
             () -> new PNGeologicPick(new Item.Properties().pickaxe(ToolMaterial.IRON, 1.0F, -2.8F)
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "geologic_pick")))));

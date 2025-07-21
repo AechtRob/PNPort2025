@@ -17,8 +17,8 @@ public class DNARecombinerCentrifugePhialModel<T extends BlockEntityDNARecombine
 	public static final ModelLayerLocation LAYER_LOCATION =
 			new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "dna_recombiner_centrifuge_phial"), "main");
 
-	private final ModelPart phial1centre;
-	private final ModelPart phial1pivot;
+	public final ModelPart phial1centre;
+	public final ModelPart phial1pivot;
 
 	public DNARecombinerCentrifugePhialModel(ModelPart root) {
 		super(root);
@@ -32,7 +32,7 @@ public class DNARecombinerCentrifugePhialModel<T extends BlockEntityDNARecombine
 
 		PartDefinition phial1centre = partdefinition.addOrReplaceChild("phial1centre", CubeListBuilder.create(), PartPose.offset(0.0F, 14.5F, 0.0F));
 
-		PartDefinition phial1pivot = phial1centre.addOrReplaceChild("phial1pivot", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, -2.0F));
+		PartDefinition phial1pivot = phial1centre.addOrReplaceChild("phial1pivot", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, -5.5F));
 
 		PartDefinition phial1b_r1 = phial1pivot.addOrReplaceChild("phial1b_r1", CubeListBuilder.create().texOffs(0, -4).addBox(0.0F, -4.0F, -2.0F, 0.0F, 8.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 3.0F, 0.0F, 0.0F, 0.7854F, 0.0F));
 

@@ -7,6 +7,7 @@ import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombi
 import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombinerCentrifugePhialModel;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombinerCentrifugeSpindleModel;
 import com.github.aechtrob.prehistoricnature.entity.blockentity.model.DNARecombinerCentrifugeTopModel;
+import com.github.aechtrob.prehistoricnature.item.ModItems;
 import com.mojang.blaze3d.opengl.GlStateManager;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -26,7 +27,7 @@ public class BlockEntityDNARecombinerCentrifugeRenderer implements BlockEntityRe
     RenderType TEXTURE_CENTRIFUGE_LID = RenderType.entityCutoutNoCullZOffset(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "textures/entity/blockentity/dna_recombiner_centrifuge_top.png"));
     RenderType TEXTURE_CENTRIFUGE_PHIAL_DNA = RenderType.entityCutoutNoCullZOffset(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "textures/entity/blockentity/centrifuge_phial.png"));
     RenderType TEXTURE_CENTRIFUGE_PHIAL_EMPTY = RenderType.entityCutoutNoCullZOffset(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "textures/entity/blockentity/centrifuge_phial_empty.png"));
-    RenderType TEXTURE_IRON_BLOCK = RenderType.entityCutoutNoCullZOffset(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "textures/entity/blockentity/centrifuge_spindle.png"));
+    RenderType TEXTURE_IRON_BLOCK = RenderType.entityCutout(ResourceLocation.parse("minecraft:textures/block/iron_block.png"));
 
     private final DNARecombinerCentrifugeTopModel modelDNARecombinerCentrifugeLid;
     private final DNARecombinerCentrifugeHatchModel modelDNARecombinerCentrifugeHatch;
@@ -66,12 +67,25 @@ public class BlockEntityDNARecombinerCentrifugeRenderer implements BlockEntityRe
             f = 1.0F - f * f * f;
             modelDNARecombinerCentrifugeLid.lid.zRot = (f * ((float)Math.PI / 2F));
         }
-        //modelDNARecombinerCentrifugeLid.lid.zRot = ((float)Math.PI / 2F); //test lid
         poseStack.pushPose();
             float f = direction.getCounterClockWise().toYRot();
             poseStack.translate(1.0F, 1.0F, 1.0F);
             poseStack.mulPose(Axis.ZP.rotationDegrees(180F));
-            poseStack.mulPose(Axis.YP.rotationDegrees(-f));
+            if (direction == Direction.NORTH) {
+                poseStack.mulPose(Axis.YP.rotationDegrees(-f));
+            }
+            if (direction == Direction.SOUTH) {
+                poseStack.translate(1.0F, 0.0F, -1.0F);
+                poseStack.mulPose(Axis.YP.rotationDegrees( - f));
+            }
+            if (direction == Direction.EAST) {
+                poseStack.translate(1.0F, 0.0F, 0.0F);
+                poseStack.mulPose(Axis.YP.rotationDegrees(180 - f));
+            }
+            if (direction == Direction.WEST) {
+                poseStack.translate(0.0F, 0.0F, -1.0F);
+                poseStack.mulPose(Axis.YP.rotationDegrees(180 - f));
+            }
             poseStack.translate(-0.5F, -0.5F, -0.5F);
             this.modelDNARecombinerCentrifugeLid.renderToBuffer(poseStack, vertexconsumer, packedLight, OverlayTexture.NO_OVERLAY);
         poseStack.popPose();
@@ -89,12 +103,26 @@ public class BlockEntityDNARecombinerCentrifugeRenderer implements BlockEntityRe
         }
         modelDNARecombinerCentrifugeHatch.left.z = 1.25F * (float) blockEntity.getHatchVal();
         modelDNARecombinerCentrifugeHatch.right.z = -1.25F * (float) blockEntity.getHatchVal();
-        poseStack.pushPose();
-            poseStack.translate(0.0F, 1.0F, 1.0F);
-            poseStack.mulPose(Axis.ZP.rotationDegrees(180F));
-            poseStack.mulPose(Axis.YP.rotationDegrees(-f));
-            poseStack.translate(-0.5F, -0.5F, -0.5F);
         GlStateManager._enableCull();
+        poseStack.pushPose();
+            poseStack.translate(1.0F, 1.0F, 1.0F);
+            poseStack.mulPose(Axis.ZP.rotationDegrees(180F));
+            if (direction == Direction.NORTH) {
+                poseStack.mulPose(Axis.YP.rotationDegrees(270 - f));
+            }
+            if (direction == Direction.SOUTH) {
+                poseStack.mulPose(Axis.YP.rotationDegrees(90 - f));
+                poseStack.translate(1.0F, 0.0F, 1.0F);
+            }
+            if (direction == Direction.EAST) {
+                poseStack.mulPose(Axis.YP.rotationDegrees( - f));
+                poseStack.translate(1.0F, 0.0F, 0.0F);
+            }
+            if (direction == Direction.WEST) {
+                poseStack.mulPose(Axis.YP.rotationDegrees(180 - f));
+                poseStack.translate(0.0F, 0.0F, 1.0F);
+            }
+            poseStack.translate(-0.5F, -0.5F, -0.5F);
             this.modelDNARecombinerCentrifugeHatch.renderToBuffer(poseStack, vertexconsumer, packedLight, OverlayTexture.NO_OVERLAY);
         poseStack.popPose();
 
@@ -107,6 +135,85 @@ public class BlockEntityDNARecombinerCentrifugeRenderer implements BlockEntityRe
             poseStack.translate(-0.5F, -0.5F, -0.5F);
             this.modelDNARecombinerCentrifugeSpindle.renderToBuffer(poseStack, vertexconsumer, packedLight, OverlayTexture.NO_OVERLAY);
         poseStack.popPose();
+        
+        //Render phials if present
+        double yy = 1.08; //1.525 change lower to lower it
+        if (!blockEntity.getItem(0).isEmpty()) {
+            //Render the model in position 0:
+            if (blockEntity.getItem(0).getItem() == ModItems.PHIAL.get()) {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
+            } else {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_EMPTY);
+            }
+            DNARecombinerCentrifugePhialModel modelDNARecombinerCentrifugePhial = this.modelDNARecombinerCentrifugePhial;
+
+            poseStack.pushPose();
+                poseStack.translate(0.5, yy, 0.5);
+                poseStack.mulPose(Axis.XP.rotationDegrees(180F));
+                poseStack.mulPose(Axis.YP.rotationDegrees(270-f));
+                modelDNARecombinerCentrifugePhial.phial1pivot.xRot = (float) -Math.toRadians(flareAngle);
+                poseStack.scale(0.5F, 0.5F, 0.5F);
+                this.modelDNARecombinerCentrifugePhial.renderToBuffer(poseStack, vertexconsumer, packedLight, OverlayTexture.NO_OVERLAY);
+            poseStack.popPose();
+        }
+
+        if (!blockEntity.getItem(1).isEmpty()) {
+            //Render the model in position 1:
+            if (blockEntity.getItem(1).getItem() == ModItems.PHIAL.get()) {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
+            } else {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_EMPTY);
+            }
+            DNARecombinerCentrifugePhialModel modelDNARecombinerCentrifugePhial = this.modelDNARecombinerCentrifugePhial;
+
+            poseStack.pushPose();
+            poseStack.translate(0.5, yy, 0.5);
+            poseStack.mulPose(Axis.XP.rotationDegrees(180F));
+            poseStack.mulPose(Axis.YP.rotationDegrees(90-f));
+            modelDNARecombinerCentrifugePhial.phial1pivot.xRot = (float) -Math.toRadians(flareAngle);
+            poseStack.scale(0.5F, 0.5F, 0.5F);
+            this.modelDNARecombinerCentrifugePhial.renderToBuffer(poseStack, vertexconsumer, packedLight, OverlayTexture.NO_OVERLAY);
+            poseStack.popPose();
+        }
+
+        if (!blockEntity.getItem(2).isEmpty()) {
+            //Render the model in position 2:
+            if (blockEntity.getItem(2).getItem() == ModItems.PHIAL.get()) {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
+            } else {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_EMPTY);
+            }
+            DNARecombinerCentrifugePhialModel modelDNARecombinerCentrifugePhial = this.modelDNARecombinerCentrifugePhial;
+
+            poseStack.pushPose();
+            poseStack.translate(0.5, yy, 0.5);
+            poseStack.mulPose(Axis.XP.rotationDegrees(180F));
+            poseStack.mulPose(Axis.YP.rotationDegrees(-f));
+            modelDNARecombinerCentrifugePhial.phial1pivot.xRot = (float) -Math.toRadians(flareAngle);
+            poseStack.scale(0.5F, 0.5F, 0.5F);
+            this.modelDNARecombinerCentrifugePhial.renderToBuffer(poseStack, vertexconsumer, packedLight, OverlayTexture.NO_OVERLAY);
+            poseStack.popPose();
+        }
+
+        if (!blockEntity.getItem(3).isEmpty()) {
+            //Render the model in position 3:
+            if (blockEntity.getItem(3).getItem() == ModItems.PHIAL.get()) {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_DNA);
+            } else {
+                vertexconsumer = bufferSource.getBuffer(TEXTURE_CENTRIFUGE_PHIAL_EMPTY);
+            }
+            DNARecombinerCentrifugePhialModel modelDNARecombinerCentrifugePhial = this.modelDNARecombinerCentrifugePhial;
+
+            poseStack.pushPose();
+            poseStack.translate(0.5, yy, 0.5);
+            poseStack.mulPose(Axis.XP.rotationDegrees(180F));
+            poseStack.mulPose(Axis.YP.rotationDegrees(180-f));
+            modelDNARecombinerCentrifugePhial.phial1pivot.xRot = (float) -Math.toRadians(flareAngle);
+            poseStack.scale(0.5F, 0.5F, 0.5F);
+            this.modelDNARecombinerCentrifugePhial.renderToBuffer(poseStack, vertexconsumer, packedLight, OverlayTexture.NO_OVERLAY);
+            poseStack.popPose();
+        }
+        
     }
 
     @Override

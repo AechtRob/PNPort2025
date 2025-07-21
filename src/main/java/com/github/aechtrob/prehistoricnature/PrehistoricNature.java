@@ -12,6 +12,8 @@ import com.github.aechtrob.prehistoricnature.entity.entity.ModEntities;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBenchEntityRenderer;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatChestRenderer;
 import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatRenderer;
+import com.github.aechtrob.prehistoricnature.gui.ModGUIs;
+import com.github.aechtrob.prehistoricnature.gui.modgui.CentrifugeScreen;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
 import com.github.aechtrob.prehistoricnature.util.EnvelopeStatus;
 import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
@@ -65,6 +67,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.event.RegisterRangeSelectItemModelPropertyEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -180,6 +183,8 @@ public class PrehistoricNature
         ModConfiguredFeatures.register(modEventBus);
         ModFeatures.register(modEventBus);
 
+        ModGUIs.register(modEventBus);
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -283,6 +288,11 @@ public class PrehistoricNature
             event.registerLayerDefinition(DNARecombinerCentrifugeSpindleModel.LAYER_LOCATION, DNARecombinerCentrifugeSpindleModel::createBodyLayer);
 
 
+        }
+
+        @SubscribeEvent
+        public static void registerGUI(RegisterMenuScreensEvent event) {
+            event.register(ModGUIs.CENTRIFUGE_GUI.get(), CentrifugeScreen::new);
         }
     }
 }
