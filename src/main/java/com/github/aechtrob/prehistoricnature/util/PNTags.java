@@ -19,6 +19,8 @@ public class PNTags {
         public static final TagKey<Item> REVIVED_INVERTEBRATE = ItemTags.create(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "revived_invertebrate"));
         public static final TagKey<Item> REVIVABLE = ItemTags.create(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "revivable"));
 
+        public static final TagKey<Item> FOSSIL_CARBONIFEROUS_PLANT = ItemTags.create(ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "fossil_carboniferous_plant"));
+
     }
 
 }

@@ -379,6 +379,7 @@ public class ModCreativeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.GEOLOGIC_PICK.get());
                         output.accept(ModItems.COLLECTION_ENVELOPE.get());
+                        output.accept(ModItems.PHIAL.get());
 
                         output.accept(ModBlocks.CENTRIFUGE.get().asItem());
 

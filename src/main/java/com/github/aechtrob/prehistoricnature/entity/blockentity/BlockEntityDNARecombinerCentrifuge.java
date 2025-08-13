@@ -181,11 +181,17 @@ public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements C
         this.centrifugeContents.set(index, stack);
         stack.limitSize(this.getMaxStackSize(stack));
         this.setChanged();
+        level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+    }
+
+    @Override
+    public boolean canTakeItem(Container target, int slot, ItemStack stack) {
+        return false;
     }
 
     @Override
     public boolean canPlaceItem(int slot, ItemStack stack) {
-        return canInsertPhial(stack);
+        return canInsertPhial(stack) && getItem(slot).isEmpty() && !this.isLocked && !this.isProcessing;
     }
 
     public static boolean canInsertPhial(ItemStack stack) {
@@ -317,22 +323,6 @@ public class BlockEntityDNARecombinerCentrifuge extends BlockEntity implements C
             int k = blockPos.getZ();
             ++entity.ticksSinceSync;
             if (!entity.isLocked) {
-//                if (!level.isClientSide && entity.numPlayersUsing != 0 && (entity.ticksSinceSync + i + j + k) % 200 == 0) {
-//                    entity.numPlayersUsing = 0;
-////                    float f = 5.0F;
-////
-////                    for (Entity entityOpener : level.getEntities((Entity)null, new AABB((double) ((float) i - 5.0F), (double) ((float) j - 5.0F), (double) ((float) k - 5.0F), (double) ((float) (i + 1) + 5.0F), (double) ((float) (j + 1) + 5.0F), (double) ((float) (k + 1) + 5.0F)),
-////                            EntitySelector.CONTAINER_ENTITY_SELECTOR)) {
-////                        if (entityOpener. .container .openContainer instanceof GUIDNACentrifuge.GUILepidodendronDNACentrifuge) {
-////                            IInventory iinventory = ((GUIDNACentrifuge.GUILepidodendronDNACentrifuge) entityOpener.openContainer).getLowerChestInventory();
-////
-////                            if (iinventory == entity) {
-////                                ++entity.numPlayersUsing;
-////                            }
-////                        }
-////                    }
-//
-//                }
 
                 entity.prevLidAngle = entity.lidAngle;
                 float f1 = 0.1F;
