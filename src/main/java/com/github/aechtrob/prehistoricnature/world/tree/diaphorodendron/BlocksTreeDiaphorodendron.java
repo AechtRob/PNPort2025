@@ -33,25 +33,19 @@ public class BlocksTreeDiaphorodendron {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(PrehistoricNature.MODID);
 
-    public static final DeferredBlock<PNTreeLogBlock> DIAPHORODENDRON_STRIPPED_LOG = registerBlock("stripped_diaphorodendron_log",
-            () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "stripped_diaphorodendron_log")))));
-
     public static final DeferredBlock<PNTreeLogBlock> DIAPHORODENDRON_LOG = registerBlock("diaphorodendron_log",
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "diaphorodendron_log")))){
                 @Override
                 public @Nullable Block getStrippedBlock() {
-                    return DIAPHORODENDRON_STRIPPED_LOG.get();
+                    return DIAPHORODENDRON_LOG.get();
                 }
             });
-
-    public static final DeferredBlock<PNTreeLogBlock> DIAPHORODENDRON_STRIPPED_WOOD = registerBlock("stripped_diaphorodendron_wood",
-            () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "stripped_diaphorodendron_wood")))));
 
     public static final DeferredBlock<PNTreeLogBlock> DIAPHORODENDRON_WOOD = registerBlock("diaphorodendron_wood",
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "diaphorodendron_wood")))){
                 @Override
                 public @Nullable Block getStrippedBlock() {
-                    return DIAPHORODENDRON_STRIPPED_WOOD.get();
+                    return DIAPHORODENDRON_WOOD.get();
                 }
             });
 

@@ -33,25 +33,19 @@ public class BlocksTreeLepidophloios {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(PrehistoricNature.MODID);
 
-    public static final DeferredBlock<PNTreeLogBlock> LEPIDOPHLOIOS_STRIPPED_LOG = registerBlock("stripped_lepidophloios_log",
-            () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "stripped_lepidophloios_log")))));
-
     public static final DeferredBlock<PNTreeLogBlock> LEPIDOPHLOIOS_LOG = registerBlock("lepidophloios_log",
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidophloios_log")))){
                 @Override
                 public @Nullable Block getStrippedBlock() {
-                    return LEPIDOPHLOIOS_STRIPPED_LOG.get();
+                    return LEPIDOPHLOIOS_LOG.get();
                 }
             });
-
-    public static final DeferredBlock<PNTreeLogBlock> LEPIDOPHLOIOS_STRIPPED_WOOD = registerBlock("stripped_lepidophloios_wood",
-            () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "stripped_lepidophloios_wood")))));
 
     public static final DeferredBlock<PNTreeLogBlock> LEPIDOPHLOIOS_WOOD = registerBlock("lepidophloios_wood",
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidophloios_wood")))){
                 @Override
                 public @Nullable Block getStrippedBlock() {
-                    return LEPIDOPHLOIOS_STRIPPED_WOOD.get();
+                    return LEPIDOPHLOIOS_WOOD.get();
                 }
             });
 

@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "prehistoricnature:leptophloeum_log",
-    "prehistoricnature:leptophloeum_wood",
-    "prehistoricnature:stripped_leptophloeum_log",
-    "prehistoricnature:stripped_leptophloeum_wood"
+    "prehistoricnature:leptophloeum_wood"
   ]
 }

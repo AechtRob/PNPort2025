@@ -33,25 +33,19 @@ public class BlocksTreeSynchysidendron {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(PrehistoricNature.MODID);
 
-    public static final DeferredBlock<PNTreeLogBlock> SYNCHYSIDENDRON_STRIPPED_LOG = registerBlock("stripped_synchysidendron_log",
-            () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "stripped_synchysidendron_log")))));
-
     public static final DeferredBlock<PNTreeLogBlock> SYNCHYSIDENDRON_LOG = registerBlock("synchysidendron_log",
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "synchysidendron_log")))){
                 @Override
                 public @Nullable Block getStrippedBlock() {
-                    return SYNCHYSIDENDRON_STRIPPED_LOG.get();
+                    return SYNCHYSIDENDRON_LOG.get();
                 }
             });
-
-    public static final DeferredBlock<PNTreeLogBlock> SYNCHYSIDENDRON_STRIPPED_WOOD = registerBlock("stripped_synchysidendron_wood",
-            () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "stripped_synchysidendron_wood")))));
 
     public static final DeferredBlock<PNTreeLogBlock> SYNCHYSIDENDRON_WOOD = registerBlock("synchysidendron_wood",
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "synchysidendron_wood")))){
                 @Override
                 public @Nullable Block getStrippedBlock() {
-                    return SYNCHYSIDENDRON_STRIPPED_WOOD.get();
+                    return SYNCHYSIDENDRON_WOOD.get();
                 }
             });
 
