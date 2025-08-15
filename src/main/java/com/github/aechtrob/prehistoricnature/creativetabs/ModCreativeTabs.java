@@ -88,8 +88,6 @@ public class ModCreativeTabs {
 
                         output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_LOG.get().asItem());
                         output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_WOOD.get().asItem());
-                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_STRIPPED_LOG.get().asItem());
-                        output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_STRIPPED_WOOD.get().asItem());
                         output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_PLANKS.get().asItem());
                         output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_STAIRS.get().asItem());
                         output.accept(BlocksTreeBothrodendron.BOTHRODENDRON_SLAB.get().asItem());
@@ -102,8 +100,6 @@ public class ModCreativeTabs {
 
                         output.accept(BlocksTreeDiaphorodendron.DIAPHORODENDRON_LOG.get().asItem());
                         output.accept(BlocksTreeDiaphorodendron.DIAPHORODENDRON_WOOD.get().asItem());
-                        output.accept(BlocksTreeDiaphorodendron.DIAPHORODENDRON_STRIPPED_LOG.get().asItem());
-                        output.accept(BlocksTreeDiaphorodendron.DIAPHORODENDRON_STRIPPED_WOOD.get().asItem());
                         output.accept(BlocksTreeDiaphorodendron.DIAPHORODENDRON_PLANKS.get().asItem());
                         output.accept(BlocksTreeDiaphorodendron.DIAPHORODENDRON_STAIRS.get().asItem());
                         output.accept(BlocksTreeDiaphorodendron.DIAPHORODENDRON_SLAB.get().asItem());
@@ -144,8 +140,6 @@ public class ModCreativeTabs {
 
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_LOG.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_WOOD.get().asItem());
-                        output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_STRIPPED_LOG.get().asItem());
-                        output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_STRIPPED_WOOD.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_PLANKS.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_STAIRS.get().asItem());
                         output.accept(BlocksTreeLepidodendron.LEPIDODENDRON_SLAB.get().asItem());
@@ -158,9 +152,7 @@ public class ModCreativeTabs {
 
                         output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_LOG.get().asItem());
                         output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_WOOD.get().asItem());
-                        output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_STRIPPED_LOG.get().asItem());
-                        output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_STRIPPED_WOOD.get().asItem());
-                        output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_PLANKS.get().asItem());
+                         output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_PLANKS.get().asItem());
                         output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_STAIRS.get().asItem());
                         output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_SLAB.get().asItem());
                         output.accept(BlocksTreeLepidophloios.LEPIDOPHLOIOS_FENCE.get().asItem());
@@ -172,8 +164,6 @@ public class ModCreativeTabs {
 
                         output.accept(BlocksTreeLeptophloeum.LEPTOPHLOEUM_LOG.get().asItem());
                         output.accept(BlocksTreeLeptophloeum.LEPTOPHLOEUM_WOOD.get().asItem());
-                        output.accept(BlocksTreeLeptophloeum.LEPTOPHLOEUM_STRIPPED_LOG.get().asItem());
-                        output.accept(BlocksTreeLeptophloeum.LEPTOPHLOEUM_STRIPPED_WOOD.get().asItem());
                         output.accept(BlocksTreeLeptophloeum.LEPTOPHLOEUM_PLANKS.get().asItem());
                         output.accept(BlocksTreeLeptophloeum.LEPTOPHLOEUM_STAIRS.get().asItem());
                         output.accept(BlocksTreeLeptophloeum.LEPTOPHLOEUM_SLAB.get().asItem());
@@ -214,8 +204,6 @@ public class ModCreativeTabs {
 
                         output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_LOG.get().asItem());
                         output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_WOOD.get().asItem());
-                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_STRIPPED_LOG.get().asItem());
-                        output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_STRIPPED_WOOD.get().asItem());
                         output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_PLANKS.get().asItem());
                         output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_STAIRS.get().asItem());
                         output.accept(BlocksTreeSynchysidendron.SYNCHYSIDENDRON_SLAB.get().asItem());
