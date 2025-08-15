@@ -3,5 +3,6 @@
  "textures": {
  "bottom": "prehistoricnature:block/gangamopteris_door_bottom",
  "top": "prehistoricnature:block/gangamopteris_door_top"
- }
+ },
+ "render_type": "cutout"
 }

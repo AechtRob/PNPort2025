@@ -3,5 +3,6 @@
  "textures": {
  "texture": "prehistoricnature:block/leptophloeum_trapdoor",
  "planktexture": "prehistoricnature:block/leptophloeum_planks"
- }
+ },
+ "render_type": "cutout"
 }

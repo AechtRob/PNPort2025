@@ -3,5 +3,6 @@
  "textures": {
  "texture": "prehistoricnature:block/bothrodendron_trapdoor",
  "planktexture": "prehistoricnature:block/bothrodendron_planks"
- }
+ },
+ "render_type": "cutout"
 }

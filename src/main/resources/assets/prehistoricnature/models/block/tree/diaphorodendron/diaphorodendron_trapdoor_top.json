@@ -3,5 +3,6 @@
  "textures": {
  "texture": "prehistoricnature:block/diaphorodendron_trapdoor",
  "planktexture": "prehistoricnature:block/diaphorodendron_planks"
- }
+ },
+ "render_type": "cutout"
 }

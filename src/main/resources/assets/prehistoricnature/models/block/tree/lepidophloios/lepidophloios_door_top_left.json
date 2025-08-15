@@ -3,5 +3,6 @@
  "textures": {
  "bottom": "prehistoricnature:block/lepidophloios_door_bottom",
  "top": "prehistoricnature:block/lepidophloios_door_top"
- }
+ },
+ "render_type": "cutout"
 }

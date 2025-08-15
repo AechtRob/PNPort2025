@@ -3,5 +3,6 @@
     "textures": {
         "bottom": "prehistoricnature:block/lepidodendron_door_bottom",
         "top": "prehistoricnature:block/lepidodendron_door_top"
-    }
+    },
+    "render_type": "cutout"
 }
