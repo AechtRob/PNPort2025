@@ -3,6 +3,7 @@ package com.github.aechtrob.prehistoricnature.world.tree.lepidodendron;
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
 import com.github.aechtrob.prehistoricnature.block.blockbase.*;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
+import com.github.aechtrob.prehistoricnature.particle.ModParticles;
 import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTreeGrower;
 import net.minecraft.core.registries.Registries;
@@ -56,7 +57,7 @@ public class BlocksTreeLepidodendron {
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_planks")))));
 
     public static final DeferredBlock<PNTreeLeavesBlock> LEPIDODENDRON_LEAVES = registerBlock("lepidodendron_leaves",
-            () -> new PNTreeLeavesBlock(0, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_leaves")))));
+            () -> new PNTreeLeavesBlock(0.01F, ModParticles.LEPIDODENDRON_PARTICLE.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_leaves")))));
 
     public static final DeferredBlock<SlabBlock> LEPIDODENDRON_SLAB = registerBlock("lepidodendron_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "lepidodendron_slab")))));

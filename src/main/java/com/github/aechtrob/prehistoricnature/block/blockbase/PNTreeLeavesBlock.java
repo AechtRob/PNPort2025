@@ -4,21 +4,20 @@ import com.github.aechtrob.prehistoricnature.PrehistoricNatureConfig;
 import com.github.aechtrob.prehistoricnature.block.interfaces.IEnvelopable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.util.RandomSource;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.TintedParticleLeavesBlock;
+import net.minecraft.world.level.block.UntintedParticleLeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootParams;
 
 import java.util.Collections;
 import java.util.List;
 
-public class PNTreeLeavesBlock extends TintedParticleLeavesBlock implements IEnvelopable {
+public class PNTreeLeavesBlock extends UntintedParticleLeavesBlock implements IEnvelopable {
 
-    public PNTreeLeavesBlock(float leafParticleChance, Properties properties) {
-        super(leafParticleChance, properties);
+    public PNTreeLeavesBlock(float leafParticleChance, ParticleOptions leafParticle, Properties properties) {
+        super(leafParticleChance, leafParticle, properties);
     }
 
     @Override
@@ -34,11 +33,6 @@ public class PNTreeLeavesBlock extends TintedParticleLeavesBlock implements IEnv
      */
     public static List<ItemStack> getPNModdedDrops() {
         return Collections.emptyList();
-    }
-
-    @Override
-    protected void spawnFallingLeavesParticle(Level level, BlockPos blockPos, RandomSource randomSource) {
-
     }
 
     @Override

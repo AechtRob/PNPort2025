@@ -15,6 +15,7 @@ import com.github.aechtrob.prehistoricnature.entity.entity.render.PNBoatRenderer
 import com.github.aechtrob.prehistoricnature.gui.ModGUIs;
 import com.github.aechtrob.prehistoricnature.gui.modgui.CentrifugeScreen;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
+import com.github.aechtrob.prehistoricnature.particle.ModParticles;
 import com.github.aechtrob.prehistoricnature.util.EnvelopeStatus;
 import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
 import com.github.aechtrob.prehistoricnature.util.PhialStatus;
@@ -25,33 +26,43 @@ import com.github.aechtrob.prehistoricnature.world.tree.PNTrunkPlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.bothrodendron.BlocksTreeBothrodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.bothrodendron.EntitiesTreeBothrodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.bothrodendron.ItemsTreeBothrodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.bothrodendron.ParticleBothrodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron.BlocksTreeDiaphorodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron.EntitiesTreeDiaphorodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron.ItemsTreeDiaphorodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron.ParticleDiaphorodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.BlocksTreeGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.EntitiesTreeGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.ItemsTreeGangamopteris;
+import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.ParticleGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.EntitiesTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.ItemsTreeGlossopterisA;
+import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.ParticleGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.EntitiesTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ItemsTreeLepidodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ParticleLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.BlocksTreeLepidophloios;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.EntitiesTreeLepidophloios;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.ItemsTreeLepidophloios;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.ParticleLepidophloios;
 import com.github.aechtrob.prehistoricnature.world.tree.leptophloeum.BlocksTreeLeptophloeum;
 import com.github.aechtrob.prehistoricnature.world.tree.leptophloeum.EntitiesTreeLeptophloeum;
 import com.github.aechtrob.prehistoricnature.world.tree.leptophloeum.ItemsTreeLeptophloeum;
+import com.github.aechtrob.prehistoricnature.world.tree.leptophloeum.ParticleLeptophloeum;
 import com.github.aechtrob.prehistoricnature.world.tree.pitys.BlocksTreePitys;
 import com.github.aechtrob.prehistoricnature.world.tree.pitys.EntitiesTreePitys;
 import com.github.aechtrob.prehistoricnature.world.tree.pitys.ItemsTreePitys;
+import com.github.aechtrob.prehistoricnature.world.tree.pitys.ParticlePitys;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.BlocksTreeSciadopitys;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.EntitiesTreeSciadopitys;
 import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.ItemsTreeSciadopitys;
+import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.ParticleSciadopitys;
 import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.BlocksTreeSynchysidendron;
 import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.EntitiesTreeSynchysidendron;
 import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.ItemsTreeSynchysidendron;
+import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.ParticleSynchysidendron;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.Sheets;
@@ -69,6 +80,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.client.event.RegisterRangeSelectItemModelPropertyEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -183,6 +195,7 @@ public class PrehistoricNature
         PNFoliagePlacerType.register(modEventBus);
         ModConfiguredFeatures.register(modEventBus);
         ModFeatures.register(modEventBus);
+        ModParticles.register(modEventBus);
 
         ModGUIs.register(modEventBus);
 
@@ -251,6 +264,20 @@ public class PrehistoricNature
             Sheets.addWoodType(PNWoodTypes.PITYS);
             Sheets.addWoodType(PNWoodTypes.SCIADOPITYS);
             Sheets.addWoodType(PNWoodTypes.SYNCHYSIDENDRON);
+        }
+
+        @SubscribeEvent
+        public static void registerParticleProviders(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(ModParticles.BOTHRODENDRON_PARTICLE.get(), ParticleBothrodendron.BothrodendronProvider::new);
+            event.registerSpriteSet(ModParticles.DIAPHORODENDRON_PARTICLE.get(), ParticleDiaphorodendron.DiaphorodendronProvider::new);
+            event.registerSpriteSet(ModParticles.GANGAMOPTERIS_PARTICLE.get(), ParticleGangamopteris.GangamopterisProvider::new);
+            event.registerSpriteSet(ModParticles.GLOSSOPTERISA_PARTICLE.get(), ParticleGlossopterisA.GlossopterisAProvider::new);
+            event.registerSpriteSet(ModParticles.LEPIDODENDRON_PARTICLE.get(), ParticleLepidodendron.LepidodendronProvider::new);
+            event.registerSpriteSet(ModParticles.LEPIDOPHLOIOS_PARTICLE.get(), ParticleLepidophloios.LepidophloiosProvider::new);
+            event.registerSpriteSet(ModParticles.LEPTOPHLOEUM_PARTICLE.get(), ParticleLeptophloeum.LeptophloeumProvider::new);
+            event.registerSpriteSet(ModParticles.PITYS_PARTICLE.get(), ParticlePitys.PitysProvider::new);
+            event.registerSpriteSet(ModParticles.SCIADOPITYS_PARTICLE.get(), ParticleSciadopitys.SciadopitysProvider::new);
+            event.registerSpriteSet(ModParticles.SYNCHYSIDENDRON_PARTICLE.get(), ParticleSynchysidendron.SynchysidendronProvider::new);
         }
 
         @SubscribeEvent

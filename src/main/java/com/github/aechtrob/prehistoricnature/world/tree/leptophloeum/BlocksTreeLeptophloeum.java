@@ -3,6 +3,7 @@ package com.github.aechtrob.prehistoricnature.world.tree.leptophloeum;
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
 import com.github.aechtrob.prehistoricnature.block.blockbase.*;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
+import com.github.aechtrob.prehistoricnature.particle.ModParticles;
 import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTreeGrower;
 import net.minecraft.core.registries.Registries;
@@ -56,7 +57,7 @@ public class BlocksTreeLeptophloeum {
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "leptophloeum_planks")))));
 
     public static final DeferredBlock<PNTreeLeavesBlock> LEPTOPHLOEUM_LEAVES = registerBlock("leptophloeum_leaves",
-            () -> new PNTreeLeavesBlock(0, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "leptophloeum_leaves")))){
+            () -> new PNTreeLeavesBlock(0.01F, ModParticles.LEPTOPHLOEUM_PARTICLE.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "leptophloeum_leaves")))){
                 @Override
                 public ItemStack envelopeMimicsItemPlacement() {
                     return new ItemStack(BlocksTreeLeptophloeum.LEPTOPHLOEUM_SAPLING.get(), 1);

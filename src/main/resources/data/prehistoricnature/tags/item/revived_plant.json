@@ -1,17 +1,17 @@
 {
   "replace": false,
   "values": [
-    "prehistricnature:bothrodendron_sapling",
-    "prehistricnature:diaphorodendron_sapling",
-    "prehistricnature:gangamopteris_sapling",
-    "prehistricnature:glossopteris_angustifolia_sapling",
-    "prehistricnature:lepidodendron_sapling",
-    "prehistricnature:lepidophloios_sapling",
-    "prehistricnature:leptophloeum_sapling",
-    "prehistricnature:macrocystis",
-    "prehistricnature:nereocystis",
-    "prehistricnature:pitys_sapling",
-    "prehistricnature:sciadopitys_sapling",
-    "prehistricnature:synchysidendron_sapling"
+    "prehistoricnature:bothrodendron_sapling",
+    "prehistoricnature:diaphorodendron_sapling",
+    "prehistoricnature:gangamopteris_sapling",
+    "prehistoricnature:glossopteris_angustifolia_sapling",
+    "prehistoricnature:lepidodendron_sapling",
+    "prehistoricnature:lepidophloios_sapling",
+    "prehistoricnature:leptophloeum_sapling",
+    "prehistoricnature:macrocystis",
+    "prehistoricnature:nereocystis",
+    "prehistoricnature:pitys_sapling",
+    "prehistoricnature:sciadopitys_sapling",
+    "prehistoricnature:synchysidendron_sapling"
   ]
 }

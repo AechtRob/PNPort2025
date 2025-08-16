@@ -3,6 +3,7 @@ package com.github.aechtrob.prehistoricnature.world.tree.gangamopteris;
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
 import com.github.aechtrob.prehistoricnature.block.blockbase.*;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
+import com.github.aechtrob.prehistoricnature.particle.ModParticles;
 import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTreeGrower;
 import net.minecraft.core.registries.Registries;
@@ -62,7 +63,7 @@ public class BlocksTreeGangamopteris {
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "gangamopteris_planks")))));
 
     public static final DeferredBlock<PNTreeLeavesBlock> GANGAMOPTERIS_LEAVES = registerBlock("gangamopteris_leaves",
-            () -> new PNTreeLeavesBlock(0, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "gangamopteris_leaves")))));
+            () -> new PNTreeLeavesBlock(0.01F, ModParticles.GANGAMOPTERIS_PARTICLE.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "gangamopteris_leaves")))));
 
     public static final DeferredBlock<SlabBlock> GANGAMOPTERIS_SLAB = registerBlock("gangamopteris_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "gangamopteris_slab")))));

@@ -4,6 +4,7 @@ import com.github.aechtrob.prehistoricnature.PrehistoricNature;
 import com.github.aechtrob.prehistoricnature.PrehistoricNatureConfig;
 import com.github.aechtrob.prehistoricnature.block.blockbase.*;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
+import com.github.aechtrob.prehistoricnature.particle.ModParticles;
 import com.github.aechtrob.prehistoricnature.util.PNWoodTypes;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTreeGrower;
 import net.minecraft.core.BlockPos;
@@ -65,7 +66,7 @@ public class BlocksTreeSciadopitys {
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "sciadopitys_planks")))));
 
     public static final DeferredBlock<PNTreeLeavesBlock> SCIADOPITYS_LEAVES = registerBlock("sciadopitys_leaves",
-            () -> new PNTreeLeavesBlock(0, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "sciadopitys_leaves")))){
+            () -> new PNTreeLeavesBlock(0.01F, ModParticles.SCIADOPITYS_PARTICLE.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(PrehistoricNature.MODID, "sciadopitys_leaves")))){
                 @Override
                 protected List<ItemStack> getDrops(BlockState state, LootParams.Builder params) {
                     List<ItemStack> returnList = super.getDrops(state, params);
