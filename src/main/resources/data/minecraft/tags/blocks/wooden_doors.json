@@ -1,8 +1,15 @@
 {
   "replace": false,
   "values": [
+    "prehistoricnature:bothrodendron_door",
+    "prehistoricnature:diaphorodendron_door",
     "prehistoricnature:gangamopteris_door",
     "prehistoricnature:glossopteris_angustifolia_door",
-    "prehistoricnature:lepidodendron_door"
+    "prehistoricnature:lepidodendron_door",
+    "prehistoricnature:lepidophloios_door",
+    "prehistoricnature:leptophloeum_door",
+    "prehistoricnature:pitys_door",
+    "prehistoricnature:sciadopitys_door",
+    "prehistoricnature:synchysidendron_door"
   ]
 }

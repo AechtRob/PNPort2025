@@ -1,8 +1,15 @@
 {
   "replace": false,
   "values": [
+    "prehistoricnature:bothrodendron_pressure_plate",
+    "prehistoricnature:diaphorodendron_pressure_plate",
     "prehistoricnature:gangamopteris_pressure_plate",
     "prehistoricnature:glossopteris_angustifolia_pressure_plate",
-    "prehistoricnature:lepidodendron_pressure_plate"
+    "prehistoricnature:lepidodendron_pressure_plate",
+    "prehistoricnature:lepidophloios_pressure_plate",
+    "prehistoricnature:leptophloeum_pressure_plate",
+    "prehistoricnature:pitys_pressure_plate",
+    "prehistoricnature:sciadopitys_pressure_plate",
+    "prehistoricnature:synchysidendron_pressure_plate"
   ]
 }

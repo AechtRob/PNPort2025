@@ -1,8 +1,15 @@
 {
   "replace": false,
   "values": [
+    "prehistoricnature:bothrodendron_trapdoor",
+    "prehistoricnature:diaphorodendron_trapdoor",
     "prehistoricnature:gangamopteris_trapdoor",
     "prehistoricnature:glossopteris_angustifolia_trapdoor",
-    "prehistoricnature:lepidodendron_trapdoor"
+    "prehistoricnature:lepidodendron_trapdoor",
+    "prehistoricnature:lepidophloios_trapdoor",
+    "prehistoricnature:leptophloeum_trapdoor",
+    "prehistoricnature:pitys_trapdoor",
+    "prehistoricnature:sciadopitys_trapdoor",
+    "prehistoricnature:synchysidendron_trapdoor"
   ]
 }

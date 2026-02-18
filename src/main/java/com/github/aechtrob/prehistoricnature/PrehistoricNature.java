@@ -12,12 +12,26 @@ import com.github.aechtrob.prehistoricnature.world.ModConfiguredFeatures;
 import com.github.aechtrob.prehistoricnature.world.ModFeatures;
 import com.github.aechtrob.prehistoricnature.world.tree.PNFoliagePlacerType;
 import com.github.aechtrob.prehistoricnature.world.tree.PNTrunkPlacerType;
+import com.github.aechtrob.prehistoricnature.world.tree.bothrodendron.BlocksTreeBothrodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.bothrodendron.ItemsTreeBothrodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron.BlocksTreeDiaphorodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.diaphorodendron.ItemsTreeDiaphorodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.BlocksTreeGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.gangamopteris.ItemsTreeGangamopteris;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.BlocksTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.glossopteris_angustifolia.ItemsTreeGlossopterisA;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.BlocksTreeLepidodendron;
 import com.github.aechtrob.prehistoricnature.world.tree.lepidodendron.ItemsTreeLepidodendron;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.BlocksTreeLepidophloios;
+import com.github.aechtrob.prehistoricnature.world.tree.lepidophloios.ItemsTreeLepidophloios;
+import com.github.aechtrob.prehistoricnature.world.tree.leptophloeum.BlocksTreeLeptophloeum;
+import com.github.aechtrob.prehistoricnature.world.tree.leptophloeum.ItemsTreeLeptophloeum;
+import com.github.aechtrob.prehistoricnature.world.tree.pitys.BlocksTreePitys;
+import com.github.aechtrob.prehistoricnature.world.tree.pitys.ItemsTreePitys;
+import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.BlocksTreeSciadopitys;
+import com.github.aechtrob.prehistoricnature.world.tree.sciadopitys.ItemsTreeSciadopitys;
+import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.BlocksTreeSynchysidendron;
+import com.github.aechtrob.prehistoricnature.world.tree.synchysidendron.ItemsTreeSynchysidendron;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
@@ -90,6 +104,12 @@ public class PrehistoricNature
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ItemsTreeBothrodendron.register(modEventBus);
+        BlocksTreeBothrodendron.register(modEventBus);
+
+        ItemsTreeDiaphorodendron.register(modEventBus);
+        BlocksTreeDiaphorodendron.register(modEventBus);
+
         ItemsTreeGangamopteris.register(modEventBus);
         BlocksTreeGangamopteris.register(modEventBus);
         
@@ -98,6 +118,21 @@ public class PrehistoricNature
         
         ItemsTreeLepidodendron.register(modEventBus);
         BlocksTreeLepidodendron.register(modEventBus);
+
+        ItemsTreeLepidophloios.register(modEventBus);
+        BlocksTreeLepidophloios.register(modEventBus);
+
+        ItemsTreeLeptophloeum.register(modEventBus);
+        BlocksTreeLeptophloeum.register(modEventBus);
+
+        ItemsTreePitys.register(modEventBus);
+        BlocksTreePitys.register(modEventBus);
+
+        ItemsTreeSciadopitys.register(modEventBus);
+        BlocksTreeSciadopitys.register(modEventBus);
+
+        ItemsTreeSynchysidendron.register(modEventBus);
+        BlocksTreeSynchysidendron.register(modEventBus);
 
         PNTrunkPlacerType.register(modEventBus);
         PNFoliagePlacerType.register(modEventBus);
@@ -150,9 +185,17 @@ public class PrehistoricNature
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            Sheets.addWoodType(PNWoodTypes.BOTHRODENDRON);
+            Sheets.addWoodType(PNWoodTypes.DIAPHORODENDRON);
             Sheets.addWoodType(PNWoodTypes.GANGAMOPTERIS);
             Sheets.addWoodType(PNWoodTypes.GLOSSOPTERISA);
             Sheets.addWoodType(PNWoodTypes.LEPIDODENDRON);
+            Sheets.addWoodType(PNWoodTypes.LEPIDOPHLOIOS);
+            Sheets.addWoodType(PNWoodTypes.LEPTOPHLOEUM);
+            Sheets.addWoodType(PNWoodTypes.PITYS);
+            Sheets.addWoodType(PNWoodTypes.SCIADOPITYS);
+            Sheets.addWoodType(PNWoodTypes.SYNCHYSIDENDRON);
+
 
             EntityRenderers.register(ModEntities.BOAT_ENTITY.get(), context -> new PNBoatRenderer(context, false));
             EntityRenderers.register(ModEntities.CHEST_BOAT_ENTITY.get(), context -> new PNBoatRenderer(context, true));

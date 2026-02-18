@@ -3,5 +3,6 @@
  "textures": {
  "bottom": "prehistoricnature:block/glossopteris_angustifolia_door_bottom",
  "top": "prehistoricnature:block/glossopteris_angustifolia_door_top"
- }
+ },
+ "render_type": "cutout"
 }

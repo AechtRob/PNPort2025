@@ -1,8 +1,15 @@
 {
   "replace": false,
   "values": [
+    "prehistoricnature:bothrodendron_ladder",
+    "prehistoricnature:diaphorodendron_ladder",
     "prehistoricnature:gangamopteris_ladder",
     "prehistoricnature:glossopteris_angustifolia_ladder",
-    "prehistoricnature:lepidodendron_ladder"
+    "prehistoricnature:lepidodendron_ladder",
+    "prehistoricnature:lepidophloios_ladder",
+    "prehistoricnature:leptophloeum_ladder",
+    "prehistoricnature:pitys_ladder",
+    "prehistoricnature:sciadopitys_ladder",
+    "prehistoricnature:synchysidendron_ladder"
   ]
 }

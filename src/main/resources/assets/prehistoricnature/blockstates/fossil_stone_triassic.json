@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "": [
+   {"model": "prehistoricnature:block/fossil_stone_triassic" },
+   {"model": "prehistoricnature:block/fossil_stone_triassic", "y": 180 },
+   {"model": "prehistoricnature:block/fossil_stone_triassic_var" },
+   {"model": "prehistoricnature:block/fossil_stone_triassic_var", "y": 180 }
+  ]
+ }
+}

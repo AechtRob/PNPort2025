@@ -1,8 +1,15 @@
 {
   "replace": false,
   "values": [
+    "prehistoricnature:bothrodendron_sapling",
+    "prehistoricnature:diaphorodendron_sapling",
     "prehistoricnature:gangamopteris_sapling",
     "prehistoricnature:glossopteris_angustifolia_sapling",
-    "prehistoricnature:lepidodendron_sapling"
+    "prehistoricnature:lepidodendron_sapling",
+    "prehistoricnature:lepidophloios_sapling",
+    "prehistoricnature:leptophloeum_sapling",
+    "prehistoricnature:pitys_sapling",
+    "prehistoricnature:sciadopitys_sapling",
+    "prehistoricnature:synchysidendron_sapling"
   ]
 }

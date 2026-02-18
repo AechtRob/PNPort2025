@@ -1,0 +1,10 @@
+{
+ "variants": {
+ "": [
+   {"model": "prehistoricnature:block/fossil_stone_cambrian" },
+   {"model": "prehistoricnature:block/fossil_stone_cambrian", "y": 180 },
+   {"model": "prehistoricnature:block/fossil_stone_cambrian_var" },
+   {"model": "prehistoricnature:block/fossil_stone_cambrian_var", "y": 180 }
+ ]
+ }
+}

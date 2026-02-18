@@ -1,0 +1,13 @@
+{
+ "variants": {
+ "type=bottom": {
+ "model": "prehistoricnature:block/tree/leptophloeum/leptophloeum_slab"
+ },
+ "type=double": {
+ "model": "prehistoricnature:block/tree/leptophloeum/leptophloeum_planks"
+ },
+ "type=top": {
+ "model": "prehistoricnature:block/tree/leptophloeum/leptophloeum_slab_top"
+ }
+ }
+}

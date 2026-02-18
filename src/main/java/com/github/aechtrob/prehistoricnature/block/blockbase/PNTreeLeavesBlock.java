@@ -1,6 +1,7 @@
 package com.github.aechtrob.prehistoricnature.block.blockbase;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNatureConfig;
+import com.github.aechtrob.prehistoricnature.block.interfaces.IEnvelopable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
@@ -12,7 +13,7 @@ import net.minecraft.world.level.storage.loot.LootParams;
 import java.util.Collections;
 import java.util.List;
 
-public class PNTreeLeavesBlock extends LeavesBlock {
+public class PNTreeLeavesBlock extends LeavesBlock implements IEnvelopable {
 
     public PNTreeLeavesBlock(Properties properties) {
         super(properties);
@@ -46,5 +47,10 @@ public class PNTreeLeavesBlock extends LeavesBlock {
     @Override
     public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
         return 20;
+    }
+
+    @Override
+    public ItemStack envelopeMimicsItemPlacement() {
+        return ItemStack.EMPTY;
     }
 }

@@ -31,25 +31,19 @@ public class BlocksTreeLepidodendron {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, PrehistoricNature.MODID);
 
-    public static final RegistryObject<PNTreeLogBlock> LEPIDODENDRON_STRIPPED_LOG = registerBlock("stripped_lepidodendron_log",
-            () -> new PNTreeLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
-
     public static final RegistryObject<PNTreeLogBlock> LEPIDODENDRON_LOG = registerBlock("lepidodendron_log",
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)){
                 @Override
                 public @Nullable Block getStrippedBlock() {
-                    return LEPIDODENDRON_STRIPPED_LOG.get();
+                    return LEPIDODENDRON_LOG.get();
                 }
             });
-
-    public static final RegistryObject<PNTreeLogBlock> LEPIDODENDRON_STRIPPED_WOOD = registerBlock("stripped_lepidodendron_wood",
-            () -> new PNTreeLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<PNTreeLogBlock> LEPIDODENDRON_WOOD = registerBlock("lepidodendron_wood",
             () -> new PNTreeLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)){
                 @Override
                 public @Nullable Block getStrippedBlock() {
-                    return LEPIDODENDRON_STRIPPED_WOOD.get();
+                    return LEPIDODENDRON_WOOD.get();
                 }
             });
 

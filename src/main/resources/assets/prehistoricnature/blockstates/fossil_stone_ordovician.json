@@ -1,0 +1,10 @@
+{
+ "variants": {
+  "": [
+   {"model": "prehistoricnature:block/fossil_stone_ordovician" },
+   {"model": "prehistoricnature:block/fossil_stone_ordovician", "y": 180 },
+   {"model": "prehistoricnature:block/fossil_stone_ordovician_var" },
+   {"model": "prehistoricnature:block/fossil_stone_ordovician_var", "y": 180 }
+  ]
+ }
+}

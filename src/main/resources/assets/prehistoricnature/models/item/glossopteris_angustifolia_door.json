@@ -1,6 +1,6 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "prehistoricnature:item/glossopteris_angustifolia_door"
-  }
+ "parent": "item/generated",
+ "textures": {
+ "layer0": "prehistoricnature:item/glossopteris_angustifolia_door"
+ }
 }

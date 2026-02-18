@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "prehistoricnature:bothrodendron_log",
+    "prehistoricnature:bothrodendron_wood",
+    "prehistoricnature:diaphorodendron_log",
+    "prehistoricnature:diaphorodendron_wood",
     "prehistoricnature:gangamopteris_log",
     "prehistoricnature:gangamopteris_log_stripped",
     "prehistoricnature:gangamopteris_wood",
@@ -10,8 +14,20 @@
     "prehistoricnature:glossopteris_angustifolia_wood",
     "prehistoricnature:glossopteris_angustifolia_wood_stripped",
     "prehistoricnature:lepidodendron_log",
-    "prehistoricnature:lepidodendron_log_stripped",
     "prehistoricnature:lepidodendron_wood",
-    "prehistoricnature:lepidodendron_wood_stripped"
+    "prehistoricnature:lepidophloios_log",
+    "prehistoricnature:lepidophloios_wood",
+    "prehistoricnature:leptophloeum_log",
+    "prehistoricnature:leptophloeum_wood",
+    "prehistoricnature:pitys_log",
+    "prehistoricnature:pitys_log_stripped",
+    "prehistoricnature:pitys_wood",
+    "prehistoricnature:pitys_wood_stripped",
+    "prehistoricnature:sciadopitys_log",
+    "prehistoricnature:sciadopitys_log_stripped",
+    "prehistoricnature:sciadopitys_wood",
+    "prehistoricnature:sciadopitys_wood_stripped",
+    "prehistoricnature:synchysidendron_log",
+    "prehistoricnature:synchysidendron_wood",
   ]
 }

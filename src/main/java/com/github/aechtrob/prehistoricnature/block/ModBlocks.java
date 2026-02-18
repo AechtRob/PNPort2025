@@ -21,7 +21,102 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, PrehistoricNature.MODID);
-    
+
+
+    //Blocks:
+    //-------
+    public static final RegistryObject<Block> PRECAMBRIAN_FOSSIL_STONE = registerBlock(
+            "fossil_stone_precambrian",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> CAMBRIAN_FOSSIL_STONE = registerBlock(
+            "fossil_stone_cambrian",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> ORDOVICIAN_FOSSIL_STONE = registerBlock(
+            "fossil_stone_ordovician",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> SILURIAN_FOSSIL_STONE = registerBlock(
+            "fossil_stone_silurian",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> DEVONIAN_FOSSIL_STONE = registerBlock(
+            "fossil_stone_devonian",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> CARBONIFEROUS_FOSSIL_STONE = registerBlock(
+            "fossil_stone_carboniferous",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> PERMIAN_FOSSIL_STONE = registerBlock(
+            "fossil_stone_permian",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> TRIASSIC_FOSSIL_STONE = registerBlock(
+            "fossil_stone_triassic",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> JURASSIC_FOSSIL_STONE = registerBlock(
+            "fossil_stone_jurassic",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> CRETACEOUS_EARLY_FOSSIL_STONE = registerBlock(
+            "fossil_stone_cretaceous_early",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> CRETACEOUS_LATE_FOSSIL_STONE = registerBlock(
+            "fossil_stone_cretaceous_late",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> PALEOGENE_FOSSIL_STONE = registerBlock(
+            "fossil_stone_paleogene",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> NEOGENE_FOSSIL_STONE = registerBlock(
+            "fossil_stone_neogene",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    public static final RegistryObject<Block> PLEISTOCENE_FOSSIL_STONE = registerBlock(
+            "fossil_stone_pleistocene",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+
+    public static final RegistryObject<Block> PRECAMBRIAN_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_precambrian_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> CAMBRIAN_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_cambrian_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> ORDOVICIAN_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_ordovician_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> SILURIAN_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_silurian_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> DEVONIAN_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_devonian_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> CARBONIFEROUS_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_carboniferous_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> PERMIAN_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_permian_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> TRIASSIC_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_triassic_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> JURASSIC_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_jurassic_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> CRETACEOUS_EARLY_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_cretaceous_early_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> CRETACEOUS_LATE_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_cretaceous_late_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> PALEOGENE_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_paleogene_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> NEOGENE_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_neogene_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> PLEISTOCENE_FOSSIL_STONE_DEEPSLATE = registerBlock(
+            "fossil_stone_pleistocene_deepslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+
+
+
+
+    //Plants:
+    //-------
     public static final RegistryObject<KelpBlock> MACROCYSTIS = registerBlock("macrocystis",
             () -> new KelpBlock(BlockBehaviour.Properties.copy(Blocks.KELP)){
                 @Override
@@ -83,6 +178,10 @@ public class ModBlocks {
                     return (GrowingPlantHeadBlock)NEREOCYSTIS.get();
                 }
             });
+
+
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

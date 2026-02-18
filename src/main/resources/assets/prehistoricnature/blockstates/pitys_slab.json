@@ -1,0 +1,13 @@
+{
+ "variants": {
+ "type=bottom": {
+ "model": "prehistoricnature:block/tree/pitys/pitys_slab"
+ },
+ "type=double": {
+ "model": "prehistoricnature:block/tree/pitys/pitys_planks"
+ },
+ "type=top": {
+ "model": "prehistoricnature:block/tree/pitys/pitys_slab_top"
+ }
+ }
+}

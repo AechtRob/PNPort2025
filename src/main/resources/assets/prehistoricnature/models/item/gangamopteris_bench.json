@@ -1,6 +1,6 @@
 {
-  "parent": "prehistoricnature:item/base/bench_item",
-  "textures": {
-    "wood": "prehistoricnature:block/gangamopteris_planks"
-  }
+ "parent": "prehistoricnature:item/base/bench_item",
+ "textures": {
+ "wood": "prehistoricnature:block/gangamopteris_planks"
+ }
 }
